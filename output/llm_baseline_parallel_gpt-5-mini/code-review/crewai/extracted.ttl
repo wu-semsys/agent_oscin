@@ -7,14 +7,14 @@
 # - No explicit representation for "verbose" flag or "Process.sequential" enumeration member exists; these are represented as Config individuals attached to the system/team/agent as literals.
 # - No dedicated property exists for "expected LLM parameters" (temperature, top_p, etc.) in this solution; if needed, those would require schema extensions.
 
-@prefix ex: <http://example.org/code_review#> .
-@prefix agento: <http://www.w3id.org/agentic-ai/onto#> .
-@prefix agentoscin: <http://www.semanticweb.org/danilippmann/ontologies/2026/3/agentoscin/> .
-@prefix beam: <http://w3id.org/beam/core#> .
-@prefix prov: <http://www.w3.org/ns/prov#> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix agento: <http://www.w3id.org/agentic-ai/onto#>.
+@prefix agentoscin: <https://w3id.org/agentoscin/onto#>.
+@prefix beam: <http://w3id.org/beam/core#>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix ex: <http://example.org/code_review#>.
+@prefix prov: <http://www.w3.org/ns/prov#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
 #################################################################
 # Agentic system and top-level orchestration / team

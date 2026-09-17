@@ -6,14 +6,14 @@
 # - Tool "bindings" (language-level function binding to LLM) and SDK/framework-specific structs (ToolNode, StateGraph.compile, streaming) cannot be modeled; I preserved the configuration and intent via Config and descriptive literals.
 # - No new classes or properties were added. Where semantics are not directly expressible, I used descriptive literals on existing individuals (Config, Task, WorkflowStep, Prompt).
 
-@prefix : <http://www.semanticweb.org/danilippmann/ontologies/2026/3/agentoscin/> .
-@prefix agento: <http://www.w3id.org/agentic-ai/onto#> .
-@prefix beam: <http://w3id.org/beam/core#> .
-@prefix prov: <http://www.w3.org/ns/prov#> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@base <http://www.semanticweb.org/danilippmann/ontologies/2026/3/agentoscin/> .
+@prefix : <https://w3id.org/agentoscin/onto#>.
+@prefix agento: <http://www.w3id.org/agentic-ai/onto#>.
+@prefix beam: <http://w3id.org/beam/core#>.
+@prefix dc: <http://purl.org/dc/elements/1.1/>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix prov: <http://www.w3.org/ns/prov#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@base <https://w3id.org/agentoscin/onto#> .
 
 ###############################################################################
 # Agentic system (top-level)

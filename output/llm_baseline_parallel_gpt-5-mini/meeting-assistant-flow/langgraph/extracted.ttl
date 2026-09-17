@@ -6,7 +6,7 @@
 # - External service credentials and runtime environment (e.g., Trello board id, Slack channel id, .env contents) are not modeled for security and because schema lacks properties for secrets/credentials; I put descriptive literals instead.
 # - Implementation references (function names like save_tasks_to_trello) are recorded in tool description/implementation-reference but the ontology does not allow encoding executable code. No code is stored in the ontology.
 
-@prefix : <http://www.semanticweb.org/danilippmann/ontologies/2026/3/agentoscin/> .
+@prefix : <https://w3id.org/agentoscin/onto#> .
 @prefix agento: <http://www.w3id.org/agentic-ai/onto#> .
 @prefix beam: <http://w3id.org/beam/core#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .

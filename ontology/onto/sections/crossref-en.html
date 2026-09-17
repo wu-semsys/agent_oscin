@@ -1,0 +1,1807 @@
+<h2 id="crossreference" class="list">Cross-reference for AgentOSCIN Ontology classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by AgentOSCIN Ontology.
+<div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+ <h3 id="classes-headline" class="list">Classes</h3>
+ <ul class="hlist">
+  <li><a href="#https://w3id.org/agentoscin/onto#AgenticSystem" title="https://w3id.org/agentoscin/onto#AgenticSystem">Agentic System</a></li>
+  <li><a href="#https://w3id.org/agentoscin/onto#ChainOfThought" title="https://w3id.org/agentoscin/onto#ChainOfThought">Chain of Thought</a></li>
+  <li><a href="#https://w3id.org/agentoscin/onto#CompositeTermination" title="https://w3id.org/agentoscin/onto#CompositeTermination">Composite Termination</a></li>
+  <li><a href="#https://w3id.org/agentoscin/onto#ConditionalStep" title="https://w3id.org/agentoscin/onto#ConditionalStep">Conditional Step</a></li>
+  <li><a href="#https://w3id.org/agentoscin/onto#CoordinationPattern" title="https://w3id.org/agentoscin/onto#CoordinationPattern">Coordination Pattern</a></li>
+  <li><a href="#https://w3id.org/agentoscin/onto#EventBasedTermination" title="https://w3id.org/agentoscin/onto#EventBasedTermination">Event Based Termination</a></li>
+  <li><a href="#https://w3id.org/agentoscin/onto#Guardrail" title="https://w3id.org/agentoscin/onto#Guardrail">Guardrail</a></li>
+  <li><a href="#https://w3id.org/agentoscin/onto#HumanCheckpoint" title="https://w3id.org/agentoscin/onto#HumanCheckpoint">Human Checkpoint</a></li>
+  <li><a href="#https://w3id.org/agentoscin/onto#MemoryBinding" title="https://w3id.org/agentoscin/onto#MemoryBinding">Memory Binding</a></li>
+  <li><a href="#https://w3id.org/agentoscin/onto#Orchestration" title="https://w3id.org/agentoscin/onto#Orchestration">Orchestration</a></li>
+  <li><a href="#https://w3id.org/agentoscin/onto#ReAct" title="https://w3id.org/agentoscin/onto#ReAct">ReAct</a></li>
+  <li><a href="#https://w3id.org/agentoscin/onto#ReasoningPattern" title="https://w3id.org/agentoscin/onto#ReasoningPattern">Reasoning Pattern</a></li>
+  <li><a href="#https://w3id.org/agentoscin/onto#ReflectionLoop" title="https://w3id.org/agentoscin/onto#ReflectionLoop">Reflection Loop</a></li>
+  <li><a href="#https://w3id.org/agentoscin/onto#RoutingTermination" title="https://w3id.org/agentoscin/onto#RoutingTermination">Routing Termination</a></li>
+  <li><a href="#https://w3id.org/agentoscin/onto#Schema" title="https://w3id.org/agentoscin/onto#Schema">Schema</a></li>
+  <li><a href="#https://w3id.org/agentoscin/onto#TaskCompletionTermination" title="https://w3id.org/agentoscin/onto#TaskCompletionTermination">Task Completion Termination</a></li>
+  <li><a href="#https://w3id.org/agentoscin/onto#TerminationCondition" title="https://w3id.org/agentoscin/onto#TerminationCondition">Termination Condition</a></li>
+  <li><a href="#https://w3id.org/agentoscin/onto#TreeOfThoughts" title="https://w3id.org/agentoscin/onto#TreeOfThoughts">Tree of Thoughts</a></li>
+  <li><a href="#https://w3id.org/agentoscin/onto#TurnLimitTermination" title="https://w3id.org/agentoscin/onto#TurnLimitTermination">Turn Limit Termination</a></li>
+  <li><a href="#https://w3id.org/agentoscin/onto#Unspecified" title="https://w3id.org/agentoscin/onto#Unspecified">Unspecified</a></li>
+ </ul>
+ <div class="entity" id="https://w3id.org/agentoscin/onto#AgenticSystem">
+  <h3>Agentic System<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/agentoscin/onto#AgenticSystem</p>
+  <div class="comment">
+   <span class="markdown">A complete agentic AI system encompassing one or more agents, teams, and an orchestration.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://w3id.org/beam/core#System" target="_blank" title="http://w3id.org/beam/core#System">System</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/agentoscin/onto#containsAgent" title="https://w3id.org/agentoscin/onto#containsAgent">contains agent</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/agentoscin/onto#containsOrchestration" title="https://w3id.org/agentoscin/onto#containsOrchestration">contains orchestration</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/agentoscin/onto#containsTeam" title="https://w3id.org/agentoscin/onto#containsTeam">contains team</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/agentoscin/onto#hasMemoryBinding" title="https://w3id.org/agentoscin/onto#hasMemoryBinding">has memory binding</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/agentoscin/onto#hasSourceFramework" title="https://w3id.org/agentoscin/onto#hasSourceFramework">has source framework</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/agentoscin/onto#memoryBoundTo" title="https://w3id.org/agentoscin/onto#memoryBoundTo">memory bound to</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/agentoscin/onto#ChainOfThought">
+  <h3>Chain of Thought<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/agentoscin/onto#ChainOfThought</p>
+  <div class="comment">
+   <span class="markdown">Reasoning pattern in which an agent produces explicit intermediate reasoning steps before answering.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/agentoscin/onto#ReasoningPattern" title="https://w3id.org/agentoscin/onto#ReasoningPattern">Reasoning Pattern</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/agentoscin/onto#CompositeTermination">
+  <h3>Composite Termination<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/agentoscin/onto#CompositeTermination</p>
+  <div class="comment">
+   <span class="markdown">A termination condition built by combining other conditions via a logical operator.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/agentoscin/onto#TerminationCondition" title="https://w3id.org/agentoscin/onto#TerminationCondition">Termination Condition</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/agentoscin/onto#hasOperator" title="https://w3id.org/agentoscin/onto#hasOperator">has operator</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/agentoscin/onto#hasSubCondition" title="https://w3id.org/agentoscin/onto#hasSubCondition">has sub condition</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/agentoscin/onto#EventBasedTermination" title="https://w3id.org/agentoscin/onto#EventBasedTermination">Event Based Termination</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/agentoscin/onto#RoutingTermination" title="https://w3id.org/agentoscin/onto#RoutingTermination">Routing Termination</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/agentoscin/onto#TaskCompletionTermination" title="https://w3id.org/agentoscin/onto#TaskCompletionTermination">Task Completion Termination</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/agentoscin/onto#TurnLimitTermination" title="https://w3id.org/agentoscin/onto#TurnLimitTermination">Turn Limit Termination</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/agentoscin/onto#ConditionalStep">
+  <h3>Conditional Step<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/agentoscin/onto#ConditionalStep</p>
+  <div class="comment">
+   <span class="markdown">A workflow step that branches based on routing logic.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3id.org/agentic-ai/onto#WorkflowStep" target="_blank" title="http://www.w3id.org/agentic-ai/onto#WorkflowStep">Workflow Step</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/agentoscin/onto#hasRoutingLogic" title="https://w3id.org/agentoscin/onto#hasRoutingLogic">has routing logic</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/agentoscin/onto#CoordinationPattern">
+  <h3>Coordination Pattern<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/agentoscin/onto#CoordinationPattern</p>
+  <div class="comment">
+   <span class="markdown">A pattern of coordination among agents in a team (e.g. sequential, hierarchical, swarm).</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/agentoscin/onto#employsCoordinationPattern" title="https://w3id.org/agentoscin/onto#employsCoordinationPattern">employs coordination pattern</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/agentoscin/onto#Custom" title="https://w3id.org/agentoscin/onto#Custom">Custom</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/agentoscin/onto#Hierarchical" title="https://w3id.org/agentoscin/onto#Hierarchical">Hierarchical</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/agentoscin/onto#Network" title="https://w3id.org/agentoscin/onto#Network">Network</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/agentoscin/onto#ReActLoop" title="https://w3id.org/agentoscin/onto#ReActLoop">ReAct Loop</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/agentoscin/onto#RoundRobin" title="https://w3id.org/agentoscin/onto#RoundRobin">Round Robin</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/agentoscin/onto#SelectorBased" title="https://w3id.org/agentoscin/onto#SelectorBased">Selector Based</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/agentoscin/onto#Sequential" title="https://w3id.org/agentoscin/onto#Sequential">Sequential</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/agentoscin/onto#Swarm" title="https://w3id.org/agentoscin/onto#Swarm">Swarm</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/agentoscin/onto#EventBasedTermination">
+  <h3>Event Based Termination<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/agentoscin/onto#EventBasedTermination</p>
+  <div class="comment">
+   <span class="markdown">Termination condition that fires when a designated event occurs, e.g. a stop expression appearing in an agent message.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/agentoscin/onto#TerminationCondition" title="https://w3id.org/agentoscin/onto#TerminationCondition">Termination Condition</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/agentoscin/onto#hasTriggerExpression" title="https://w3id.org/agentoscin/onto#hasTriggerExpression">has trigger expression</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/agentoscin/onto#CompositeTermination" title="https://w3id.org/agentoscin/onto#CompositeTermination">Composite Termination</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/agentoscin/onto#RoutingTermination" title="https://w3id.org/agentoscin/onto#RoutingTermination">Routing Termination</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/agentoscin/onto#TaskCompletionTermination" title="https://w3id.org/agentoscin/onto#TaskCompletionTermination">Task Completion Termination</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/agentoscin/onto#TurnLimitTermination" title="https://w3id.org/agentoscin/onto#TurnLimitTermination">Turn Limit Termination</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/agentoscin/onto#Guardrail">
+  <h3>Guardrail<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/agentoscin/onto#Guardrail</p>
+  <div class="comment">
+   <span class="markdown">A validation, safety, or policy check applied to a task.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/agentoscin/onto#hasGuardrailType" title="https://w3id.org/agentoscin/onto#hasGuardrailType">has guardrail type</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/agentoscin/onto#hasMaxRetries" title="https://w3id.org/agentoscin/onto#hasMaxRetries">has max retries</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/agentoscin/onto#hasValidationLogic" title="https://w3id.org/agentoscin/onto#hasValidationLogic">has validation logic</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/agentoscin/onto#hasGuardrail" title="https://w3id.org/agentoscin/onto#hasGuardrail">has guardrail</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/agentoscin/onto#HumanCheckpoint">
+  <h3>Human Checkpoint<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/agentoscin/onto#HumanCheckpoint</p>
+  <div class="comment">
+   <span class="markdown">A human-in-the-loop checkpoint inserted into task execution.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/agentoscin/onto#hasCheckpointPosition" title="https://w3id.org/agentoscin/onto#hasCheckpointPosition">has checkpoint position</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/agentoscin/onto#hasCheckpointType" title="https://w3id.org/agentoscin/onto#hasCheckpointType">has checkpoint type</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/agentoscin/onto#isMandatory" title="https://w3id.org/agentoscin/onto#isMandatory">is mandatory</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/agentoscin/onto#hasHumanCheckpoint" title="https://w3id.org/agentoscin/onto#hasHumanCheckpoint">has human checkpoint</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/agentoscin/onto#MemoryBinding">
+  <h3>Memory Binding<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/agentoscin/onto#MemoryBinding</p>
+  <div class="comment">
+   <span class="markdown">A reified link between a memory and the agent, team, or system that uses it, with scope and configuration.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/agentoscin/onto#bindsMemory" title="https://w3id.org/agentoscin/onto#bindsMemory">binds memory</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/agentoscin/onto#hasMemoryScope" title="https://w3id.org/agentoscin/onto#hasMemoryScope">has memory scope</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/agentoscin/onto#memoryBoundTo" title="https://w3id.org/agentoscin/onto#memoryBoundTo">memory bound to</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/agentoscin/onto#hasAgentMemoryBinding" title="https://w3id.org/agentoscin/onto#hasAgentMemoryBinding">has agent memory binding</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/agentoscin/onto#hasMemoryBinding" title="https://w3id.org/agentoscin/onto#hasMemoryBinding">has memory binding</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/agentoscin/onto#hasTeamMemoryBinding" title="https://w3id.org/agentoscin/onto#hasTeamMemoryBinding">has team memory binding</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/agentoscin/onto#Orchestration">
+  <h3>Orchestration<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/agentoscin/onto#Orchestration</p>
+  <div class="comment">
+   <span class="markdown">A controller that orchestrates one or more teams to execute a workflow.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3id.org/agentic-ai/onto#Team" target="_blank" title="http://www.w3id.org/agentic-ai/onto#Team">Team</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/agentoscin/onto#hasOutputSchema" title="https://w3id.org/agentoscin/onto#hasOutputSchema">has output schema</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/agentoscin/onto#orchestratesTeam" title="https://w3id.org/agentoscin/onto#orchestratesTeam">orchestrates team</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/agentoscin/onto#containsOrchestration" title="https://w3id.org/agentoscin/onto#containsOrchestration">contains orchestration</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/agentoscin/onto#ReAct">
+  <h3>ReAct<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/agentoscin/onto#ReAct</p>
+  <div class="comment">
+   <span class="markdown">Reasoning pattern interleaving reasoning steps with tool calls and observations (Reason + Act).</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/agentoscin/onto#ReasoningPattern" title="https://w3id.org/agentoscin/onto#ReasoningPattern">Reasoning Pattern</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/agentoscin/onto#ReasoningPattern">
+  <h3>Reasoning Pattern<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/agentoscin/onto#ReasoningPattern</p>
+  <div class="comment">
+   <span class="markdown">A reasoning strategy adopted by an agent (e.g. chain-of-thought, ReAct, tree-of-thoughts).</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/agentoscin/onto#ChainOfThought" title="https://w3id.org/agentoscin/onto#ChainOfThought">Chain of Thought</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/agentoscin/onto#ReAct" title="https://w3id.org/agentoscin/onto#ReAct">ReAct</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/agentoscin/onto#ReflectionLoop" title="https://w3id.org/agentoscin/onto#ReflectionLoop">Reflection Loop</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/agentoscin/onto#TreeOfThoughts" title="https://w3id.org/agentoscin/onto#TreeOfThoughts">Tree of Thoughts</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/agentoscin/onto#Unspecified" title="https://w3id.org/agentoscin/onto#Unspecified">Unspecified</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/agentoscin/onto#employsReasoningPattern" title="https://w3id.org/agentoscin/onto#employsReasoningPattern">employs reasoning pattern</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/agentoscin/onto#ReflectionLoop">
+  <h3>Reflection Loop<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/agentoscin/onto#ReflectionLoop</p>
+  <div class="comment">
+   <span class="markdown">Reasoning pattern in which an agent iteratively critiques and revises its own output.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/agentoscin/onto#ReasoningPattern" title="https://w3id.org/agentoscin/onto#ReasoningPattern">Reasoning Pattern</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/agentoscin/onto#RoutingTermination">
+  <h3>Routing Termination<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/agentoscin/onto#RoutingTermination</p>
+  <div class="comment">
+   <span class="markdown">Termination condition under which execution ends because the routing logic reaches a terminal branch.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/agentoscin/onto#TerminationCondition" title="https://w3id.org/agentoscin/onto#TerminationCondition">Termination Condition</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/agentoscin/onto#CompositeTermination" title="https://w3id.org/agentoscin/onto#CompositeTermination">Composite Termination</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/agentoscin/onto#EventBasedTermination" title="https://w3id.org/agentoscin/onto#EventBasedTermination">Event Based Termination</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/agentoscin/onto#TaskCompletionTermination" title="https://w3id.org/agentoscin/onto#TaskCompletionTermination">Task Completion Termination</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/agentoscin/onto#TurnLimitTermination" title="https://w3id.org/agentoscin/onto#TurnLimitTermination">Turn Limit Termination</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/agentoscin/onto#Schema">
+  <h3>Schema<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/agentoscin/onto#Schema</p>
+  <div class="comment">
+   <span class="markdown">A structured-output schema (e.g. JSON Schema, Pydantic model).</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/agentoscin/onto#hasSchemaDefinition" title="https://w3id.org/agentoscin/onto#hasSchemaDefinition">has schema definition</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/agentoscin/onto#hasOutputSchema" title="https://w3id.org/agentoscin/onto#hasOutputSchema">has output schema</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/agentoscin/onto#TaskCompletionTermination">
+  <h3>Task Completion Termination<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/agentoscin/onto#TaskCompletionTermination</p>
+  <div class="comment">
+   <span class="markdown">Termination condition satisfied when the assigned task is completed.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/agentoscin/onto#TerminationCondition" title="https://w3id.org/agentoscin/onto#TerminationCondition">Termination Condition</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/agentoscin/onto#CompositeTermination" title="https://w3id.org/agentoscin/onto#CompositeTermination">Composite Termination</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/agentoscin/onto#EventBasedTermination" title="https://w3id.org/agentoscin/onto#EventBasedTermination">Event Based Termination</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/agentoscin/onto#RoutingTermination" title="https://w3id.org/agentoscin/onto#RoutingTermination">Routing Termination</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/agentoscin/onto#TurnLimitTermination" title="https://w3id.org/agentoscin/onto#TurnLimitTermination">Turn Limit Termination</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/agentoscin/onto#TerminationCondition">
+  <h3>Termination Condition<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/agentoscin/onto#TerminationCondition</p>
+  <div class="comment">
+   <span class="markdown">A condition under which a team's execution terminates.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/agentoscin/onto#CompositeTermination" title="https://w3id.org/agentoscin/onto#CompositeTermination">Composite Termination</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/agentoscin/onto#EventBasedTermination" title="https://w3id.org/agentoscin/onto#EventBasedTermination">Event Based Termination</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/agentoscin/onto#RoutingTermination" title="https://w3id.org/agentoscin/onto#RoutingTermination">Routing Termination</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/agentoscin/onto#TaskCompletionTermination" title="https://w3id.org/agentoscin/onto#TaskCompletionTermination">Task Completion Termination</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/agentoscin/onto#TurnLimitTermination" title="https://w3id.org/agentoscin/onto#TurnLimitTermination">Turn Limit Termination</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/agentoscin/onto#hasSubCondition" title="https://w3id.org/agentoscin/onto#hasSubCondition">has sub condition</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/agentoscin/onto#hasTerminationCondition" title="https://w3id.org/agentoscin/onto#hasTerminationCondition">has termination condition</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/agentoscin/onto#TreeOfThoughts">
+  <h3>Tree of Thoughts<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/agentoscin/onto#TreeOfThoughts</p>
+  <div class="comment">
+   <span class="markdown">Reasoning pattern that explores several alternative reasoning branches and selects among them.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/agentoscin/onto#ReasoningPattern" title="https://w3id.org/agentoscin/onto#ReasoningPattern">Reasoning Pattern</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/agentoscin/onto#TurnLimitTermination">
+  <h3>Turn Limit Termination<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/agentoscin/onto#TurnLimitTermination</p>
+  <div class="comment">
+   <span class="markdown">Termination condition that ends execution once a maximum number of turns is reached.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/agentoscin/onto#TerminationCondition" title="https://w3id.org/agentoscin/onto#TerminationCondition">Termination Condition</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/agentoscin/onto#hasMaxTurns" title="https://w3id.org/agentoscin/onto#hasMaxTurns">has max turns</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/agentoscin/onto#CompositeTermination" title="https://w3id.org/agentoscin/onto#CompositeTermination">Composite Termination</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/agentoscin/onto#EventBasedTermination" title="https://w3id.org/agentoscin/onto#EventBasedTermination">Event Based Termination</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/agentoscin/onto#RoutingTermination" title="https://w3id.org/agentoscin/onto#RoutingTermination">Routing Termination</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/agentoscin/onto#TaskCompletionTermination" title="https://w3id.org/agentoscin/onto#TaskCompletionTermination">Task Completion Termination</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/agentoscin/onto#Unspecified">
+  <h3>Unspecified<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/agentoscin/onto#Unspecified</p>
+  <div class="comment">
+   <span class="markdown">Placeholder reasoning pattern used when the source system does not state which reasoning strategy an agent follows.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/agentoscin/onto#ReasoningPattern" title="https://w3id.org/agentoscin/onto#ReasoningPattern">Reasoning Pattern</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+ <h3 id="properties" class="list">Object Properties</h3>
+ <ul class="hlist">
+  <li><a href="#https://w3id.org/agentoscin/onto#bindsMemory" title="https://w3id.org/agentoscin/onto#bindsMemory">binds memory</a></li>
+  <li><a href="#https://w3id.org/agentoscin/onto#containsAgent" title="https://w3id.org/agentoscin/onto#containsAgent"> <span>contains agent</span> </a></li>
+  <li><a href="#https://w3id.org/agentoscin/onto#containsOrchestration" title="https://w3id.org/agentoscin/onto#containsOrchestration">contains orchestration</a></li>
+  <li><a href="#https://w3id.org/agentoscin/onto#containsTeam" title="https://w3id.org/agentoscin/onto#containsTeam">contains team</a></li>
+  <li><a href="#https://w3id.org/agentoscin/onto#dependsOn" title="https://w3id.org/agentoscin/onto#dependsOn">depends on</a></li>
+  <li><a href="#https://w3id.org/agentoscin/onto#employsCoordinationPattern" title="https://w3id.org/agentoscin/onto#employsCoordinationPattern">employs coordination pattern</a></li>
+  <li><a href="#https://w3id.org/agentoscin/onto#employsReasoningPattern" title="https://w3id.org/agentoscin/onto#employsReasoningPattern">employs reasoning pattern</a></li>
+  <li><a href="#https://w3id.org/agentoscin/onto#hasAgentMemoryBinding" title="https://w3id.org/agentoscin/onto#hasAgentMemoryBinding">has agent memory binding</a></li>
+  <li><a href="#https://w3id.org/agentoscin/onto#hasAssociatedAgent" title="https://w3id.org/agentoscin/onto#hasAssociatedAgent"> <span>has associated agent</span> </a></li>
+  <li><a href="#https://w3id.org/agentoscin/onto#hasGuardrail" title="https://w3id.org/agentoscin/onto#hasGuardrail">has guardrail</a></li>
+  <li><a href="#https://w3id.org/agentoscin/onto#hasHumanCheckpoint" title="https://w3id.org/agentoscin/onto#hasHumanCheckpoint">has human checkpoint</a></li>
+  <li><a href="#https://w3id.org/agentoscin/onto#hasMemoryBinding" title="https://w3id.org/agentoscin/onto#hasMemoryBinding">has memory binding</a></li>
+  <li><a href="#https://w3id.org/agentoscin/onto#hasOutputSchema" title="https://w3id.org/agentoscin/onto#hasOutputSchema">has output schema</a></li>
+  <li><a href="#https://w3id.org/agentoscin/onto#hasSubCondition" title="https://w3id.org/agentoscin/onto#hasSubCondition">has sub condition</a></li>
+  <li><a href="#https://w3id.org/agentoscin/onto#hasTeamMemoryBinding" title="https://w3id.org/agentoscin/onto#hasTeamMemoryBinding">has team memory binding</a></li>
+  <li><a href="#https://w3id.org/agentoscin/onto#hasTerminationCondition" title="https://w3id.org/agentoscin/onto#hasTerminationCondition">has termination condition</a></li>
+  <li><a href="#https://w3id.org/agentoscin/onto#memoryBoundTo" title="https://w3id.org/agentoscin/onto#memoryBoundTo">memory bound to</a></li>
+  <li><a href="#https://w3id.org/agentoscin/onto#orchestratesTeam" title="https://w3id.org/agentoscin/onto#orchestratesTeam">orchestrates team</a></li>
+  <li><a href="#https://w3id.org/agentoscin/onto#taskToolUsage" title="https://w3id.org/agentoscin/onto#taskToolUsage">task tool usage</a></li>
+ </ul>
+ <div class="entity" id="https://w3id.org/agentoscin/onto#bindsMemory">
+  <h3>binds memory<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/agentoscin/onto#bindsMemory</p>
+  <div class="comment">
+   <span class="markdown">Links a memory binding to the memory it binds.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/agentoscin/onto#MemoryBinding" title="https://w3id.org/agentoscin/onto#MemoryBinding">Memory Binding</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3id.org/agentic-ai/onto#Memory" target="_blank" title="http://www.w3id.org/agentic-ai/onto#Memory">Memory</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/agentoscin/onto#containsAgent">
+  <h3>contains agent<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/agentoscin/onto#containsAgent</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/agentoscin/onto#AgenticSystem" title="https://w3id.org/agentoscin/onto#AgenticSystem">Agentic System</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is also defined as
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/agentoscin/onto#containsAgent">data property</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/agentoscin/onto#containsOrchestration">
+  <h3>contains orchestration<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/agentoscin/onto#containsOrchestration</p>
+  <div class="comment">
+   <span class="markdown">Relates an agentic system to its orchestration.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/agentoscin/onto#AgenticSystem" title="https://w3id.org/agentoscin/onto#AgenticSystem">Agentic System</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/agentoscin/onto#Orchestration" title="https://w3id.org/agentoscin/onto#Orchestration">Orchestration</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/agentoscin/onto#containsTeam">
+  <h3>contains team<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/agentoscin/onto#containsTeam</p>
+  <div class="comment">
+   <span class="markdown">Relates an agentic system to a team it contains.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/agentoscin/onto#AgenticSystem" title="https://w3id.org/agentoscin/onto#AgenticSystem">Agentic System</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3id.org/agentic-ai/onto#Team" target="_blank" title="http://www.w3id.org/agentic-ai/onto#Team">Team</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/agentoscin/onto#dependsOn">
+  <h3>depends on<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/agentoscin/onto#dependsOn</p>
+  <div class="comment">
+   <span class="markdown">Indicates that one task depends on another.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3id.org/agentic-ai/onto#Task" target="_blank" title="http://www.w3id.org/agentic-ai/onto#Task">Task</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3id.org/agentic-ai/onto#Task" target="_blank" title="http://www.w3id.org/agentic-ai/onto#Task">Task</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/agentoscin/onto#employsCoordinationPattern">
+  <h3>employs coordination pattern<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/agentoscin/onto#employsCoordinationPattern</p>
+  <div class="comment">
+   <span class="markdown">Relates a team to the coordination pattern it employs.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3id.org/agentic-ai/onto#Team" target="_blank" title="http://www.w3id.org/agentic-ai/onto#Team">Team</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/agentoscin/onto#CoordinationPattern" title="https://w3id.org/agentoscin/onto#CoordinationPattern">Coordination Pattern</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/agentoscin/onto#employsReasoningPattern">
+  <h3>employs reasoning pattern<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/agentoscin/onto#employsReasoningPattern</p>
+  <div class="comment">
+   <span class="markdown">Relates an agent to the reasoning pattern it employs.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3id.org/agentic-ai/onto#LLMAgent" target="_blank" title="http://www.w3id.org/agentic-ai/onto#LLMAgent">L L M Agent</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/agentoscin/onto#ReasoningPattern" title="https://w3id.org/agentoscin/onto#ReasoningPattern">Reasoning Pattern</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/agentoscin/onto#hasAgentMemoryBinding">
+  <h3>has agent memory binding<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/agentoscin/onto#hasAgentMemoryBinding</p>
+  <div class="comment">
+   <span class="markdown">Memory binding attached to an individual agent.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/agentoscin/onto#hasMemoryBinding" title="https://w3id.org/agentoscin/onto#hasMemoryBinding">has memory binding</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3id.org/agentic-ai/onto#LLMAgent" target="_blank" title="http://www.w3id.org/agentic-ai/onto#LLMAgent">L L M Agent</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/agentoscin/onto#MemoryBinding" title="https://w3id.org/agentoscin/onto#MemoryBinding">Memory Binding</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/agentoscin/onto#hasAssociatedAgent">
+  <h3>has associated agent<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/agentoscin/onto#hasAssociatedAgent</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3id.org/agentic-ai/onto#WorkflowStep" target="_blank" title="http://www.w3id.org/agentic-ai/onto#WorkflowStep">Workflow Step</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is also defined as
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/agentoscin/onto#hasAssociatedAgent">data property</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/agentoscin/onto#hasGuardrail">
+  <h3>has guardrail<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/agentoscin/onto#hasGuardrail</p>
+  <div class="comment">
+   <span class="markdown">Associates a guardrail with a task.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3id.org/agentic-ai/onto#Task" target="_blank" title="http://www.w3id.org/agentic-ai/onto#Task">Task</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/agentoscin/onto#Guardrail" title="https://w3id.org/agentoscin/onto#Guardrail">Guardrail</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/agentoscin/onto#hasHumanCheckpoint">
+  <h3>has human checkpoint<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/agentoscin/onto#hasHumanCheckpoint</p>
+  <div class="comment">
+   <span class="markdown">Associates a human-in-the-loop checkpoint with a task.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3id.org/agentic-ai/onto#Task" target="_blank" title="http://www.w3id.org/agentic-ai/onto#Task">Task</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/agentoscin/onto#HumanCheckpoint" title="https://w3id.org/agentoscin/onto#HumanCheckpoint">Human Checkpoint</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/agentoscin/onto#hasMemoryBinding">
+  <h3>has memory binding<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/agentoscin/onto#hasMemoryBinding</p>
+  <div class="comment">
+   <span class="markdown">Associates a subject (agent, team, system) with a memory binding.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has sub-properties
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/agentoscin/onto#hasAgentMemoryBinding" title="https://w3id.org/agentoscin/onto#hasAgentMemoryBinding">has agent memory binding</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/agentoscin/onto#hasTeamMemoryBinding" title="https://w3id.org/agentoscin/onto#hasTeamMemoryBinding">has team memory binding</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3id.org/agentic-ai/onto#LLMAgent" target="_blank" title="http://www.w3id.org/agentic-ai/onto#LLMAgent">L L M Agent</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="http://www.w3id.org/agentic-ai/onto#Team" target="_blank" title="http://www.w3id.org/agentic-ai/onto#Team">Team</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#https://w3id.org/agentoscin/onto#AgenticSystem" title="https://w3id.org/agentoscin/onto#AgenticSystem">Agentic System</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/agentoscin/onto#MemoryBinding" title="https://w3id.org/agentoscin/onto#MemoryBinding">Memory Binding</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/agentoscin/onto#hasOutputSchema">
+  <h3>has output schema<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/agentoscin/onto#hasOutputSchema</p>
+  <div class="comment">
+   <span class="markdown">Specifies the schema of the structured output produced by an orchestration or task.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3id.org/agentic-ai/onto#Task" target="_blank" title="http://www.w3id.org/agentic-ai/onto#Task">Task</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#https://w3id.org/agentoscin/onto#Orchestration" title="https://w3id.org/agentoscin/onto#Orchestration">Orchestration</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/agentoscin/onto#Schema" title="https://w3id.org/agentoscin/onto#Schema">Schema</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/agentoscin/onto#hasSubCondition">
+  <h3>has sub condition<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/agentoscin/onto#hasSubCondition</p>
+  <div class="comment">
+   <span class="markdown">A sub-condition combined within a composite termination condition.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/agentoscin/onto#CompositeTermination" title="https://w3id.org/agentoscin/onto#CompositeTermination">Composite Termination</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/agentoscin/onto#TerminationCondition" title="https://w3id.org/agentoscin/onto#TerminationCondition">Termination Condition</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/agentoscin/onto#hasTeamMemoryBinding">
+  <h3>has team memory binding<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/agentoscin/onto#hasTeamMemoryBinding</p>
+  <div class="comment">
+   <span class="markdown">Memory binding attached to a team.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/agentoscin/onto#hasMemoryBinding" title="https://w3id.org/agentoscin/onto#hasMemoryBinding">has memory binding</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3id.org/agentic-ai/onto#Team" target="_blank" title="http://www.w3id.org/agentic-ai/onto#Team">Team</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/agentoscin/onto#MemoryBinding" title="https://w3id.org/agentoscin/onto#MemoryBinding">Memory Binding</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/agentoscin/onto#hasTerminationCondition">
+  <h3>has termination condition<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/agentoscin/onto#hasTerminationCondition</p>
+  <div class="comment">
+   <span class="markdown">Relates a team to a termination condition that ends its execution.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3id.org/agentic-ai/onto#Team" target="_blank" title="http://www.w3id.org/agentic-ai/onto#Team">Team</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/agentoscin/onto#TerminationCondition" title="https://w3id.org/agentoscin/onto#TerminationCondition">Termination Condition</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/agentoscin/onto#memoryBoundTo">
+  <h3>memory bound to<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/agentoscin/onto#memoryBoundTo</p>
+  <div class="comment">
+   <span class="markdown">Links a memory binding to the agent, team, or system that owns it.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/agentoscin/onto#MemoryBinding" title="https://w3id.org/agentoscin/onto#MemoryBinding">Memory Binding</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3id.org/agentic-ai/onto#LLMAgent" target="_blank" title="http://www.w3id.org/agentic-ai/onto#LLMAgent">L L M Agent</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="http://www.w3id.org/agentic-ai/onto#Team" target="_blank" title="http://www.w3id.org/agentic-ai/onto#Team">Team</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#https://w3id.org/agentoscin/onto#AgenticSystem" title="https://w3id.org/agentoscin/onto#AgenticSystem">Agentic System</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/agentoscin/onto#orchestratesTeam">
+  <h3>orchestrates team<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/agentoscin/onto#orchestratesTeam</p>
+  <div class="comment">
+   <span class="markdown">Relates an orchestration to the team it orchestrates.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/agentoscin/onto#Orchestration" title="https://w3id.org/agentoscin/onto#Orchestration">Orchestration</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3id.org/agentic-ai/onto#Team" target="_blank" title="http://www.w3id.org/agentic-ai/onto#Team">Team</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/agentoscin/onto#taskToolUsage">
+  <h3>task tool usage<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/agentoscin/onto#taskToolUsage</p>
+  <div class="comment">
+   <span class="markdown">A tool used in the execution of a task.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3id.org/agentic-ai/onto#toolUsage" target="_blank" title="http://www.w3id.org/agentic-ai/onto#toolUsage">tool Usage</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3id.org/agentic-ai/onto#Task" target="_blank" title="http://www.w3id.org/agentic-ai/onto#Task">Task</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3id.org/agentic-ai/onto#Tool" target="_blank" title="http://www.w3id.org/agentic-ai/onto#Tool">Tool</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+ <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+ <ul class="hlist">
+  <li><a href="#https://w3id.org/agentoscin/onto#agentType" title="https://w3id.org/agentoscin/onto#agentType">agent type</a></li>
+  <li><a href="#https://w3id.org/agentoscin/onto#callsCrew" title="https://w3id.org/agentoscin/onto#callsCrew">calls crew</a></li>
+  <li><a href="#https://w3id.org/agentoscin/onto#containsAgent" title="https://w3id.org/agentoscin/onto#containsAgent"> <span>contains agent</span> </a></li>
+  <li><a href="#https://w3id.org/agentoscin/onto#hasAggregationCombinator" title="https://w3id.org/agentoscin/onto#hasAggregationCombinator">has aggregation combinator</a></li>
+  <li><a href="#https://w3id.org/agentoscin/onto#hasAssociatedAgent" title="https://w3id.org/agentoscin/onto#hasAssociatedAgent"> <span>has associated agent</span> </a></li>
+  <li><a href="#https://w3id.org/agentoscin/onto#hasCheckpointPosition" title="https://w3id.org/agentoscin/onto#hasCheckpointPosition">has checkpoint position</a></li>
+  <li><a href="#https://w3id.org/agentoscin/onto#hasCheckpointType" title="https://w3id.org/agentoscin/onto#hasCheckpointType">has checkpoint type</a></li>
+  <li><a href="#https://w3id.org/agentoscin/onto#hasDecoratorArgument" title="https://w3id.org/agentoscin/onto#hasDecoratorArgument">has decorator argument</a></li>
+  <li><a href="#https://w3id.org/agentoscin/onto#hasDelegationStrategy" title="https://w3id.org/agentoscin/onto#hasDelegationStrategy">has delegation strategy</a></li>
+  <li><a href="#https://w3id.org/agentoscin/onto#hasDependencyType" title="https://w3id.org/agentoscin/onto#hasDependencyType">has dependency type</a></li>
+  <li><a href="#https://w3id.org/agentoscin/onto#hasDirectiveFunction" title="https://w3id.org/agentoscin/onto#hasDirectiveFunction">has directive function</a></li>
+  <li><a href="#https://w3id.org/agentoscin/onto#hasEdgeMapping" title="https://w3id.org/agentoscin/onto#hasEdgeMapping">has edge mapping</a></li>
+  <li><a href="#https://w3id.org/agentoscin/onto#hasExpectedOutput" title="https://w3id.org/agentoscin/onto#hasExpectedOutput">has expected output</a></li>
+  <li><a href="#https://w3id.org/agentoscin/onto#hasGuardrailType" title="https://w3id.org/agentoscin/onto#hasGuardrailType">has guardrail type</a></li>
+  <li><a href="#https://w3id.org/agentoscin/onto#hasImplementationReference" title="https://w3id.org/agentoscin/onto#hasImplementationReference">has implementation reference</a></li>
+  <li><a href="#https://w3id.org/agentoscin/onto#hasInputSchema" title="https://w3id.org/agentoscin/onto#hasInputSchema">has input schema</a></li>
+  <li><a href="#https://w3id.org/agentoscin/onto#hasMaxReasoningAttempts" title="https://w3id.org/agentoscin/onto#hasMaxReasoningAttempts">has max reasoning attempts</a></li>
+  <li><a href="#https://w3id.org/agentoscin/onto#hasMaxRetries" title="https://w3id.org/agentoscin/onto#hasMaxRetries">has max retries</a></li>
+  <li><a href="#https://w3id.org/agentoscin/onto#hasMaxTurns" title="https://w3id.org/agentoscin/onto#hasMaxTurns">has max turns</a></li>
+  <li><a href="#https://w3id.org/agentoscin/onto#hasMemoryScope" title="https://w3id.org/agentoscin/onto#hasMemoryScope">has memory scope</a></li>
+  <li><a href="#https://w3id.org/agentoscin/onto#hasOperator" title="https://w3id.org/agentoscin/onto#hasOperator">has operator</a></li>
+  <li><a href="#https://w3id.org/agentoscin/onto#hasPersistenceScope" title="https://w3id.org/agentoscin/onto#hasPersistenceScope">has persistence scope</a></li>
+  <li><a href="#https://w3id.org/agentoscin/onto#hasReasoningEnabled" title="https://w3id.org/agentoscin/onto#hasReasoningEnabled">has reasoning enabled</a></li>
+  <li><a href="#https://w3id.org/agentoscin/onto#hasReasoningOrigin" title="https://w3id.org/agentoscin/onto#hasReasoningOrigin">has reasoning origin</a></li>
+  <li><a href="#https://w3id.org/agentoscin/onto#hasRoutingLogic" title="https://w3id.org/agentoscin/onto#hasRoutingLogic">has routing logic</a></li>
+  <li><a href="#https://w3id.org/agentoscin/onto#hasSchemaDefinition" title="https://w3id.org/agentoscin/onto#hasSchemaDefinition">has schema definition</a></li>
+  <li><a href="#https://w3id.org/agentoscin/onto#hasSourceAttribute" title="https://w3id.org/agentoscin/onto#hasSourceAttribute">has source attribute</a></li>
+  <li><a href="#https://w3id.org/agentoscin/onto#hasSourceFramework" title="https://w3id.org/agentoscin/onto#hasSourceFramework">has source framework</a></li>
+  <li><a href="#https://w3id.org/agentoscin/onto#hasTriggerExpression" title="https://w3id.org/agentoscin/onto#hasTriggerExpression">has trigger expression</a></li>
+  <li><a href="#https://w3id.org/agentoscin/onto#hasValidationLogic" title="https://w3id.org/agentoscin/onto#hasValidationLogic">has validation logic</a></li>
+  <li><a href="#https://w3id.org/agentoscin/onto#isMandatory" title="https://w3id.org/agentoscin/onto#isMandatory">is mandatory</a></li>
+ </ul>
+ <div class="entity" id="https://w3id.org/agentoscin/onto#agentType">
+  <h3>agent type<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/agentoscin/onto#agentType</p>
+  <div class="comment">
+   <span class="markdown">Framework-specific classification of an agent's role in the system. Values: "GeneralPurpose", "UserProxy", "Manager".</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3id.org/agentic-ai/onto#LLMAgent" target="_blank" title="http://www.w3id.org/agentic-ai/onto#LLMAgent">L L M Agent</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/agentoscin/onto#callsCrew">
+  <h3>calls crew<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/agentoscin/onto#callsCrew</p>
+  <div class="comment">
+   <span class="markdown">Key of the team/crew invoked by this workflow step (e.g. CrewAI @listen method calling crew.kickoff()). Enables per-step crew binding through the ontology round-trip.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3id.org/agentic-ai/onto#WorkflowStep" target="_blank" title="http://www.w3id.org/agentic-ai/onto#WorkflowStep">Workflow Step</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/agentoscin/onto#containsAgent">
+  <h3>contains agent<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/agentoscin/onto#containsAgent</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3id.org/agentic-ai/onto#LLMAgent" target="_blank" title="http://www.w3id.org/agentic-ai/onto#LLMAgent">L L M Agent</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is also defined as
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/agentoscin/onto#containsAgent">object property</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/agentoscin/onto#hasAggregationCombinator">
+  <h3>has aggregation combinator<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/agentoscin/onto#hasAggregationCombinator</p>
+  <div class="comment">
+   <span class="markdown">Combinator used to aggregate multiple predecessor steps in the source decorator (e.g. CrewAI @listen(or_(step_a, step_b)) stores "or_"). Values: "or_", "and_", or empty for single-predecessor steps.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3id.org/agentic-ai/onto#WorkflowStep" target="_blank" title="http://www.w3id.org/agentic-ai/onto#WorkflowStep">Workflow Step</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/agentoscin/onto#hasAssociatedAgent">
+  <h3>has associated agent<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/agentoscin/onto#hasAssociatedAgent</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3id.org/agentic-ai/onto#LLMAgent" target="_blank" title="http://www.w3id.org/agentic-ai/onto#LLMAgent">L L M Agent</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is also defined as
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/agentoscin/onto#hasAssociatedAgent">object property</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/agentoscin/onto#hasCheckpointPosition">
+  <h3>has checkpoint position<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/agentoscin/onto#hasCheckpointPosition</p>
+  <div class="comment">
+   <span class="markdown">Point in the execution of a task at which the human checkpoint is applied (e.g. "AfterExecution").</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/agentoscin/onto#HumanCheckpoint" title="https://w3id.org/agentoscin/onto#HumanCheckpoint">Human Checkpoint</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/agentoscin/onto#hasCheckpointType">
+  <h3>has checkpoint type<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/agentoscin/onto#hasCheckpointType</p>
+  <div class="comment">
+   <span class="markdown">Kind of human interaction requested at a checkpoint. Values: "Approval", "Review", "InputRequest".</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/agentoscin/onto#HumanCheckpoint" title="https://w3id.org/agentoscin/onto#HumanCheckpoint">Human Checkpoint</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/agentoscin/onto#hasDecoratorArgument">
+  <h3>has decorator argument<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/agentoscin/onto#hasDecoratorArgument</p>
+  <div class="comment">
+   <span class="markdown">Original literal argument(s) of the framework decorator that defined this step (e.g. CrewAI @start("wait_next_run") or @listen("label")). Preserves source-level identifiers that are not method names and therefore cannot be reconstructed from the inverse of nextStep edges.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3id.org/agentic-ai/onto#WorkflowStep" target="_blank" title="http://www.w3id.org/agentic-ai/onto#WorkflowStep">Workflow Step</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/agentoscin/onto#hasDelegationStrategy">
+  <h3>has delegation strategy<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/agentoscin/onto#hasDelegationStrategy</p>
+  <div class="comment">
+   <span class="markdown">Strategy by which a task may be handed over to another agent instead of being executed by its assigned agent.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3id.org/agentic-ai/onto#Task" target="_blank" title="http://www.w3id.org/agentic-ai/onto#Task">Task</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/agentoscin/onto#hasDependencyType">
+  <h3>has dependency type<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/agentoscin/onto#hasDependencyType</p>
+  <div class="comment">
+   <span class="markdown">Nature of the dependency between two tasks. Values: "Sequential" (ordering imposed by the workflow) and "ContextProviding" (the predecessor supplies context to the successor).</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3id.org/agentic-ai/onto#Task" target="_blank" title="http://www.w3id.org/agentic-ai/onto#Task">Task</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/agentoscin/onto#hasDirectiveFunction">
+  <h3>has directive function<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/agentoscin/onto#hasDirectiveFunction</p>
+  <div class="comment">
+   <span class="markdown">Role that a prompt plays for its agent. Values: "ModelDirective" (instructs the underlying model), "OrchestratorDirective" (describes the agent to a coordinating agent), "DualDirective" (serves both purposes).</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3id.org/agentic-ai/onto#Prompt" target="_blank" title="http://www.w3id.org/agentic-ai/onto#Prompt">Prompt</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/agentoscin/onto#hasEdgeMapping">
+  <h3>has edge mapping<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/agentoscin/onto#hasEdgeMapping</p>
+  <div class="comment">
+   <span class="markdown">JSON object mapping the return labels of a conditional step to the names of the target steps (e.g. LangGraph add_conditional_edges path map). Preserves branch targets that cannot be reconstructed from nextStep edges alone.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3id.org/agentic-ai/onto#WorkflowStep" target="_blank" title="http://www.w3id.org/agentic-ai/onto#WorkflowStep">Workflow Step</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/agentoscin/onto#hasExpectedOutput">
+  <h3>has expected output<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/agentoscin/onto#hasExpectedOutput</p>
+  <div class="comment">
+   <span class="markdown">Natural-language description of the output a task is expected to produce.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3id.org/agentic-ai/onto#Task" target="_blank" title="http://www.w3id.org/agentic-ai/onto#Task">Task</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/agentoscin/onto#hasGuardrailType">
+  <h3>has guardrail type<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/agentoscin/onto#hasGuardrailType</p>
+  <div class="comment">
+   <span class="markdown">How a guardrail is implemented. Values: "FunctionBased" (a validation callable) and "LLMBased" (a natural-language validation prompt).</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/agentoscin/onto#Guardrail" title="https://w3id.org/agentoscin/onto#Guardrail">Guardrail</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/agentoscin/onto#hasImplementationReference">
+  <h3>has implementation reference<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/agentoscin/onto#hasImplementationReference</p>
+  <div class="comment">
+   <span class="markdown">Reference to the implementation of a tool, typically a module path or an "external:&lt;name&gt;" marker for imported tools that were not found in the parsed sources.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3id.org/agentic-ai/onto#Tool" target="_blank" title="http://www.w3id.org/agentic-ai/onto#Tool">Tool</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/agentoscin/onto#hasInputSchema">
+  <h3>has input schema<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/agentoscin/onto#hasInputSchema</p>
+  <div class="comment">
+   <span class="markdown">Serialized JSON Schema describing the arguments accepted by a tool.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3id.org/agentic-ai/onto#Tool" target="_blank" title="http://www.w3id.org/agentic-ai/onto#Tool">Tool</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/agentoscin/onto#hasMaxReasoningAttempts">
+  <h3>has max reasoning attempts<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/agentoscin/onto#hasMaxReasoningAttempts</p>
+  <div class="comment">
+   <span class="markdown">Upper bound on the number of reasoning attempts an agent may perform before giving up.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3id.org/agentic-ai/onto#LLMAgent" target="_blank" title="http://www.w3id.org/agentic-ai/onto#LLMAgent">L L M Agent</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/agentoscin/onto#hasMaxRetries">
+  <h3>has max retries<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/agentoscin/onto#hasMaxRetries</p>
+  <div class="comment">
+   <span class="markdown">Number of times a task may be retried when its guardrail rejects the output.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/agentoscin/onto#Guardrail" title="https://w3id.org/agentoscin/onto#Guardrail">Guardrail</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/agentoscin/onto#hasMaxTurns">
+  <h3>has max turns<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/agentoscin/onto#hasMaxTurns</p>
+  <div class="comment">
+   <span class="markdown">Maximum number of conversational turns after which execution terminates.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/agentoscin/onto#TurnLimitTermination" title="https://w3id.org/agentoscin/onto#TurnLimitTermination">Turn Limit Termination</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/agentoscin/onto#hasMemoryScope">
+  <h3>has memory scope<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/agentoscin/onto#hasMemoryScope</p>
+  <div class="comment">
+   <span class="markdown">Visibility of a memory binding. Values: "AgentPrivate" (memory owned by a single agent) and "GroupShared" (memory shared across a team).</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/agentoscin/onto#MemoryBinding" title="https://w3id.org/agentoscin/onto#MemoryBinding">Memory Binding</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/agentoscin/onto#hasOperator">
+  <h3>has operator<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/agentoscin/onto#hasOperator</p>
+  <div class="comment">
+   <span class="markdown">Logical operator combining the sub-conditions of a composite termination condition. Values: "OR", "AND".</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/agentoscin/onto#CompositeTermination" title="https://w3id.org/agentoscin/onto#CompositeTermination">Composite Termination</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/agentoscin/onto#hasPersistenceScope">
+  <h3>has persistence scope<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/agentoscin/onto#hasPersistenceScope</p>
+  <div class="comment">
+   <span class="markdown">Lifetime of a memory. Values: "ExecutionScoped" (discarded after the run) and "Persistent" (retained across runs).</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3id.org/agentic-ai/onto#Memory" target="_blank" title="http://www.w3id.org/agentic-ai/onto#Memory">Memory</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/agentoscin/onto#hasReasoningEnabled">
+  <h3>has reasoning enabled<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/agentoscin/onto#hasReasoningEnabled</p>
+  <div class="comment">
+   <span class="markdown">Whether explicit reasoning is enabled for an agent.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3id.org/agentic-ai/onto#LLMAgent" target="_blank" title="http://www.w3id.org/agentic-ai/onto#LLMAgent">L L M Agent</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/agentoscin/onto#hasReasoningOrigin">
+  <h3>has reasoning origin<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/agentoscin/onto#hasReasoningOrigin</p>
+  <div class="comment">
+   <span class="markdown">Where an agent's reasoning capability comes from. Values: "FrameworkManaged" (the framework adds a reasoning loop) and "ModelNative" (the underlying model reasons on its own).</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3id.org/agentic-ai/onto#LLMAgent" target="_blank" title="http://www.w3id.org/agentic-ai/onto#LLMAgent">L L M Agent</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/agentoscin/onto#hasRoutingLogic">
+  <h3>has routing logic<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/agentoscin/onto#hasRoutingLogic</p>
+  <div class="comment">
+   <span class="markdown">Serialized body of the routing function that decides which branch a conditional step takes.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/agentoscin/onto#ConditionalStep" title="https://w3id.org/agentoscin/onto#ConditionalStep">Conditional Step</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/agentoscin/onto#hasSchemaDefinition">
+  <h3>has schema definition<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/agentoscin/onto#hasSchemaDefinition</p>
+  <div class="comment">
+   <span class="markdown">Serialized definition of a structured-output schema, expressed as JSON Schema.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/agentoscin/onto#Schema" title="https://w3id.org/agentoscin/onto#Schema">Schema</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/agentoscin/onto#hasSourceAttribute">
+  <h3>has source attribute<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/agentoscin/onto#hasSourceAttribute</p>
+  <div class="comment">
+   <span class="markdown">Framework attribute(s) the annotated element was derived from (e.g. "role, goal, backstory", "system_message", "output_pydantic"). Enables faithful regeneration of source code from the ontology.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3id.org/agentic-ai/onto#Prompt" target="_blank" title="http://www.w3id.org/agentic-ai/onto#Prompt">Prompt</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/agentoscin/onto#hasSourceFramework">
+  <h3>has source framework<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/agentoscin/onto#hasSourceFramework</p>
+  <div class="comment">
+   <span class="markdown">Framework the agentic system was extracted from (e.g. "CrewAI", "AutoGen", "LangGraph").</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/agentoscin/onto#AgenticSystem" title="https://w3id.org/agentoscin/onto#AgenticSystem">Agentic System</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/agentoscin/onto#hasTriggerExpression">
+  <h3>has trigger expression<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/agentoscin/onto#hasTriggerExpression</p>
+  <div class="comment">
+   <span class="markdown">Expression or text whose occurrence triggers an event-based termination condition (e.g. a stop keyword in an agent message).</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/agentoscin/onto#EventBasedTermination" title="https://w3id.org/agentoscin/onto#EventBasedTermination">Event Based Termination</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/agentoscin/onto#hasValidationLogic">
+  <h3>has validation logic<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/agentoscin/onto#hasValidationLogic</p>
+  <div class="comment">
+   <span class="markdown">Validation performed by a guardrail: the name of the validation function, or the validation prompt for LLM-based guardrails.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/agentoscin/onto#Guardrail" title="https://w3id.org/agentoscin/onto#Guardrail">Guardrail</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/agentoscin/onto#isMandatory">
+  <h3>is mandatory<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/agentoscin/onto#isMandatory</p>
+  <div class="comment">
+   <span class="markdown">Whether the human checkpoint must be passed, i.e. execution cannot continue without human input.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/agentoscin/onto#HumanCheckpoint" title="https://w3id.org/agentoscin/onto#HumanCheckpoint">Human Checkpoint</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
+ <h3 id="namedindividuals" class="list">Named Individuals</h3>
+ <ul class="hlist">
+  <li><a href="#https://w3id.org/agentoscin/onto#Custom" title="https://w3id.org/agentoscin/onto#Custom">Custom</a></li>
+  <li><a href="#https://w3id.org/agentoscin/onto#Hierarchical" title="https://w3id.org/agentoscin/onto#Hierarchical">Hierarchical</a></li>
+  <li><a href="#https://w3id.org/agentoscin/onto#Network" title="https://w3id.org/agentoscin/onto#Network">Network</a></li>
+  <li><a href="#https://w3id.org/agentoscin/onto#ReActLoop" title="https://w3id.org/agentoscin/onto#ReActLoop">ReAct Loop</a></li>
+  <li><a href="#https://w3id.org/agentoscin/onto#RoundRobin" title="https://w3id.org/agentoscin/onto#RoundRobin">Round Robin</a></li>
+  <li><a href="#https://w3id.org/agentoscin/onto#SelectorBased" title="https://w3id.org/agentoscin/onto#SelectorBased">Selector Based</a></li>
+  <li><a href="#https://w3id.org/agentoscin/onto#Sequential" title="https://w3id.org/agentoscin/onto#Sequential">Sequential</a></li>
+  <li><a href="#https://w3id.org/agentoscin/onto#Swarm" title="https://w3id.org/agentoscin/onto#Swarm">Swarm</a></li>
+ </ul>
+ <div class="entity" id="https://w3id.org/agentoscin/onto#Custom">
+  <h3>Custom<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/agentoscin/onto#Custom</p>
+  <div class="comment">
+   <span class="markdown">Coordination pattern that does not match any of the predefined patterns, e.g. a framework-specific or hand-written control flow.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/agentoscin/onto#CoordinationPattern" title="https://w3id.org/agentoscin/onto#CoordinationPattern">Coordination Pattern</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/agentoscin/onto#Hierarchical">
+  <h3>Hierarchical<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/agentoscin/onto#Hierarchical</p>
+  <div class="comment">
+   <span class="markdown">Coordination pattern in which a manager agent delegates work to subordinate agents and integrates their results.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/agentoscin/onto#CoordinationPattern" title="https://w3id.org/agentoscin/onto#CoordinationPattern">Coordination Pattern</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/agentoscin/onto#Network">
+  <h3>Network<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/agentoscin/onto#Network</p>
+  <div class="comment">
+   <span class="markdown">Coordination pattern in which agents communicate peer-to-peer along a graph of connections without a central coordinator.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/agentoscin/onto#CoordinationPattern" title="https://w3id.org/agentoscin/onto#CoordinationPattern">Coordination Pattern</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/agentoscin/onto#ReActLoop">
+  <h3>ReAct Loop<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/agentoscin/onto#ReActLoop</p>
+  <div class="comment">
+   <span class="markdown">Coordination pattern in which a single agent cycles between reasoning and tool execution until it produces a final answer.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/agentoscin/onto#CoordinationPattern" title="https://w3id.org/agentoscin/onto#CoordinationPattern">Coordination Pattern</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/agentoscin/onto#RoundRobin">
+  <h3>Round Robin<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/agentoscin/onto#RoundRobin</p>
+  <div class="comment">
+   <span class="markdown">Coordination pattern in which agents take turns in a fixed cyclic order.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/agentoscin/onto#CoordinationPattern" title="https://w3id.org/agentoscin/onto#CoordinationPattern">Coordination Pattern</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/agentoscin/onto#SelectorBased">
+  <h3>Selector Based<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/agentoscin/onto#SelectorBased</p>
+  <div class="comment">
+   <span class="markdown">Coordination pattern in which a selector — typically a model — chooses which agent speaks next at each turn.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/agentoscin/onto#CoordinationPattern" title="https://w3id.org/agentoscin/onto#CoordinationPattern">Coordination Pattern</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/agentoscin/onto#Sequential">
+  <h3>Sequential<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/agentoscin/onto#Sequential</p>
+  <div class="comment">
+   <span class="markdown">Coordination pattern in which agents act one after another in a fixed order, each consuming the previous output.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/agentoscin/onto#CoordinationPattern" title="https://w3id.org/agentoscin/onto#CoordinationPattern">Coordination Pattern</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/agentoscin/onto#Swarm">
+  <h3>Swarm<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/agentoscin/onto#Swarm</p>
+  <div class="comment">
+   <span class="markdown">Coordination pattern in which agents hand off control to one another dynamically, based on which agent is best suited to continue.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/agentoscin/onto#CoordinationPattern" title="https://w3id.org/agentoscin/onto#CoordinationPattern">Coordination Pattern</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals <br/>
+</div>
+</div>

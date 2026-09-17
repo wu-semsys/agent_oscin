@@ -1,0 +1,1945 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3id.org/agentic-ai/onto", "http://www.w3.org/2000/01/rdf-schema", "http://w3id.org/beam/core", "http://www.w3.org/2001/XMLSchema", "https://w3id.org/agentoscin/onto" ],
+    "title" : {
+      "undefined" : "AgentOSCIn — Extension of the Agentic AI Ontology"
+    },
+    "iri" : "http://www.semanticweb.org/danilippmann/ontologies/2026/3/agentoscin",
+    "author" : [ "Dani Lippmann" ],
+    "description" : {
+      "en" : "An Extension of agentO adding agentic-system orchestration, coordination & reasoning patterns, memory bindings, guardrails, human checkpoints, termination conditions, schemas, and framework-mapping properties."
+    },
+    "labels" : {
+      "undefined" : "AgentOSCIN Ontology"
+    },
+    "other" : {
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "https://creativecommons.org/licenses/by/4.0/",
+        "type" : "iri"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Dani Lippmann",
+        "type" : "label"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Andreas Ekelhart",
+        "type" : "label"
+      }, {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Fajar J. Ekaputra",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "undefined",
+        "value" : "AgentOSCIn — Extension of the Agentic AI Ontology",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "3",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "14",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "15",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "16",
+    "type" : "owl:Class"
+  }, {
+    "id" : "23",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "24",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "28",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "29",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "31",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "32",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "33",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "34",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "21",
+    "type" : "owl:Class"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "42",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "43",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "37",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "45",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "46",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "9",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "47",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "48",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "51",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "52",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "50",
+    "type" : "owl:Class"
+  }, {
+    "id" : "49",
+    "type" : "owl:Class"
+  }, {
+    "id" : "41",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "77",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "62",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "78",
+    "type" : "owl:Class"
+  }, {
+    "id" : "19",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "79",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "39",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "80",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "59",
+    "type" : "owl:Class"
+  }, {
+    "id" : "57",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "87",
+    "type" : "owl:Class"
+  }, {
+    "id" : "22",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "26",
+    "type" : "owl:Class"
+  }, {
+    "id" : "88",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "89",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "90",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "85",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "91",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "92",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "83",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "73",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "72",
+    "type" : "owl:Class"
+  }, {
+    "id" : "104",
+    "type" : "owl:Class"
+  }, {
+    "id" : "18",
+    "type" : "owl:Class"
+  }, {
+    "id" : "36",
+    "type" : "owl:Class"
+  }, {
+    "id" : "55",
+    "type" : "owl:Class"
+  }, {
+    "id" : "13",
+    "type" : "owl:Class"
+  }, {
+    "id" : "30",
+    "type" : "owl:Class"
+  }, {
+    "id" : "65",
+    "type" : "owl:Class"
+  }, {
+    "id" : "107",
+    "type" : "owl:Class"
+  }, {
+    "id" : "53",
+    "type" : "owl:Class"
+  }, {
+    "id" : "69",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "3",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "https://w3id.org/agentoscin/onto#ConditionalStep",
+    "baseIri" : "https://w3id.org/agentoscin/onto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ConditionalStep",
+      "undefined" : "Conditional Step"
+    },
+    "comment" : {
+      "undefined" : "A workflow step that branches based on routing logic."
+    },
+    "attributes" : [ "external" ],
+    "id" : "10",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "https://w3id.org/agentoscin/onto#CoordinationPattern",
+    "baseIri" : "https://w3id.org/agentoscin/onto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CoordinationPattern",
+      "undefined" : "Coordination Pattern"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/agentoscin/onto#RoundRobin",
+      "baseIri" : "https://w3id.org/agentoscin/onto",
+      "comment" : {
+        "undefined" : "Coordination pattern in which agents take turns in a fixed cyclic order."
+      },
+      "labels" : {
+        "IRI-based" : "RoundRobin",
+        "undefined" : "Round Robin"
+      }
+    }, {
+      "iri" : "https://w3id.org/agentoscin/onto#Custom",
+      "baseIri" : "https://w3id.org/agentoscin/onto",
+      "comment" : {
+        "undefined" : "Coordination pattern that does not match any of the predefined patterns, e.g. a framework-specific or hand-written control flow."
+      },
+      "labels" : {
+        "IRI-based" : "Custom",
+        "undefined" : "Custom"
+      }
+    }, {
+      "iri" : "https://w3id.org/agentoscin/onto#Sequential",
+      "baseIri" : "https://w3id.org/agentoscin/onto",
+      "comment" : {
+        "undefined" : "Coordination pattern in which agents act one after another in a fixed order, each consuming the previous output."
+      },
+      "labels" : {
+        "IRI-based" : "Sequential",
+        "undefined" : "Sequential"
+      }
+    }, {
+      "iri" : "https://w3id.org/agentoscin/onto#Network",
+      "baseIri" : "https://w3id.org/agentoscin/onto",
+      "comment" : {
+        "undefined" : "Coordination pattern in which agents communicate peer-to-peer along a graph of connections without a central coordinator."
+      },
+      "labels" : {
+        "IRI-based" : "Network",
+        "undefined" : "Network"
+      }
+    }, {
+      "iri" : "https://w3id.org/agentoscin/onto#SelectorBased",
+      "baseIri" : "https://w3id.org/agentoscin/onto",
+      "comment" : {
+        "undefined" : "Coordination pattern in which a selector — typically a model — chooses which agent speaks next at each turn."
+      },
+      "labels" : {
+        "IRI-based" : "SelectorBased",
+        "undefined" : "Selector Based"
+      }
+    }, {
+      "iri" : "https://w3id.org/agentoscin/onto#Hierarchical",
+      "baseIri" : "https://w3id.org/agentoscin/onto",
+      "comment" : {
+        "undefined" : "Coordination pattern in which a manager agent delegates work to subordinate agents and integrates their results."
+      },
+      "labels" : {
+        "IRI-based" : "Hierarchical",
+        "undefined" : "Hierarchical"
+      }
+    }, {
+      "iri" : "https://w3id.org/agentoscin/onto#Swarm",
+      "baseIri" : "https://w3id.org/agentoscin/onto",
+      "comment" : {
+        "undefined" : "Coordination pattern in which agents hand off control to one another dynamically, based on which agent is best suited to continue."
+      },
+      "labels" : {
+        "IRI-based" : "Swarm",
+        "undefined" : "Swarm"
+      }
+    }, {
+      "iri" : "https://w3id.org/agentoscin/onto#ReActLoop",
+      "baseIri" : "https://w3id.org/agentoscin/onto",
+      "comment" : {
+        "undefined" : "Coordination pattern in which a single agent cycles between reasoning and tool execution until it produces a final answer."
+      },
+      "labels" : {
+        "IRI-based" : "ReActLoop",
+        "undefined" : "ReAct Loop"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "A pattern of coordination among agents in a team (e.g. sequential, hierarchical, swarm)."
+    },
+    "attributes" : [ "external" ],
+    "id" : "11"
+  }, {
+    "iri" : "https://w3id.org/agentoscin/onto#Unspecified",
+    "baseIri" : "https://w3id.org/agentoscin/onto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Unspecified",
+      "undefined" : "Unspecified"
+    },
+    "comment" : {
+      "undefined" : "Placeholder reasoning pattern used when the source system does not state which reasoning strategy an agent follows."
+    },
+    "attributes" : [ "external" ],
+    "id" : "12",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "14",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "15",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3id.org/agentic-ai/onto#Tool",
+    "baseIri" : "http://www.w3id.org/agentic-ai/onto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Tool"
+    },
+    "attributes" : [ "external" ],
+    "id" : "16"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "23",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "24",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "28",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://w3id.org/agentoscin/onto#EventBasedTermination",
+    "baseIri" : "https://w3id.org/agentoscin/onto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "EventBasedTermination",
+      "undefined" : "Event Based Termination"
+    },
+    "comment" : {
+      "undefined" : "Termination condition that fires when a designated event occurs, e.g. a stop expression appearing in an agent message."
+    },
+    "attributes" : [ "external" ],
+    "id" : "29",
+    "superClasses" : [ "30" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "2",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "31",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "32",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "33",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "34",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3id.org/agentic-ai/onto#Prompt",
+    "baseIri" : "http://www.w3id.org/agentic-ai/onto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Prompt"
+    },
+    "attributes" : [ "external" ],
+    "id" : "21"
+  }, {
+    "iri" : "http://www.w3id.org/agentic-ai/onto#WorkflowStep",
+    "baseIri" : "http://www.w3id.org/agentic-ai/onto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "WorkflowStep"
+    },
+    "subClasses" : [ "10" ],
+    "attributes" : [ "external" ],
+    "id" : "8"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "42",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3id.org/agentic-ai/onto#LLMAgent",
+    "baseIri" : "http://www.w3id.org/agentic-ai/onto",
+    "id" : "43"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "37",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "45",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "46",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "9",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3id.org/agentic-ai/onto#LLMAgent",
+    "baseIri" : "http://www.w3id.org/agentic-ai/onto",
+    "id" : "47"
+  }, {
+    "instances" : 0,
+    "union" : [ "49", "18", "50" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "48"
+  }, {
+    "instances" : 0,
+    "union" : [ "49", "18", "50" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "51"
+  }, {
+    "iri" : "https://w3id.org/agentoscin/onto#ChainOfThought",
+    "baseIri" : "https://w3id.org/agentoscin/onto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ChainOfThought",
+      "undefined" : "Chain of Thought"
+    },
+    "comment" : {
+      "undefined" : "Reasoning pattern in which an agent produces explicit intermediate reasoning steps before answering."
+    },
+    "attributes" : [ "external" ],
+    "id" : "52",
+    "superClasses" : [ "13" ]
+  }, {
+    "instances" : 0,
+    "union" : [ "26", "53" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "5"
+  }, {
+    "iri" : "http://www.w3id.org/agentic-ai/onto#LLMAgent",
+    "baseIri" : "http://www.w3id.org/agentic-ai/onto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LLMAgent"
+    },
+    "attributes" : [ "external" ],
+    "id" : "50"
+  }, {
+    "iri" : "http://www.w3id.org/agentic-ai/onto#Team",
+    "baseIri" : "http://www.w3id.org/agentic-ai/onto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Team"
+    },
+    "subClasses" : [ "53" ],
+    "attributes" : [ "external" ],
+    "id" : "49"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "41",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "77",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "62",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://w3id.org/agentoscin/onto#TaskCompletionTermination",
+    "baseIri" : "https://w3id.org/agentoscin/onto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TaskCompletionTermination",
+      "undefined" : "Task Completion Termination"
+    },
+    "comment" : {
+      "undefined" : "Termination condition satisfied when the assigned task is completed."
+    },
+    "attributes" : [ "external" ],
+    "id" : "78",
+    "superClasses" : [ "30" ]
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "19",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "79",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "39",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "80",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://w3id.org/agentoscin/onto#ReAct",
+    "baseIri" : "https://w3id.org/agentoscin/onto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ReAct",
+      "undefined" : "ReAct"
+    },
+    "comment" : {
+      "undefined" : "Reasoning pattern interleaving reasoning steps with tool calls and observations (Reason + Act)."
+    },
+    "attributes" : [ "external" ],
+    "id" : "59",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "https://w3id.org/agentoscin/onto#ReflectionLoop",
+    "baseIri" : "https://w3id.org/agentoscin/onto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ReflectionLoop",
+      "undefined" : "Reflection Loop"
+    },
+    "comment" : {
+      "undefined" : "Reasoning pattern in which an agent iteratively critiques and revises its own output."
+    },
+    "attributes" : [ "external" ],
+    "id" : "57",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "https://w3id.org/agentoscin/onto#Guardrail",
+    "baseIri" : "https://w3id.org/agentoscin/onto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Guardrail",
+      "undefined" : "Guardrail"
+    },
+    "comment" : {
+      "undefined" : "A validation, safety, or policy check applied to a task."
+    },
+    "attributes" : [ "external" ],
+    "id" : "1"
+  }, {
+    "iri" : "https://w3id.org/agentoscin/onto#TurnLimitTermination",
+    "baseIri" : "https://w3id.org/agentoscin/onto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TurnLimitTermination",
+      "undefined" : "Turn Limit Termination"
+    },
+    "comment" : {
+      "undefined" : "Termination condition that ends execution once a maximum number of turns is reached."
+    },
+    "attributes" : [ "external" ],
+    "id" : "87",
+    "superClasses" : [ "30" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "22",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://w3id.org/agentoscin/onto#Schema",
+    "baseIri" : "https://w3id.org/agentoscin/onto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Schema",
+      "undefined" : "Schema"
+    },
+    "comment" : {
+      "undefined" : "A structured-output schema (e.g. JSON Schema, Pydantic model)."
+    },
+    "attributes" : [ "external" ],
+    "id" : "6"
+  }, {
+    "iri" : "http://www.w3id.org/agentic-ai/onto#Task",
+    "baseIri" : "http://www.w3id.org/agentic-ai/onto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Task"
+    },
+    "attributes" : [ "external" ],
+    "id" : "26"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "88",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "89",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "90",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "85",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "91",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "92",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "83",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "73",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://w3id.org/agentoscin/onto#CompositeTermination",
+    "baseIri" : "https://w3id.org/agentoscin/onto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CompositeTermination",
+      "undefined" : "Composite Termination"
+    },
+    "comment" : {
+      "undefined" : "A termination condition built by combining other conditions via a logical operator."
+    },
+    "attributes" : [ "external" ],
+    "id" : "72",
+    "superClasses" : [ "30" ]
+  }, {
+    "iri" : "https://w3id.org/agentoscin/onto#RoutingTermination",
+    "baseIri" : "https://w3id.org/agentoscin/onto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RoutingTermination",
+      "undefined" : "Routing Termination"
+    },
+    "comment" : {
+      "undefined" : "Termination condition under which execution ends because the routing logic reaches a terminal branch."
+    },
+    "attributes" : [ "external" ],
+    "id" : "104",
+    "superClasses" : [ "30" ]
+  }, {
+    "iri" : "https://w3id.org/agentoscin/onto#AgenticSystem",
+    "baseIri" : "https://w3id.org/agentoscin/onto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AgenticSystem",
+      "undefined" : "Agentic System"
+    },
+    "comment" : {
+      "undefined" : "A complete agentic AI system encompassing one or more agents, teams, and an orchestration."
+    },
+    "attributes" : [ "external" ],
+    "id" : "18",
+    "superClasses" : [ "107" ]
+  }, {
+    "iri" : "https://w3id.org/agentoscin/onto#HumanCheckpoint",
+    "baseIri" : "https://w3id.org/agentoscin/onto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "HumanCheckpoint",
+      "undefined" : "Human Checkpoint"
+    },
+    "comment" : {
+      "undefined" : "A human-in-the-loop checkpoint inserted into task execution."
+    },
+    "attributes" : [ "external" ],
+    "id" : "36"
+  }, {
+    "iri" : "https://w3id.org/agentoscin/onto#TreeOfThoughts",
+    "baseIri" : "https://w3id.org/agentoscin/onto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TreeOfThoughts",
+      "undefined" : "Tree of Thoughts"
+    },
+    "comment" : {
+      "undefined" : "Reasoning pattern that explores several alternative reasoning branches and selects among them."
+    },
+    "attributes" : [ "external" ],
+    "id" : "55",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "https://w3id.org/agentoscin/onto#ReasoningPattern",
+    "baseIri" : "https://w3id.org/agentoscin/onto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ReasoningPattern",
+      "undefined" : "Reasoning Pattern"
+    },
+    "subClasses" : [ "12", "55", "59", "57", "52" ],
+    "comment" : {
+      "undefined" : "A reasoning strategy adopted by an agent (e.g. chain-of-thought, ReAct, tree-of-thoughts)."
+    },
+    "attributes" : [ "external" ],
+    "id" : "13"
+  }, {
+    "iri" : "https://w3id.org/agentoscin/onto#TerminationCondition",
+    "baseIri" : "https://w3id.org/agentoscin/onto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TerminationCondition",
+      "undefined" : "Termination Condition"
+    },
+    "subClasses" : [ "72", "104", "87", "29", "78" ],
+    "comment" : {
+      "undefined" : "A condition under which a team's execution terminates."
+    },
+    "attributes" : [ "external" ],
+    "id" : "30"
+  }, {
+    "iri" : "https://w3id.org/agentoscin/onto#MemoryBinding",
+    "baseIri" : "https://w3id.org/agentoscin/onto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MemoryBinding",
+      "undefined" : "Memory Binding"
+    },
+    "comment" : {
+      "undefined" : "A reified link between a memory and the agent, team, or system that uses it, with scope and configuration."
+    },
+    "attributes" : [ "external" ],
+    "id" : "65"
+  }, {
+    "iri" : "http://w3id.org/beam/core#System",
+    "baseIri" : "http://w3id.org/beam/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "System"
+    },
+    "subClasses" : [ "18" ],
+    "attributes" : [ "external" ],
+    "id" : "107"
+  }, {
+    "iri" : "https://w3id.org/agentoscin/onto#Orchestration",
+    "baseIri" : "https://w3id.org/agentoscin/onto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Orchestration",
+      "undefined" : "Orchestration"
+    },
+    "comment" : {
+      "undefined" : "A controller that orchestrates one or more teams to execute a workflow."
+    },
+    "attributes" : [ "external" ],
+    "id" : "53",
+    "superClasses" : [ "49" ]
+  }, {
+    "iri" : "http://www.w3id.org/agentic-ai/onto#Memory",
+    "baseIri" : "http://www.w3id.org/agentic-ai/onto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Memory"
+    },
+    "attributes" : [ "external" ],
+    "id" : "69"
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "4",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "7",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "17",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "20",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "25",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "35",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "38",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "40",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "44",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "54",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "56",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "58",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "60",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "61",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "63",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "64",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "68",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "70",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "71",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "74",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "75",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "76",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "81",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "82",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "84",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "86",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "93",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "94",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "95",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "96",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "97",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "98",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "99",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "27",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "100",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "101",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "102",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "103",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "105",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "106",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "108",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "109",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "110",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "111",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "112",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "113",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "114",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "115",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "116",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "117",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "118",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "119",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "120",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "121",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "67",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "122",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "123",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "124",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "125",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "126",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "127",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "128",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "129",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "130",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "131",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "66",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "132",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "133",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "134",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "135",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "136",
+    "type" : "owl:objectProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "https://w3id.org/agentoscin/onto#hasGuardrailType",
+    "baseIri" : "https://w3id.org/agentoscin/onto",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "hasGuardrailType",
+      "undefined" : "has guardrail type"
+    },
+    "domain" : "1",
+    "comment" : {
+      "undefined" : "How a guardrail is implemented. Values: \"FunctionBased\" (a validation callable) and \"LLMBased\" (a natural-language validation prompt)."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "0"
+  }, {
+    "iri" : "https://w3id.org/agentoscin/onto#hasOutputSchema",
+    "baseIri" : "https://w3id.org/agentoscin/onto",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "hasOutputSchema",
+      "undefined" : "has output schema"
+    },
+    "domain" : "5",
+    "comment" : {
+      "undefined" : "Specifies the schema of the structured output produced by an orchestration or task."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "4"
+  }, {
+    "iri" : "https://w3id.org/agentoscin/onto#hasAggregationCombinator",
+    "baseIri" : "https://w3id.org/agentoscin/onto",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "hasAggregationCombinator",
+      "undefined" : "has aggregation combinator"
+    },
+    "domain" : "8",
+    "comment" : {
+      "undefined" : "Combinator used to aggregate multiple predecessor steps in the source decorator (e.g. CrewAI @listen(or_(step_a, step_b)) stores \"or_\"). Values: \"or_\", \"and_\", or empty for single-predecessor steps."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "7"
+  }, {
+    "iri" : "https://w3id.org/agentoscin/onto#containsAgent",
+    "baseIri" : "https://w3id.org/agentoscin/onto",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "containsAgent",
+      "undefined" : "contains agent"
+    },
+    "domain" : "18",
+    "comment" : {
+      "undefined" : "Relates an agentic system to an agent it contains."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "17"
+  }, {
+    "iri" : "https://w3id.org/agentoscin/onto#hasSourceAttribute",
+    "baseIri" : "https://w3id.org/agentoscin/onto",
+    "range" : "22",
+    "label" : {
+      "IRI-based" : "hasSourceAttribute",
+      "undefined" : "has source attribute"
+    },
+    "domain" : "21",
+    "comment" : {
+      "undefined" : "Framework attribute(s) the annotated element was derived from (e.g. \"role, goal, backstory\", \"system_message\", \"output_pydantic\"). Enables faithful regeneration of source code from the ontology."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "20"
+  }, {
+    "iri" : "https://w3id.org/agentoscin/onto#taskToolUsage",
+    "baseIri" : "https://w3id.org/agentoscin/onto",
+    "range" : "16",
+    "label" : {
+      "IRI-based" : "taskToolUsage",
+      "undefined" : "task tool usage"
+    },
+    "superproperty" : [ "27" ],
+    "domain" : "26",
+    "comment" : {
+      "undefined" : "A tool used in the execution of a task."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "25"
+  }, {
+    "iri" : "https://w3id.org/agentoscin/onto#hasCheckpointType",
+    "baseIri" : "https://w3id.org/agentoscin/onto",
+    "range" : "37",
+    "label" : {
+      "IRI-based" : "hasCheckpointType",
+      "undefined" : "has checkpoint type"
+    },
+    "domain" : "36",
+    "comment" : {
+      "undefined" : "Kind of human interaction requested at a checkpoint. Values: \"Approval\", \"Review\", \"InputRequest\"."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "35"
+  }, {
+    "iri" : "https://w3id.org/agentoscin/onto#hasTriggerExpression",
+    "baseIri" : "https://w3id.org/agentoscin/onto",
+    "range" : "39",
+    "label" : {
+      "IRI-based" : "hasTriggerExpression",
+      "undefined" : "has trigger expression"
+    },
+    "domain" : "29",
+    "comment" : {
+      "undefined" : "Expression or text whose occurrence triggers an event-based termination condition (e.g. a stop keyword in an agent message)."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "38"
+  }, {
+    "iri" : "https://w3id.org/agentoscin/onto#hasAssociatedAgent",
+    "baseIri" : "https://w3id.org/agentoscin/onto",
+    "range" : "41",
+    "label" : {
+      "IRI-based" : "hasAssociatedAgent",
+      "undefined" : "has associated agent"
+    },
+    "domain" : "8",
+    "comment" : {
+      "undefined" : "Links a workflow step to the agent that executes it (e.g. a LangGraph node function implemented by a specific LLMAgent)."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "40"
+  }, {
+    "iri" : "https://w3id.org/agentoscin/onto#hasDirectiveFunction",
+    "baseIri" : "https://w3id.org/agentoscin/onto",
+    "range" : "33",
+    "label" : {
+      "IRI-based" : "hasDirectiveFunction",
+      "undefined" : "has directive function"
+    },
+    "domain" : "21",
+    "comment" : {
+      "undefined" : "Role that a prompt plays for its agent. Values: \"ModelDirective\" (instructs the underlying model), \"OrchestratorDirective\" (describes the agent to a coordinating agent), \"DualDirective\" (serves both purposes)."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "44"
+  }, {
+    "range" : "13",
+    "domain" : "55",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "54"
+  }, {
+    "range" : "13",
+    "domain" : "57",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "56"
+  }, {
+    "range" : "13",
+    "domain" : "59",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "58"
+  }, {
+    "iri" : "https://w3id.org/agentoscin/onto#hasDecoratorArgument",
+    "baseIri" : "https://w3id.org/agentoscin/onto",
+    "range" : "32",
+    "label" : {
+      "IRI-based" : "hasDecoratorArgument",
+      "undefined" : "has decorator argument"
+    },
+    "domain" : "8",
+    "comment" : {
+      "undefined" : "Original literal argument(s) of the framework decorator that defined this step (e.g. CrewAI @start(\"wait_next_run\") or @listen(\"label\")). Preserves source-level identifiers that are not method names and therefore cannot be reconstructed from the inverse of nextStep edges."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "60"
+  }, {
+    "iri" : "https://w3id.org/agentoscin/onto#hasValidationLogic",
+    "baseIri" : "https://w3id.org/agentoscin/onto",
+    "range" : "62",
+    "label" : {
+      "IRI-based" : "hasValidationLogic",
+      "undefined" : "has validation logic"
+    },
+    "domain" : "1",
+    "comment" : {
+      "undefined" : "Validation performed by a guardrail: the name of the validation function, or the validation prompt for LLM-based guardrails."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "61"
+  }, {
+    "iri" : "https://w3id.org/agentoscin/onto#hasImplementationReference",
+    "baseIri" : "https://w3id.org/agentoscin/onto",
+    "range" : "28",
+    "label" : {
+      "IRI-based" : "hasImplementationReference",
+      "undefined" : "has implementation reference"
+    },
+    "domain" : "16",
+    "comment" : {
+      "undefined" : "Reference to the implementation of a tool, typically a module path or an \"external:<name>\" marker for imported tools that were not found in the parsed sources."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "63"
+  }, {
+    "iri" : "https://w3id.org/agentoscin/onto#hasMemoryBinding",
+    "baseIri" : "https://w3id.org/agentoscin/onto",
+    "range" : "65",
+    "label" : {
+      "IRI-based" : "hasMemoryBinding",
+      "undefined" : "has memory binding"
+    },
+    "domain" : "48",
+    "subproperty" : [ "66", "67" ],
+    "comment" : {
+      "undefined" : "Associates a subject (agent, team, system) with a memory binding."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "64"
+  }, {
+    "iri" : "https://w3id.org/agentoscin/onto#bindsMemory",
+    "baseIri" : "https://w3id.org/agentoscin/onto",
+    "range" : "69",
+    "label" : {
+      "IRI-based" : "bindsMemory",
+      "undefined" : "binds memory"
+    },
+    "domain" : "65",
+    "comment" : {
+      "undefined" : "Links a memory binding to the memory it binds."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "68"
+  }, {
+    "iri" : "https://w3id.org/agentoscin/onto#employsReasoningPattern",
+    "baseIri" : "https://w3id.org/agentoscin/onto",
+    "range" : "13",
+    "label" : {
+      "IRI-based" : "employsReasoningPattern",
+      "undefined" : "employs reasoning pattern"
+    },
+    "domain" : "50",
+    "comment" : {
+      "undefined" : "Relates an agent to the reasoning pattern it employs."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "70"
+  }, {
+    "iri" : "https://w3id.org/agentoscin/onto#hasOperator",
+    "baseIri" : "https://w3id.org/agentoscin/onto",
+    "range" : "73",
+    "label" : {
+      "IRI-based" : "hasOperator",
+      "undefined" : "has operator"
+    },
+    "domain" : "72",
+    "comment" : {
+      "undefined" : "Logical operator combining the sub-conditions of a composite termination condition. Values: \"OR\", \"AND\"."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "71"
+  }, {
+    "range" : "8",
+    "domain" : "10",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "74"
+  }, {
+    "range" : "13",
+    "domain" : "12",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "75"
+  }, {
+    "range" : "49",
+    "domain" : "53",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "76"
+  }, {
+    "iri" : "https://w3id.org/agentoscin/onto#hasSourceFramework",
+    "baseIri" : "https://w3id.org/agentoscin/onto",
+    "range" : "80",
+    "label" : {
+      "IRI-based" : "hasSourceFramework",
+      "undefined" : "has source framework"
+    },
+    "domain" : "18",
+    "comment" : {
+      "undefined" : "Framework the agentic system was extracted from (e.g. \"CrewAI\", \"AutoGen\", \"LangGraph\")."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "81"
+  }, {
+    "iri" : "https://w3id.org/agentoscin/onto#hasPersistenceScope",
+    "baseIri" : "https://w3id.org/agentoscin/onto",
+    "range" : "83",
+    "label" : {
+      "IRI-based" : "hasPersistenceScope",
+      "undefined" : "has persistence scope"
+    },
+    "domain" : "69",
+    "comment" : {
+      "undefined" : "Lifetime of a memory. Values: \"ExecutionScoped\" (discarded after the run) and \"Persistent\" (retained across runs)."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "82"
+  }, {
+    "iri" : "https://w3id.org/agentoscin/onto#hasRoutingLogic",
+    "baseIri" : "https://w3id.org/agentoscin/onto",
+    "range" : "85",
+    "label" : {
+      "IRI-based" : "hasRoutingLogic",
+      "undefined" : "has routing logic"
+    },
+    "domain" : "10",
+    "comment" : {
+      "undefined" : "Serialized body of the routing function that decides which branch a conditional step takes."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "84"
+  }, {
+    "iri" : "https://w3id.org/agentoscin/onto#hasMaxRetries",
+    "baseIri" : "https://w3id.org/agentoscin/onto",
+    "range" : "3",
+    "label" : {
+      "IRI-based" : "hasMaxRetries",
+      "undefined" : "has max retries"
+    },
+    "domain" : "1",
+    "comment" : {
+      "undefined" : "Number of times a task may be retried when its guardrail rejects the output."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "86"
+  }, {
+    "iri" : "https://w3id.org/agentoscin/onto#hasHumanCheckpoint",
+    "baseIri" : "https://w3id.org/agentoscin/onto",
+    "range" : "36",
+    "label" : {
+      "IRI-based" : "hasHumanCheckpoint",
+      "undefined" : "has human checkpoint"
+    },
+    "domain" : "26",
+    "comment" : {
+      "undefined" : "Associates a human-in-the-loop checkpoint with a task."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "93"
+  }, {
+    "iri" : "https://w3id.org/agentoscin/onto#hasDependencyType",
+    "baseIri" : "https://w3id.org/agentoscin/onto",
+    "range" : "34",
+    "label" : {
+      "IRI-based" : "hasDependencyType",
+      "undefined" : "has dependency type"
+    },
+    "domain" : "26",
+    "comment" : {
+      "undefined" : "Nature of the dependency between two tasks. Values: \"Sequential\" (ordering imposed by the workflow) and \"ContextProviding\" (the predecessor supplies context to the successor)."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "94"
+  }, {
+    "iri" : "https://w3id.org/agentoscin/onto#hasSchemaDefinition",
+    "baseIri" : "https://w3id.org/agentoscin/onto",
+    "range" : "90",
+    "label" : {
+      "IRI-based" : "hasSchemaDefinition",
+      "undefined" : "has schema definition"
+    },
+    "domain" : "6",
+    "comment" : {
+      "undefined" : "Serialized definition of a structured-output schema, expressed as JSON Schema."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "95"
+  }, {
+    "iri" : "https://w3id.org/agentoscin/onto#hasSubCondition",
+    "baseIri" : "https://w3id.org/agentoscin/onto",
+    "range" : "30",
+    "label" : {
+      "IRI-based" : "hasSubCondition",
+      "undefined" : "has sub condition"
+    },
+    "domain" : "72",
+    "comment" : {
+      "undefined" : "A sub-condition combined within a composite termination condition."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "96"
+  }, {
+    "iri" : "https://w3id.org/agentoscin/onto#hasMaxReasoningAttempts",
+    "baseIri" : "https://w3id.org/agentoscin/onto",
+    "range" : "14",
+    "label" : {
+      "IRI-based" : "hasMaxReasoningAttempts",
+      "undefined" : "has max reasoning attempts"
+    },
+    "domain" : "50",
+    "comment" : {
+      "undefined" : "Upper bound on the number of reasoning attempts an agent may perform before giving up."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "97"
+  }, {
+    "iri" : "https://w3id.org/agentoscin/onto#hasMaxTurns",
+    "baseIri" : "https://w3id.org/agentoscin/onto",
+    "range" : "92",
+    "label" : {
+      "IRI-based" : "hasMaxTurns",
+      "undefined" : "has max turns"
+    },
+    "domain" : "87",
+    "comment" : {
+      "undefined" : "Maximum number of conversational turns after which execution terminates."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "98"
+  }, {
+    "iri" : "https://w3id.org/agentoscin/onto#hasInputSchema",
+    "baseIri" : "https://w3id.org/agentoscin/onto",
+    "range" : "15",
+    "label" : {
+      "IRI-based" : "hasInputSchema",
+      "undefined" : "has input schema"
+    },
+    "domain" : "16",
+    "comment" : {
+      "undefined" : "Serialized JSON Schema describing the arguments accepted by a tool."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "99"
+  }, {
+    "iri" : "http://www.w3id.org/agentic-ai/onto#toolUsage",
+    "baseIri" : "http://www.w3id.org/agentic-ai/onto",
+    "range" : "79",
+    "label" : {
+      "IRI-based" : "toolUsage"
+    },
+    "domain" : "79",
+    "subproperty" : [ "25" ],
+    "attributes" : [ "object", "external" ],
+    "id" : "27"
+  }, {
+    "iri" : "https://w3id.org/agentoscin/onto#orchestratesTeam",
+    "baseIri" : "https://w3id.org/agentoscin/onto",
+    "range" : "49",
+    "label" : {
+      "IRI-based" : "orchestratesTeam",
+      "undefined" : "orchestrates team"
+    },
+    "domain" : "53",
+    "comment" : {
+      "undefined" : "Relates an orchestration to the team it orchestrates."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "100"
+  }, {
+    "iri" : "https://w3id.org/agentoscin/onto#hasDelegationStrategy",
+    "baseIri" : "https://w3id.org/agentoscin/onto",
+    "range" : "31",
+    "label" : {
+      "IRI-based" : "hasDelegationStrategy",
+      "undefined" : "has delegation strategy"
+    },
+    "domain" : "26",
+    "comment" : {
+      "undefined" : "Strategy by which a task may be handed over to another agent instead of being executed by its assigned agent."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "101"
+  }, {
+    "iri" : "https://w3id.org/agentoscin/onto#hasReasoningEnabled",
+    "baseIri" : "https://w3id.org/agentoscin/onto",
+    "range" : "89",
+    "label" : {
+      "IRI-based" : "hasReasoningEnabled",
+      "undefined" : "has reasoning enabled"
+    },
+    "domain" : "50",
+    "comment" : {
+      "undefined" : "Whether explicit reasoning is enabled for an agent."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "102"
+  }, {
+    "iri" : "https://w3id.org/agentoscin/onto#hasMemoryScope",
+    "baseIri" : "https://w3id.org/agentoscin/onto",
+    "range" : "91",
+    "label" : {
+      "IRI-based" : "hasMemoryScope",
+      "undefined" : "has memory scope"
+    },
+    "domain" : "65",
+    "comment" : {
+      "undefined" : "Visibility of a memory binding. Values: \"AgentPrivate\" (memory owned by a single agent) and \"GroupShared\" (memory shared across a team)."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "103"
+  }, {
+    "range" : "30",
+    "domain" : "78",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "105"
+  }, {
+    "iri" : "https://w3id.org/agentoscin/onto#memoryBoundTo",
+    "baseIri" : "https://w3id.org/agentoscin/onto",
+    "range" : "51",
+    "label" : {
+      "IRI-based" : "memoryBoundTo",
+      "undefined" : "memory bound to"
+    },
+    "domain" : "65",
+    "comment" : {
+      "undefined" : "Links a memory binding to the agent, team, or system that owns it."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "106"
+  }, {
+    "range" : "30",
+    "domain" : "29",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "108"
+  }, {
+    "iri" : "https://w3id.org/agentoscin/onto#hasEdgeMapping",
+    "baseIri" : "https://w3id.org/agentoscin/onto",
+    "range" : "24",
+    "label" : {
+      "IRI-based" : "hasEdgeMapping",
+      "undefined" : "has edge mapping"
+    },
+    "domain" : "8",
+    "comment" : {
+      "undefined" : "JSON object mapping the return labels of a conditional step to the names of the target steps (e.g. LangGraph add_conditional_edges path map). Preserves branch targets that cannot be reconstructed from nextStep edges alone."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "109"
+  }, {
+    "range" : "107",
+    "domain" : "18",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "110"
+  }, {
+    "iri" : "https://w3id.org/agentoscin/onto#hasReasoningOrigin",
+    "baseIri" : "https://w3id.org/agentoscin/onto",
+    "range" : "88",
+    "label" : {
+      "IRI-based" : "hasReasoningOrigin",
+      "undefined" : "has reasoning origin"
+    },
+    "domain" : "50",
+    "comment" : {
+      "undefined" : "Where an agent's reasoning capability comes from. Values: \"FrameworkManaged\" (the framework adds a reasoning loop) and \"ModelNative\" (the underlying model reasons on its own)."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "111"
+  }, {
+    "range" : "30",
+    "domain" : "72",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "112"
+  }, {
+    "range" : "13",
+    "domain" : "52",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "113"
+  }, {
+    "range" : "30",
+    "domain" : "87",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "114"
+  }, {
+    "range" : "30",
+    "domain" : "104",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "115"
+  }, {
+    "iri" : "https://w3id.org/agentoscin/onto#dependsOn",
+    "baseIri" : "https://w3id.org/agentoscin/onto",
+    "range" : "26",
+    "label" : {
+      "IRI-based" : "dependsOn",
+      "undefined" : "depends on"
+    },
+    "domain" : "26",
+    "comment" : {
+      "undefined" : "Indicates that one task depends on another."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "116"
+  }, {
+    "range" : "78",
+    "domain" : "72",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "117"
+  }, {
+    "iri" : "https://w3id.org/agentoscin/onto#hasExpectedOutput",
+    "baseIri" : "https://w3id.org/agentoscin/onto",
+    "range" : "23",
+    "label" : {
+      "IRI-based" : "hasExpectedOutput",
+      "undefined" : "has expected output"
+    },
+    "domain" : "26",
+    "comment" : {
+      "undefined" : "Natural-language description of the output a task is expected to produce."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "118"
+  }, {
+    "range" : "87",
+    "domain" : "72",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "119"
+  }, {
+    "iri" : "https://w3id.org/agentoscin/onto#employsCoordinationPattern",
+    "baseIri" : "https://w3id.org/agentoscin/onto",
+    "range" : "11",
+    "label" : {
+      "IRI-based" : "employsCoordinationPattern",
+      "undefined" : "employs coordination pattern"
+    },
+    "domain" : "49",
+    "comment" : {
+      "undefined" : "Relates a team to the coordination pattern it employs."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "120"
+  }, {
+    "range" : "104",
+    "domain" : "29",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "121"
+  }, {
+    "iri" : "https://w3id.org/agentoscin/onto#hasAgentMemoryBinding",
+    "baseIri" : "https://w3id.org/agentoscin/onto",
+    "range" : "65",
+    "label" : {
+      "IRI-based" : "hasAgentMemoryBinding",
+      "undefined" : "has agent memory binding"
+    },
+    "superproperty" : [ "64" ],
+    "domain" : "50",
+    "comment" : {
+      "undefined" : "Memory binding attached to an individual agent."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "67"
+  }, {
+    "range" : "78",
+    "domain" : "29",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "122"
+  }, {
+    "range" : "87",
+    "domain" : "29",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "123"
+  }, {
+    "range" : "78",
+    "domain" : "104",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "124"
+  }, {
+    "range" : "87",
+    "domain" : "104",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "125"
+  }, {
+    "range" : "87",
+    "domain" : "78",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "126"
+  }, {
+    "range" : "29",
+    "domain" : "72",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "127"
+  }, {
+    "range" : "104",
+    "domain" : "72",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "128"
+  }, {
+    "iri" : "https://w3id.org/agentoscin/onto#isMandatory",
+    "baseIri" : "https://w3id.org/agentoscin/onto",
+    "range" : "77",
+    "label" : {
+      "IRI-based" : "isMandatory",
+      "undefined" : "is mandatory"
+    },
+    "domain" : "36",
+    "comment" : {
+      "undefined" : "Whether the human checkpoint must be passed, i.e. execution cannot continue without human input."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "129"
+  }, {
+    "iri" : "https://w3id.org/agentoscin/onto#hasGuardrail",
+    "baseIri" : "https://w3id.org/agentoscin/onto",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "hasGuardrail",
+      "undefined" : "has guardrail"
+    },
+    "domain" : "26",
+    "comment" : {
+      "undefined" : "Associates a guardrail with a task."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "130"
+  }, {
+    "iri" : "https://w3id.org/agentoscin/onto#hasTerminationCondition",
+    "baseIri" : "https://w3id.org/agentoscin/onto",
+    "range" : "30",
+    "label" : {
+      "IRI-based" : "hasTerminationCondition",
+      "undefined" : "has termination condition"
+    },
+    "domain" : "49",
+    "comment" : {
+      "undefined" : "Relates a team to a termination condition that ends its execution."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "131"
+  }, {
+    "iri" : "https://w3id.org/agentoscin/onto#hasTeamMemoryBinding",
+    "baseIri" : "https://w3id.org/agentoscin/onto",
+    "range" : "65",
+    "label" : {
+      "IRI-based" : "hasTeamMemoryBinding",
+      "undefined" : "has team memory binding"
+    },
+    "superproperty" : [ "64" ],
+    "domain" : "49",
+    "comment" : {
+      "undefined" : "Memory binding attached to a team."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "66"
+  }, {
+    "iri" : "https://w3id.org/agentoscin/onto#hasCheckpointPosition",
+    "baseIri" : "https://w3id.org/agentoscin/onto",
+    "range" : "42",
+    "label" : {
+      "IRI-based" : "hasCheckpointPosition",
+      "undefined" : "has checkpoint position"
+    },
+    "domain" : "36",
+    "comment" : {
+      "undefined" : "Point in the execution of a task at which the human checkpoint is applied (e.g. \"AfterExecution\")."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "132"
+  }, {
+    "iri" : "https://w3id.org/agentoscin/onto#agentType",
+    "baseIri" : "https://w3id.org/agentoscin/onto",
+    "range" : "46",
+    "label" : {
+      "IRI-based" : "agentType",
+      "undefined" : "agent type"
+    },
+    "domain" : "50",
+    "comment" : {
+      "undefined" : "Framework-specific classification of an agent's role in the system. Values: \"GeneralPurpose\", \"UserProxy\", \"Manager\"."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "133"
+  }, {
+    "iri" : "https://w3id.org/agentoscin/onto#containsTeam",
+    "baseIri" : "https://w3id.org/agentoscin/onto",
+    "range" : "49",
+    "label" : {
+      "IRI-based" : "containsTeam",
+      "undefined" : "contains team"
+    },
+    "domain" : "18",
+    "comment" : {
+      "undefined" : "Relates an agentic system to a team it contains."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "134"
+  }, {
+    "iri" : "https://w3id.org/agentoscin/onto#callsCrew",
+    "baseIri" : "https://w3id.org/agentoscin/onto",
+    "range" : "45",
+    "label" : {
+      "IRI-based" : "callsCrew",
+      "undefined" : "calls crew"
+    },
+    "domain" : "8",
+    "comment" : {
+      "undefined" : "Key of the team/crew invoked by this workflow step (e.g. CrewAI @listen method calling crew.kickoff()). Enables per-step crew binding through the ontology round-trip."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "135"
+  }, {
+    "iri" : "https://w3id.org/agentoscin/onto#containsOrchestration",
+    "baseIri" : "https://w3id.org/agentoscin/onto",
+    "range" : "53",
+    "label" : {
+      "IRI-based" : "containsOrchestration",
+      "undefined" : "contains orchestration"
+    },
+    "domain" : "18",
+    "comment" : {
+      "undefined" : "Relates an agentic system to its orchestration."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "136"
+  } ]
+}

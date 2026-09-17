@@ -7,14 +7,14 @@
 # - The ontology lacks specialized properties for "step transition conditions" based on return values of nodes (e.g., should_end returning "end"); I encoded the simple linear flow via nextStep and a TaskCompletionTermination on the Team as the termination mechanism.
 # - If further fidelity is required (e.g., explicit representation of message histories, exact runtime returned content, or code-level control flow), additional classes/properties (StateMachine, TransitionCondition, RuntimeInvocation, MessageSequence) would be necessary.
 
-@prefix ex: <http://example.org/techblog#> .
-@prefix agento: <http://www.w3id.org/agentic-ai/onto#> .
-@prefix agentoscin: <http://www.semanticweb.org/danilippmann/ontologies/2026/3/agentoscin/> .
-@prefix beam: <http://w3id.org/beam/core#> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix prov: <http://www.w3.org/ns/prov#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix agento: <http://www.w3id.org/agentic-ai/onto#>.
+@prefix agentoscin: <https://w3id.org/agentoscin/onto#>.
+@prefix beam: <http://w3id.org/beam/core#>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix ex: <http://example.org/techblog#>.
+@prefix prov: <http://www.w3.org/ns/prov#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 @base <http://example.org/techblog#> .
 
 ###############################################################################

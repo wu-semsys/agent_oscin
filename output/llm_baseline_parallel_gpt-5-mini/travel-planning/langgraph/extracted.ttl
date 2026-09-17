@@ -5,7 +5,7 @@ Issues / Assumptions:
 - Assumption: LLMAgent runtime configuration is limited in the code to one explicit parameter we can observe (the LLM model name "gpt-4o"). I represent that as a Config tied to each agent. No other internal SDK or provider-specific parameters are recorded because they are implementation details.
 - No changes were made to the ontology schema; only individuals (instances) from the existing classes/properties were created.
 
-@prefix : <http://www.semanticweb.org/danilippmann/ontologies/2026/3/agentoscin/> .
+@prefix : <https://w3id.org/agentoscin/onto#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .

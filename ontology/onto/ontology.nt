@@ -1,0 +1,670 @@
+<http://www.semanticweb.org/danilippmann/ontologies/2026/3/agentoscin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.semanticweb.org/danilippmann/ontologies/2026/3/agentoscin> <http://www.w3.org/2002/07/owl#imports> <http://www.w3id.org/agentic-ai/onto> .
+<http://www.semanticweb.org/danilippmann/ontologies/2026/3/agentoscin> <http://purl.org/dc/elements/1.1/contributor> "Andreas Ekelhart" .
+<http://www.semanticweb.org/danilippmann/ontologies/2026/3/agentoscin> <http://purl.org/dc/elements/1.1/contributor> "Fajar J. Ekaputra" .
+<http://www.semanticweb.org/danilippmann/ontologies/2026/3/agentoscin> <http://purl.org/dc/elements/1.1/creator> "Dani Lippmann" .
+<http://www.semanticweb.org/danilippmann/ontologies/2026/3/agentoscin> <http://purl.org/dc/elements/1.1/description> "An Extension of agentO adding agentic-system orchestration, coordination & reasoning patterns, memory bindings, guardrails, human checkpoints, termination conditions, schemas, and framework-mapping properties."@en .
+<http://www.semanticweb.org/danilippmann/ontologies/2026/3/agentoscin> <http://purl.org/dc/elements/1.1/title> "AgentOSCIn — Extension of the Agentic AI Ontology" .
+<http://www.semanticweb.org/danilippmann/ontologies/2026/3/agentoscin> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
+<http://www.semanticweb.org/danilippmann/ontologies/2026/3/agentoscin> <http://www.w3.org/2000/01/rdf-schema#label> "AgentOSCIN Ontology" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/elements/1.1/contributor
+<http://purl.org/dc/elements/1.1/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.w3id.org/agentic-ai/onto#toolUsage
+<http://www.w3id.org/agentic-ai/onto#toolUsage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# https://w3id.org/agentoscin/onto#bindsMemory
+<https://w3id.org/agentoscin/onto#bindsMemory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/agentoscin/onto#bindsMemory> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/agentoscin/onto#MemoryBinding> .
+<https://w3id.org/agentoscin/onto#bindsMemory> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3id.org/agentic-ai/onto#Memory> .
+<http://www.w3id.org/agentic-ai/onto#Memory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/agentoscin/onto#bindsMemory> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a memory binding to the memory it binds." .
+<https://w3id.org/agentoscin/onto#bindsMemory> <http://www.w3.org/2000/01/rdf-schema#label> "binds memory" .
+# 
+# https://w3id.org/agentoscin/onto#containsAgent
+<https://w3id.org/agentoscin/onto#containsAgent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/agentoscin/onto#containsAgent> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/agentoscin/onto#AgenticSystem> .
+# 
+# https://w3id.org/agentoscin/onto#containsOrchestration
+<https://w3id.org/agentoscin/onto#containsOrchestration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/agentoscin/onto#containsOrchestration> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/agentoscin/onto#AgenticSystem> .
+<https://w3id.org/agentoscin/onto#containsOrchestration> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/agentoscin/onto#Orchestration> .
+<https://w3id.org/agentoscin/onto#containsOrchestration> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an agentic system to its orchestration." .
+<https://w3id.org/agentoscin/onto#containsOrchestration> <http://www.w3.org/2000/01/rdf-schema#label> "contains orchestration" .
+# 
+# https://w3id.org/agentoscin/onto#containsTeam
+<https://w3id.org/agentoscin/onto#containsTeam> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/agentoscin/onto#containsTeam> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/agentoscin/onto#AgenticSystem> .
+<https://w3id.org/agentoscin/onto#containsTeam> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3id.org/agentic-ai/onto#Team> .
+<http://www.w3id.org/agentic-ai/onto#Team> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/agentoscin/onto#containsTeam> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an agentic system to a team it contains." .
+<https://w3id.org/agentoscin/onto#containsTeam> <http://www.w3.org/2000/01/rdf-schema#label> "contains team" .
+# 
+# https://w3id.org/agentoscin/onto#dependsOn
+<https://w3id.org/agentoscin/onto#dependsOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/agentoscin/onto#dependsOn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/agentic-ai/onto#Task> .
+<http://www.w3id.org/agentic-ai/onto#Task> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/agentoscin/onto#dependsOn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3id.org/agentic-ai/onto#Task> .
+<https://w3id.org/agentoscin/onto#dependsOn> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that one task depends on another." .
+<https://w3id.org/agentoscin/onto#dependsOn> <http://www.w3.org/2000/01/rdf-schema#label> "depends on" .
+# 
+# https://w3id.org/agentoscin/onto#employsCoordinationPattern
+<https://w3id.org/agentoscin/onto#employsCoordinationPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/agentoscin/onto#employsCoordinationPattern> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/agentic-ai/onto#Team> .
+<https://w3id.org/agentoscin/onto#employsCoordinationPattern> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/agentoscin/onto#CoordinationPattern> .
+<https://w3id.org/agentoscin/onto#employsCoordinationPattern> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a team to the coordination pattern it employs." .
+<https://w3id.org/agentoscin/onto#employsCoordinationPattern> <http://www.w3.org/2000/01/rdf-schema#label> "employs coordination pattern" .
+# 
+# https://w3id.org/agentoscin/onto#employsReasoningPattern
+<https://w3id.org/agentoscin/onto#employsReasoningPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/agentoscin/onto#employsReasoningPattern> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/agentic-ai/onto#LLMAgent> .
+<http://www.w3id.org/agentic-ai/onto#LLMAgent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/agentoscin/onto#employsReasoningPattern> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/agentoscin/onto#ReasoningPattern> .
+<https://w3id.org/agentoscin/onto#employsReasoningPattern> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an agent to the reasoning pattern it employs." .
+<https://w3id.org/agentoscin/onto#employsReasoningPattern> <http://www.w3.org/2000/01/rdf-schema#label> "employs reasoning pattern" .
+# 
+# https://w3id.org/agentoscin/onto#hasAgentMemoryBinding
+<https://w3id.org/agentoscin/onto#hasAgentMemoryBinding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/agentoscin/onto#hasAgentMemoryBinding> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/agentoscin/onto#hasMemoryBinding> .
+<https://w3id.org/agentoscin/onto#hasAgentMemoryBinding> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/agentic-ai/onto#LLMAgent> .
+<https://w3id.org/agentoscin/onto#hasAgentMemoryBinding> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/agentoscin/onto#MemoryBinding> .
+<https://w3id.org/agentoscin/onto#hasAgentMemoryBinding> <http://www.w3.org/2000/01/rdf-schema#comment> "Memory binding attached to an individual agent." .
+<https://w3id.org/agentoscin/onto#hasAgentMemoryBinding> <http://www.w3.org/2000/01/rdf-schema#label> "has agent memory binding" .
+# 
+# https://w3id.org/agentoscin/onto#hasAssociatedAgent
+<https://w3id.org/agentoscin/onto#hasAssociatedAgent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/agentoscin/onto#hasAssociatedAgent> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/agentic-ai/onto#WorkflowStep> .
+<http://www.w3id.org/agentic-ai/onto#WorkflowStep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/agentoscin/onto#hasGuardrail
+<https://w3id.org/agentoscin/onto#hasGuardrail> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/agentoscin/onto#hasGuardrail> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/agentic-ai/onto#Task> .
+<https://w3id.org/agentoscin/onto#hasGuardrail> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/agentoscin/onto#Guardrail> .
+<https://w3id.org/agentoscin/onto#hasGuardrail> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates a guardrail with a task." .
+<https://w3id.org/agentoscin/onto#hasGuardrail> <http://www.w3.org/2000/01/rdf-schema#label> "has guardrail" .
+# 
+# https://w3id.org/agentoscin/onto#hasHumanCheckpoint
+<https://w3id.org/agentoscin/onto#hasHumanCheckpoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/agentoscin/onto#hasHumanCheckpoint> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/agentic-ai/onto#Task> .
+<https://w3id.org/agentoscin/onto#hasHumanCheckpoint> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/agentoscin/onto#HumanCheckpoint> .
+<https://w3id.org/agentoscin/onto#hasHumanCheckpoint> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates a human-in-the-loop checkpoint with a task." .
+<https://w3id.org/agentoscin/onto#hasHumanCheckpoint> <http://www.w3.org/2000/01/rdf-schema#label> "has human checkpoint" .
+# 
+# https://w3id.org/agentoscin/onto#hasMemoryBinding
+<https://w3id.org/agentoscin/onto#hasMemoryBinding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/agentoscin/onto#hasMemoryBinding> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#unionOf> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/agentoscin/onto#AgenticSystem> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3id.org/agentic-ai/onto#Team> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3id.org/agentic-ai/onto#LLMAgent> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/agentoscin/onto#hasMemoryBinding> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/agentoscin/onto#MemoryBinding> .
+<https://w3id.org/agentoscin/onto#hasMemoryBinding> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates a subject (agent, team, system) with a memory binding." .
+<https://w3id.org/agentoscin/onto#hasMemoryBinding> <http://www.w3.org/2000/01/rdf-schema#label> "has memory binding" .
+# 
+# https://w3id.org/agentoscin/onto#hasOutputSchema
+<https://w3id.org/agentoscin/onto#hasOutputSchema> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/agentoscin/onto#hasOutputSchema> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid5 .
+_:genid5 <http://www.w3.org/2002/07/owl#unionOf> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/agentoscin/onto#Orchestration> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3id.org/agentic-ai/onto#Task> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/agentoscin/onto#hasOutputSchema> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/agentoscin/onto#Schema> .
+<https://w3id.org/agentoscin/onto#hasOutputSchema> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the schema of the structured output produced by an orchestration or task." .
+<https://w3id.org/agentoscin/onto#hasOutputSchema> <http://www.w3.org/2000/01/rdf-schema#label> "has output schema" .
+# 
+# https://w3id.org/agentoscin/onto#hasSubCondition
+<https://w3id.org/agentoscin/onto#hasSubCondition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/agentoscin/onto#hasSubCondition> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/agentoscin/onto#CompositeTermination> .
+<https://w3id.org/agentoscin/onto#hasSubCondition> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/agentoscin/onto#TerminationCondition> .
+<https://w3id.org/agentoscin/onto#hasSubCondition> <http://www.w3.org/2000/01/rdf-schema#comment> "A sub-condition combined within a composite termination condition." .
+<https://w3id.org/agentoscin/onto#hasSubCondition> <http://www.w3.org/2000/01/rdf-schema#label> "has sub condition" .
+# 
+# https://w3id.org/agentoscin/onto#hasTeamMemoryBinding
+<https://w3id.org/agentoscin/onto#hasTeamMemoryBinding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/agentoscin/onto#hasTeamMemoryBinding> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/agentoscin/onto#hasMemoryBinding> .
+<https://w3id.org/agentoscin/onto#hasTeamMemoryBinding> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/agentic-ai/onto#Team> .
+<https://w3id.org/agentoscin/onto#hasTeamMemoryBinding> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/agentoscin/onto#MemoryBinding> .
+<https://w3id.org/agentoscin/onto#hasTeamMemoryBinding> <http://www.w3.org/2000/01/rdf-schema#comment> "Memory binding attached to a team." .
+<https://w3id.org/agentoscin/onto#hasTeamMemoryBinding> <http://www.w3.org/2000/01/rdf-schema#label> "has team memory binding" .
+# 
+# https://w3id.org/agentoscin/onto#hasTerminationCondition
+<https://w3id.org/agentoscin/onto#hasTerminationCondition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/agentoscin/onto#hasTerminationCondition> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/agentic-ai/onto#Team> .
+<https://w3id.org/agentoscin/onto#hasTerminationCondition> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/agentoscin/onto#TerminationCondition> .
+<https://w3id.org/agentoscin/onto#hasTerminationCondition> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a team to a termination condition that ends its execution." .
+<https://w3id.org/agentoscin/onto#hasTerminationCondition> <http://www.w3.org/2000/01/rdf-schema#label> "has termination condition" .
+# 
+# https://w3id.org/agentoscin/onto#memoryBoundTo
+<https://w3id.org/agentoscin/onto#memoryBoundTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/agentoscin/onto#memoryBoundTo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/agentoscin/onto#MemoryBinding> .
+<https://w3id.org/agentoscin/onto#memoryBoundTo> <http://www.w3.org/2000/01/rdf-schema#range> _:genid8 .
+_:genid8 <http://www.w3.org/2002/07/owl#unionOf> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/agentoscin/onto#AgenticSystem> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3id.org/agentic-ai/onto#Team> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3id.org/agentic-ai/onto#LLMAgent> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/agentoscin/onto#memoryBoundTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a memory binding to the agent, team, or system that owns it." .
+<https://w3id.org/agentoscin/onto#memoryBoundTo> <http://www.w3.org/2000/01/rdf-schema#label> "memory bound to" .
+# 
+# https://w3id.org/agentoscin/onto#orchestratesTeam
+<https://w3id.org/agentoscin/onto#orchestratesTeam> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/agentoscin/onto#orchestratesTeam> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/agentoscin/onto#Orchestration> .
+<https://w3id.org/agentoscin/onto#orchestratesTeam> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3id.org/agentic-ai/onto#Team> .
+<https://w3id.org/agentoscin/onto#orchestratesTeam> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an orchestration to the team it orchestrates." .
+<https://w3id.org/agentoscin/onto#orchestratesTeam> <http://www.w3.org/2000/01/rdf-schema#label> "orchestrates team" .
+# 
+# https://w3id.org/agentoscin/onto#taskToolUsage
+<https://w3id.org/agentoscin/onto#taskToolUsage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/agentoscin/onto#taskToolUsage> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3id.org/agentic-ai/onto#toolUsage> .
+<https://w3id.org/agentoscin/onto#taskToolUsage> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/agentic-ai/onto#Task> .
+<https://w3id.org/agentoscin/onto#taskToolUsage> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3id.org/agentic-ai/onto#Tool> .
+<http://www.w3id.org/agentic-ai/onto#Tool> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/agentoscin/onto#taskToolUsage> <http://www.w3.org/2000/01/rdf-schema#comment> "A tool used in the execution of a task." .
+<https://w3id.org/agentoscin/onto#taskToolUsage> <http://www.w3.org/2000/01/rdf-schema#label> "task tool usage" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/agentoscin/onto#agentType
+<https://w3id.org/agentoscin/onto#agentType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/agentoscin/onto#agentType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/agentic-ai/onto#LLMAgent> .
+<https://w3id.org/agentoscin/onto#agentType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/agentoscin/onto#agentType> <http://www.w3.org/2000/01/rdf-schema#comment> "Framework-specific classification of an agent's role in the system. Values: \"GeneralPurpose\", \"UserProxy\", \"Manager\"." .
+<https://w3id.org/agentoscin/onto#agentType> <http://www.w3.org/2000/01/rdf-schema#label> "agent type" .
+# 
+# https://w3id.org/agentoscin/onto#callsCrew
+<https://w3id.org/agentoscin/onto#callsCrew> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/agentoscin/onto#callsCrew> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/agentic-ai/onto#WorkflowStep> .
+<https://w3id.org/agentoscin/onto#callsCrew> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/agentoscin/onto#callsCrew> <http://www.w3.org/2000/01/rdf-schema#comment> "Key of the team/crew invoked by this workflow step (e.g. CrewAI @listen method calling crew.kickoff()). Enables per-step crew binding through the ontology round-trip." .
+<https://w3id.org/agentoscin/onto#callsCrew> <http://www.w3.org/2000/01/rdf-schema#label> "calls crew" .
+# 
+# https://w3id.org/agentoscin/onto#containsAgent
+<https://w3id.org/agentoscin/onto#containsAgent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/agentoscin/onto#containsAgent> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3id.org/agentic-ai/onto#LLMAgent> .
+<http://www.w3id.org/agentic-ai/onto#LLMAgent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# https://w3id.org/agentoscin/onto#hasAggregationCombinator
+<https://w3id.org/agentoscin/onto#hasAggregationCombinator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/agentoscin/onto#hasAggregationCombinator> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/agentic-ai/onto#WorkflowStep> .
+<https://w3id.org/agentoscin/onto#hasAggregationCombinator> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/agentoscin/onto#hasAggregationCombinator> <http://www.w3.org/2000/01/rdf-schema#comment> "Combinator used to aggregate multiple predecessor steps in the source decorator (e.g. CrewAI @listen(or_(step_a, step_b)) stores \"or_\"). Values: \"or_\", \"and_\", or empty for single-predecessor steps." .
+<https://w3id.org/agentoscin/onto#hasAggregationCombinator> <http://www.w3.org/2000/01/rdf-schema#label> "has aggregation combinator" .
+# 
+# https://w3id.org/agentoscin/onto#hasAssociatedAgent
+<https://w3id.org/agentoscin/onto#hasAssociatedAgent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/agentoscin/onto#hasAssociatedAgent> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3id.org/agentic-ai/onto#LLMAgent> .
+# 
+# https://w3id.org/agentoscin/onto#hasCheckpointPosition
+<https://w3id.org/agentoscin/onto#hasCheckpointPosition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/agentoscin/onto#hasCheckpointPosition> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/agentoscin/onto#HumanCheckpoint> .
+<https://w3id.org/agentoscin/onto#hasCheckpointPosition> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/agentoscin/onto#hasCheckpointPosition> <http://www.w3.org/2000/01/rdf-schema#comment> "Point in the execution of a task at which the human checkpoint is applied (e.g. \"AfterExecution\")." .
+<https://w3id.org/agentoscin/onto#hasCheckpointPosition> <http://www.w3.org/2000/01/rdf-schema#label> "has checkpoint position" .
+# 
+# https://w3id.org/agentoscin/onto#hasCheckpointType
+<https://w3id.org/agentoscin/onto#hasCheckpointType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/agentoscin/onto#hasCheckpointType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/agentoscin/onto#HumanCheckpoint> .
+<https://w3id.org/agentoscin/onto#hasCheckpointType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/agentoscin/onto#hasCheckpointType> <http://www.w3.org/2000/01/rdf-schema#comment> "Kind of human interaction requested at a checkpoint. Values: \"Approval\", \"Review\", \"InputRequest\"." .
+<https://w3id.org/agentoscin/onto#hasCheckpointType> <http://www.w3.org/2000/01/rdf-schema#label> "has checkpoint type" .
+# 
+# https://w3id.org/agentoscin/onto#hasDecoratorArgument
+<https://w3id.org/agentoscin/onto#hasDecoratorArgument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/agentoscin/onto#hasDecoratorArgument> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/agentic-ai/onto#WorkflowStep> .
+<https://w3id.org/agentoscin/onto#hasDecoratorArgument> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/agentoscin/onto#hasDecoratorArgument> <http://www.w3.org/2000/01/rdf-schema#comment> "Original literal argument(s) of the framework decorator that defined this step (e.g. CrewAI @start(\"wait_next_run\") or @listen(\"label\")). Preserves source-level identifiers that are not method names and therefore cannot be reconstructed from the inverse of nextStep edges." .
+<https://w3id.org/agentoscin/onto#hasDecoratorArgument> <http://www.w3.org/2000/01/rdf-schema#label> "has decorator argument" .
+# 
+# https://w3id.org/agentoscin/onto#hasDelegationStrategy
+<https://w3id.org/agentoscin/onto#hasDelegationStrategy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/agentoscin/onto#hasDelegationStrategy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/agentic-ai/onto#Task> .
+<https://w3id.org/agentoscin/onto#hasDelegationStrategy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/agentoscin/onto#hasDelegationStrategy> <http://www.w3.org/2000/01/rdf-schema#comment> "Strategy by which a task may be handed over to another agent instead of being executed by its assigned agent." .
+<https://w3id.org/agentoscin/onto#hasDelegationStrategy> <http://www.w3.org/2000/01/rdf-schema#label> "has delegation strategy" .
+# 
+# https://w3id.org/agentoscin/onto#hasDependencyType
+<https://w3id.org/agentoscin/onto#hasDependencyType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/agentoscin/onto#hasDependencyType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/agentic-ai/onto#Task> .
+<https://w3id.org/agentoscin/onto#hasDependencyType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/agentoscin/onto#hasDependencyType> <http://www.w3.org/2000/01/rdf-schema#comment> "Nature of the dependency between two tasks. Values: \"Sequential\" (ordering imposed by the workflow) and \"ContextProviding\" (the predecessor supplies context to the successor)." .
+<https://w3id.org/agentoscin/onto#hasDependencyType> <http://www.w3.org/2000/01/rdf-schema#label> "has dependency type" .
+# 
+# https://w3id.org/agentoscin/onto#hasDirectiveFunction
+<https://w3id.org/agentoscin/onto#hasDirectiveFunction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/agentoscin/onto#hasDirectiveFunction> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/agentic-ai/onto#Prompt> .
+<http://www.w3id.org/agentic-ai/onto#Prompt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/agentoscin/onto#hasDirectiveFunction> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/agentoscin/onto#hasDirectiveFunction> <http://www.w3.org/2000/01/rdf-schema#comment> "Role that a prompt plays for its agent. Values: \"ModelDirective\" (instructs the underlying model), \"OrchestratorDirective\" (describes the agent to a coordinating agent), \"DualDirective\" (serves both purposes)." .
+<https://w3id.org/agentoscin/onto#hasDirectiveFunction> <http://www.w3.org/2000/01/rdf-schema#label> "has directive function" .
+# 
+# https://w3id.org/agentoscin/onto#hasEdgeMapping
+<https://w3id.org/agentoscin/onto#hasEdgeMapping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/agentoscin/onto#hasEdgeMapping> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/agentic-ai/onto#WorkflowStep> .
+<https://w3id.org/agentoscin/onto#hasEdgeMapping> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/agentoscin/onto#hasEdgeMapping> <http://www.w3.org/2000/01/rdf-schema#comment> "JSON object mapping the return labels of a conditional step to the names of the target steps (e.g. LangGraph add_conditional_edges path map). Preserves branch targets that cannot be reconstructed from nextStep edges alone." .
+<https://w3id.org/agentoscin/onto#hasEdgeMapping> <http://www.w3.org/2000/01/rdf-schema#label> "has edge mapping" .
+# 
+# https://w3id.org/agentoscin/onto#hasExpectedOutput
+<https://w3id.org/agentoscin/onto#hasExpectedOutput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/agentoscin/onto#hasExpectedOutput> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/agentic-ai/onto#Task> .
+<https://w3id.org/agentoscin/onto#hasExpectedOutput> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/agentoscin/onto#hasExpectedOutput> <http://www.w3.org/2000/01/rdf-schema#comment> "Natural-language description of the output a task is expected to produce." .
+<https://w3id.org/agentoscin/onto#hasExpectedOutput> <http://www.w3.org/2000/01/rdf-schema#label> "has expected output" .
+# 
+# https://w3id.org/agentoscin/onto#hasGuardrailType
+<https://w3id.org/agentoscin/onto#hasGuardrailType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/agentoscin/onto#hasGuardrailType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/agentoscin/onto#Guardrail> .
+<https://w3id.org/agentoscin/onto#hasGuardrailType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/agentoscin/onto#hasGuardrailType> <http://www.w3.org/2000/01/rdf-schema#comment> "How a guardrail is implemented. Values: \"FunctionBased\" (a validation callable) and \"LLMBased\" (a natural-language validation prompt)." .
+<https://w3id.org/agentoscin/onto#hasGuardrailType> <http://www.w3.org/2000/01/rdf-schema#label> "has guardrail type" .
+# 
+# https://w3id.org/agentoscin/onto#hasImplementationReference
+<https://w3id.org/agentoscin/onto#hasImplementationReference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/agentoscin/onto#hasImplementationReference> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/agentic-ai/onto#Tool> .
+<https://w3id.org/agentoscin/onto#hasImplementationReference> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/agentoscin/onto#hasImplementationReference> <http://www.w3.org/2000/01/rdf-schema#comment> "Reference to the implementation of a tool, typically a module path or an \"external:<name>\" marker for imported tools that were not found in the parsed sources." .
+<https://w3id.org/agentoscin/onto#hasImplementationReference> <http://www.w3.org/2000/01/rdf-schema#label> "has implementation reference" .
+# 
+# https://w3id.org/agentoscin/onto#hasInputSchema
+<https://w3id.org/agentoscin/onto#hasInputSchema> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/agentoscin/onto#hasInputSchema> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/agentic-ai/onto#Tool> .
+<https://w3id.org/agentoscin/onto#hasInputSchema> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/agentoscin/onto#hasInputSchema> <http://www.w3.org/2000/01/rdf-schema#comment> "Serialized JSON Schema describing the arguments accepted by a tool." .
+<https://w3id.org/agentoscin/onto#hasInputSchema> <http://www.w3.org/2000/01/rdf-schema#label> "has input schema" .
+# 
+# https://w3id.org/agentoscin/onto#hasMaxReasoningAttempts
+<https://w3id.org/agentoscin/onto#hasMaxReasoningAttempts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/agentoscin/onto#hasMaxReasoningAttempts> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/agentic-ai/onto#LLMAgent> .
+<https://w3id.org/agentoscin/onto#hasMaxReasoningAttempts> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/agentoscin/onto#hasMaxReasoningAttempts> <http://www.w3.org/2000/01/rdf-schema#comment> "Upper bound on the number of reasoning attempts an agent may perform before giving up." .
+<https://w3id.org/agentoscin/onto#hasMaxReasoningAttempts> <http://www.w3.org/2000/01/rdf-schema#label> "has max reasoning attempts" .
+# 
+# https://w3id.org/agentoscin/onto#hasMaxRetries
+<https://w3id.org/agentoscin/onto#hasMaxRetries> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/agentoscin/onto#hasMaxRetries> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/agentoscin/onto#Guardrail> .
+<https://w3id.org/agentoscin/onto#hasMaxRetries> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/agentoscin/onto#hasMaxRetries> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of times a task may be retried when its guardrail rejects the output." .
+<https://w3id.org/agentoscin/onto#hasMaxRetries> <http://www.w3.org/2000/01/rdf-schema#label> "has max retries" .
+# 
+# https://w3id.org/agentoscin/onto#hasMaxTurns
+<https://w3id.org/agentoscin/onto#hasMaxTurns> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/agentoscin/onto#hasMaxTurns> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/agentoscin/onto#TurnLimitTermination> .
+<https://w3id.org/agentoscin/onto#hasMaxTurns> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/agentoscin/onto#hasMaxTurns> <http://www.w3.org/2000/01/rdf-schema#comment> "Maximum number of conversational turns after which execution terminates." .
+<https://w3id.org/agentoscin/onto#hasMaxTurns> <http://www.w3.org/2000/01/rdf-schema#label> "has max turns" .
+# 
+# https://w3id.org/agentoscin/onto#hasMemoryScope
+<https://w3id.org/agentoscin/onto#hasMemoryScope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/agentoscin/onto#hasMemoryScope> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/agentoscin/onto#MemoryBinding> .
+<https://w3id.org/agentoscin/onto#hasMemoryScope> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/agentoscin/onto#hasMemoryScope> <http://www.w3.org/2000/01/rdf-schema#comment> "Visibility of a memory binding. Values: \"AgentPrivate\" (memory owned by a single agent) and \"GroupShared\" (memory shared across a team)." .
+<https://w3id.org/agentoscin/onto#hasMemoryScope> <http://www.w3.org/2000/01/rdf-schema#label> "has memory scope" .
+# 
+# https://w3id.org/agentoscin/onto#hasOperator
+<https://w3id.org/agentoscin/onto#hasOperator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/agentoscin/onto#hasOperator> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/agentoscin/onto#CompositeTermination> .
+<https://w3id.org/agentoscin/onto#hasOperator> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/agentoscin/onto#hasOperator> <http://www.w3.org/2000/01/rdf-schema#comment> "Logical operator combining the sub-conditions of a composite termination condition. Values: \"OR\", \"AND\"." .
+<https://w3id.org/agentoscin/onto#hasOperator> <http://www.w3.org/2000/01/rdf-schema#label> "has operator" .
+# 
+# https://w3id.org/agentoscin/onto#hasPersistenceScope
+<https://w3id.org/agentoscin/onto#hasPersistenceScope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/agentoscin/onto#hasPersistenceScope> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/agentic-ai/onto#Memory> .
+<https://w3id.org/agentoscin/onto#hasPersistenceScope> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/agentoscin/onto#hasPersistenceScope> <http://www.w3.org/2000/01/rdf-schema#comment> "Lifetime of a memory. Values: \"ExecutionScoped\" (discarded after the run) and \"Persistent\" (retained across runs)." .
+<https://w3id.org/agentoscin/onto#hasPersistenceScope> <http://www.w3.org/2000/01/rdf-schema#label> "has persistence scope" .
+# 
+# https://w3id.org/agentoscin/onto#hasReasoningEnabled
+<https://w3id.org/agentoscin/onto#hasReasoningEnabled> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/agentoscin/onto#hasReasoningEnabled> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/agentic-ai/onto#LLMAgent> .
+<https://w3id.org/agentoscin/onto#hasReasoningEnabled> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/agentoscin/onto#hasReasoningEnabled> <http://www.w3.org/2000/01/rdf-schema#comment> "Whether explicit reasoning is enabled for an agent." .
+<https://w3id.org/agentoscin/onto#hasReasoningEnabled> <http://www.w3.org/2000/01/rdf-schema#label> "has reasoning enabled" .
+# 
+# https://w3id.org/agentoscin/onto#hasReasoningOrigin
+<https://w3id.org/agentoscin/onto#hasReasoningOrigin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/agentoscin/onto#hasReasoningOrigin> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/agentic-ai/onto#LLMAgent> .
+<https://w3id.org/agentoscin/onto#hasReasoningOrigin> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/agentoscin/onto#hasReasoningOrigin> <http://www.w3.org/2000/01/rdf-schema#comment> "Where an agent's reasoning capability comes from. Values: \"FrameworkManaged\" (the framework adds a reasoning loop) and \"ModelNative\" (the underlying model reasons on its own)." .
+<https://w3id.org/agentoscin/onto#hasReasoningOrigin> <http://www.w3.org/2000/01/rdf-schema#label> "has reasoning origin" .
+# 
+# https://w3id.org/agentoscin/onto#hasRoutingLogic
+<https://w3id.org/agentoscin/onto#hasRoutingLogic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/agentoscin/onto#hasRoutingLogic> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/agentoscin/onto#ConditionalStep> .
+<https://w3id.org/agentoscin/onto#hasRoutingLogic> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/agentoscin/onto#hasRoutingLogic> <http://www.w3.org/2000/01/rdf-schema#comment> "Serialized body of the routing function that decides which branch a conditional step takes." .
+<https://w3id.org/agentoscin/onto#hasRoutingLogic> <http://www.w3.org/2000/01/rdf-schema#label> "has routing logic" .
+# 
+# https://w3id.org/agentoscin/onto#hasSchemaDefinition
+<https://w3id.org/agentoscin/onto#hasSchemaDefinition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/agentoscin/onto#hasSchemaDefinition> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/agentoscin/onto#Schema> .
+<https://w3id.org/agentoscin/onto#hasSchemaDefinition> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/agentoscin/onto#hasSchemaDefinition> <http://www.w3.org/2000/01/rdf-schema#comment> "Serialized definition of a structured-output schema, expressed as JSON Schema." .
+<https://w3id.org/agentoscin/onto#hasSchemaDefinition> <http://www.w3.org/2000/01/rdf-schema#label> "has schema definition" .
+# 
+# https://w3id.org/agentoscin/onto#hasSourceAttribute
+<https://w3id.org/agentoscin/onto#hasSourceAttribute> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/agentoscin/onto#hasSourceAttribute> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/agentic-ai/onto#Prompt> .
+<https://w3id.org/agentoscin/onto#hasSourceAttribute> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/agentoscin/onto#hasSourceAttribute> <http://www.w3.org/2000/01/rdf-schema#comment> "Framework attribute(s) the annotated element was derived from (e.g. \"role, goal, backstory\", \"system_message\", \"output_pydantic\"). Enables faithful regeneration of source code from the ontology." .
+<https://w3id.org/agentoscin/onto#hasSourceAttribute> <http://www.w3.org/2000/01/rdf-schema#label> "has source attribute" .
+# 
+# https://w3id.org/agentoscin/onto#hasSourceFramework
+<https://w3id.org/agentoscin/onto#hasSourceFramework> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/agentoscin/onto#hasSourceFramework> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/agentoscin/onto#AgenticSystem> .
+<https://w3id.org/agentoscin/onto#hasSourceFramework> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/agentoscin/onto#hasSourceFramework> <http://www.w3.org/2000/01/rdf-schema#comment> "Framework the agentic system was extracted from (e.g. \"CrewAI\", \"AutoGen\", \"LangGraph\")." .
+<https://w3id.org/agentoscin/onto#hasSourceFramework> <http://www.w3.org/2000/01/rdf-schema#label> "has source framework" .
+# 
+# https://w3id.org/agentoscin/onto#hasTriggerExpression
+<https://w3id.org/agentoscin/onto#hasTriggerExpression> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/agentoscin/onto#hasTriggerExpression> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/agentoscin/onto#EventBasedTermination> .
+<https://w3id.org/agentoscin/onto#hasTriggerExpression> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/agentoscin/onto#hasTriggerExpression> <http://www.w3.org/2000/01/rdf-schema#comment> "Expression or text whose occurrence triggers an event-based termination condition (e.g. a stop keyword in an agent message)." .
+<https://w3id.org/agentoscin/onto#hasTriggerExpression> <http://www.w3.org/2000/01/rdf-schema#label> "has trigger expression" .
+# 
+# https://w3id.org/agentoscin/onto#hasValidationLogic
+<https://w3id.org/agentoscin/onto#hasValidationLogic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/agentoscin/onto#hasValidationLogic> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/agentoscin/onto#Guardrail> .
+<https://w3id.org/agentoscin/onto#hasValidationLogic> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/agentoscin/onto#hasValidationLogic> <http://www.w3.org/2000/01/rdf-schema#comment> "Validation performed by a guardrail: the name of the validation function, or the validation prompt for LLM-based guardrails." .
+<https://w3id.org/agentoscin/onto#hasValidationLogic> <http://www.w3.org/2000/01/rdf-schema#label> "has validation logic" .
+# 
+# https://w3id.org/agentoscin/onto#isMandatory
+<https://w3id.org/agentoscin/onto#isMandatory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/agentoscin/onto#isMandatory> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/agentoscin/onto#HumanCheckpoint> .
+<https://w3id.org/agentoscin/onto#isMandatory> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/agentoscin/onto#isMandatory> <http://www.w3.org/2000/01/rdf-schema#comment> "Whether the human checkpoint must be passed, i.e. execution cannot continue without human input." .
+<https://w3id.org/agentoscin/onto#isMandatory> <http://www.w3.org/2000/01/rdf-schema#label> "is mandatory" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://w3id.org/beam/core#System
+<http://w3id.org/beam/core#System> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3id.org/agentic-ai/onto#Memory
+# 
+# http://www.w3id.org/agentic-ai/onto#Prompt
+# 
+# http://www.w3id.org/agentic-ai/onto#Task
+# 
+# http://www.w3id.org/agentic-ai/onto#Team
+# 
+# http://www.w3id.org/agentic-ai/onto#Tool
+# 
+# http://www.w3id.org/agentic-ai/onto#WorkflowStep
+# 
+# https://w3id.org/agentoscin/onto#AgenticSystem
+<https://w3id.org/agentoscin/onto#AgenticSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/agentoscin/onto#AgenticSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/beam/core#System> .
+<https://w3id.org/agentoscin/onto#AgenticSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "A complete agentic AI system encompassing one or more agents, teams, and an orchestration." .
+<https://w3id.org/agentoscin/onto#AgenticSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Agentic System" .
+# 
+# https://w3id.org/agentoscin/onto#ChainOfThought
+<https://w3id.org/agentoscin/onto#ChainOfThought> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/agentoscin/onto#ChainOfThought> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/agentoscin/onto#ReasoningPattern> .
+<https://w3id.org/agentoscin/onto#ChainOfThought> <http://www.w3.org/2000/01/rdf-schema#comment> "Reasoning pattern in which an agent produces explicit intermediate reasoning steps before answering." .
+<https://w3id.org/agentoscin/onto#ChainOfThought> <http://www.w3.org/2000/01/rdf-schema#label> "Chain of Thought" .
+# 
+# https://w3id.org/agentoscin/onto#CompositeTermination
+<https://w3id.org/agentoscin/onto#CompositeTermination> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/agentoscin/onto#CompositeTermination> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/agentoscin/onto#TerminationCondition> .
+<https://w3id.org/agentoscin/onto#CompositeTermination> <http://www.w3.org/2000/01/rdf-schema#comment> "A termination condition built by combining other conditions via a logical operator." .
+<https://w3id.org/agentoscin/onto#CompositeTermination> <http://www.w3.org/2000/01/rdf-schema#label> "Composite Termination" .
+# 
+# https://w3id.org/agentoscin/onto#ConditionalStep
+<https://w3id.org/agentoscin/onto#ConditionalStep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/agentoscin/onto#ConditionalStep> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/agentic-ai/onto#WorkflowStep> .
+<https://w3id.org/agentoscin/onto#ConditionalStep> <http://www.w3.org/2000/01/rdf-schema#comment> "A workflow step that branches based on routing logic." .
+<https://w3id.org/agentoscin/onto#ConditionalStep> <http://www.w3.org/2000/01/rdf-schema#label> "Conditional Step" .
+# 
+# https://w3id.org/agentoscin/onto#CoordinationPattern
+<https://w3id.org/agentoscin/onto#CoordinationPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/agentoscin/onto#CoordinationPattern> <http://www.w3.org/2000/01/rdf-schema#comment> "A pattern of coordination among agents in a team (e.g. sequential, hierarchical, swarm)." .
+<https://w3id.org/agentoscin/onto#CoordinationPattern> <http://www.w3.org/2000/01/rdf-schema#label> "Coordination Pattern" .
+# 
+# https://w3id.org/agentoscin/onto#EventBasedTermination
+<https://w3id.org/agentoscin/onto#EventBasedTermination> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/agentoscin/onto#EventBasedTermination> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/agentoscin/onto#TerminationCondition> .
+<https://w3id.org/agentoscin/onto#EventBasedTermination> <http://www.w3.org/2000/01/rdf-schema#comment> "Termination condition that fires when a designated event occurs, e.g. a stop expression appearing in an agent message." .
+<https://w3id.org/agentoscin/onto#EventBasedTermination> <http://www.w3.org/2000/01/rdf-schema#label> "Event Based Termination" .
+# 
+# https://w3id.org/agentoscin/onto#Guardrail
+<https://w3id.org/agentoscin/onto#Guardrail> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/agentoscin/onto#Guardrail> <http://www.w3.org/2000/01/rdf-schema#comment> "A validation, safety, or policy check applied to a task." .
+<https://w3id.org/agentoscin/onto#Guardrail> <http://www.w3.org/2000/01/rdf-schema#label> "Guardrail" .
+# 
+# https://w3id.org/agentoscin/onto#HumanCheckpoint
+<https://w3id.org/agentoscin/onto#HumanCheckpoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/agentoscin/onto#HumanCheckpoint> <http://www.w3.org/2000/01/rdf-schema#comment> "A human-in-the-loop checkpoint inserted into task execution." .
+<https://w3id.org/agentoscin/onto#HumanCheckpoint> <http://www.w3.org/2000/01/rdf-schema#label> "Human Checkpoint" .
+# 
+# https://w3id.org/agentoscin/onto#MemoryBinding
+<https://w3id.org/agentoscin/onto#MemoryBinding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/agentoscin/onto#MemoryBinding> <http://www.w3.org/2000/01/rdf-schema#comment> "A reified link between a memory and the agent, team, or system that uses it, with scope and configuration." .
+<https://w3id.org/agentoscin/onto#MemoryBinding> <http://www.w3.org/2000/01/rdf-schema#label> "Memory Binding" .
+# 
+# https://w3id.org/agentoscin/onto#Orchestration
+<https://w3id.org/agentoscin/onto#Orchestration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/agentoscin/onto#Orchestration> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/agentic-ai/onto#Team> .
+<https://w3id.org/agentoscin/onto#Orchestration> <http://www.w3.org/2000/01/rdf-schema#comment> "A controller that orchestrates one or more teams to execute a workflow." .
+<https://w3id.org/agentoscin/onto#Orchestration> <http://www.w3.org/2000/01/rdf-schema#label> "Orchestration" .
+# 
+# https://w3id.org/agentoscin/onto#ReAct
+<https://w3id.org/agentoscin/onto#ReAct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/agentoscin/onto#ReAct> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/agentoscin/onto#ReasoningPattern> .
+<https://w3id.org/agentoscin/onto#ReAct> <http://www.w3.org/2000/01/rdf-schema#comment> "Reasoning pattern interleaving reasoning steps with tool calls and observations (Reason + Act)." .
+<https://w3id.org/agentoscin/onto#ReAct> <http://www.w3.org/2000/01/rdf-schema#label> "ReAct" .
+# 
+# https://w3id.org/agentoscin/onto#ReasoningPattern
+<https://w3id.org/agentoscin/onto#ReasoningPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/agentoscin/onto#ReasoningPattern> <http://www.w3.org/2000/01/rdf-schema#comment> "A reasoning strategy adopted by an agent (e.g. chain-of-thought, ReAct, tree-of-thoughts)." .
+<https://w3id.org/agentoscin/onto#ReasoningPattern> <http://www.w3.org/2000/01/rdf-schema#label> "Reasoning Pattern" .
+# 
+# https://w3id.org/agentoscin/onto#ReflectionLoop
+<https://w3id.org/agentoscin/onto#ReflectionLoop> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/agentoscin/onto#ReflectionLoop> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/agentoscin/onto#ReasoningPattern> .
+<https://w3id.org/agentoscin/onto#ReflectionLoop> <http://www.w3.org/2000/01/rdf-schema#comment> "Reasoning pattern in which an agent iteratively critiques and revises its own output." .
+<https://w3id.org/agentoscin/onto#ReflectionLoop> <http://www.w3.org/2000/01/rdf-schema#label> "Reflection Loop" .
+# 
+# https://w3id.org/agentoscin/onto#RoutingTermination
+<https://w3id.org/agentoscin/onto#RoutingTermination> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/agentoscin/onto#RoutingTermination> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/agentoscin/onto#TerminationCondition> .
+<https://w3id.org/agentoscin/onto#RoutingTermination> <http://www.w3.org/2000/01/rdf-schema#comment> "Termination condition under which execution ends because the routing logic reaches a terminal branch." .
+<https://w3id.org/agentoscin/onto#RoutingTermination> <http://www.w3.org/2000/01/rdf-schema#label> "Routing Termination" .
+# 
+# https://w3id.org/agentoscin/onto#Schema
+<https://w3id.org/agentoscin/onto#Schema> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/agentoscin/onto#Schema> <http://www.w3.org/2000/01/rdf-schema#comment> "A structured-output schema (e.g. JSON Schema, Pydantic model)." .
+<https://w3id.org/agentoscin/onto#Schema> <http://www.w3.org/2000/01/rdf-schema#label> "Schema" .
+# 
+# https://w3id.org/agentoscin/onto#TaskCompletionTermination
+<https://w3id.org/agentoscin/onto#TaskCompletionTermination> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/agentoscin/onto#TaskCompletionTermination> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/agentoscin/onto#TerminationCondition> .
+<https://w3id.org/agentoscin/onto#TaskCompletionTermination> <http://www.w3.org/2000/01/rdf-schema#comment> "Termination condition satisfied when the assigned task is completed." .
+<https://w3id.org/agentoscin/onto#TaskCompletionTermination> <http://www.w3.org/2000/01/rdf-schema#label> "Task Completion Termination" .
+# 
+# https://w3id.org/agentoscin/onto#TerminationCondition
+<https://w3id.org/agentoscin/onto#TerminationCondition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/agentoscin/onto#TerminationCondition> <http://www.w3.org/2000/01/rdf-schema#comment> "A condition under which a team's execution terminates." .
+<https://w3id.org/agentoscin/onto#TerminationCondition> <http://www.w3.org/2000/01/rdf-schema#label> "Termination Condition" .
+# 
+# https://w3id.org/agentoscin/onto#TreeOfThoughts
+<https://w3id.org/agentoscin/onto#TreeOfThoughts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/agentoscin/onto#TreeOfThoughts> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/agentoscin/onto#ReasoningPattern> .
+<https://w3id.org/agentoscin/onto#TreeOfThoughts> <http://www.w3.org/2000/01/rdf-schema#comment> "Reasoning pattern that explores several alternative reasoning branches and selects among them." .
+<https://w3id.org/agentoscin/onto#TreeOfThoughts> <http://www.w3.org/2000/01/rdf-schema#label> "Tree of Thoughts" .
+# 
+# https://w3id.org/agentoscin/onto#TurnLimitTermination
+<https://w3id.org/agentoscin/onto#TurnLimitTermination> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/agentoscin/onto#TurnLimitTermination> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/agentoscin/onto#TerminationCondition> .
+<https://w3id.org/agentoscin/onto#TurnLimitTermination> <http://www.w3.org/2000/01/rdf-schema#comment> "Termination condition that ends execution once a maximum number of turns is reached." .
+<https://w3id.org/agentoscin/onto#TurnLimitTermination> <http://www.w3.org/2000/01/rdf-schema#label> "Turn Limit Termination" .
+# 
+# https://w3id.org/agentoscin/onto#Unspecified
+<https://w3id.org/agentoscin/onto#Unspecified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/agentoscin/onto#Unspecified> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/agentoscin/onto#ReasoningPattern> .
+<https://w3id.org/agentoscin/onto#Unspecified> <http://www.w3.org/2000/01/rdf-schema#comment> "Placeholder reasoning pattern used when the source system does not state which reasoning strategy an agent follows." .
+<https://w3id.org/agentoscin/onto#Unspecified> <http://www.w3.org/2000/01/rdf-schema#label> "Unspecified" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/agentoscin/onto#Custom
+<https://w3id.org/agentoscin/onto#Custom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/agentoscin/onto#Custom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/agentoscin/onto#CoordinationPattern> .
+<https://w3id.org/agentoscin/onto#Custom> <http://www.w3.org/2000/01/rdf-schema#comment> "Coordination pattern that does not match any of the predefined patterns, e.g. a framework-specific or hand-written control flow." .
+<https://w3id.org/agentoscin/onto#Custom> <http://www.w3.org/2000/01/rdf-schema#label> "Custom" .
+# 
+# https://w3id.org/agentoscin/onto#Hierarchical
+<https://w3id.org/agentoscin/onto#Hierarchical> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/agentoscin/onto#Hierarchical> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/agentoscin/onto#CoordinationPattern> .
+<https://w3id.org/agentoscin/onto#Hierarchical> <http://www.w3.org/2000/01/rdf-schema#comment> "Coordination pattern in which a manager agent delegates work to subordinate agents and integrates their results." .
+<https://w3id.org/agentoscin/onto#Hierarchical> <http://www.w3.org/2000/01/rdf-schema#label> "Hierarchical" .
+# 
+# https://w3id.org/agentoscin/onto#Network
+<https://w3id.org/agentoscin/onto#Network> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/agentoscin/onto#Network> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/agentoscin/onto#CoordinationPattern> .
+<https://w3id.org/agentoscin/onto#Network> <http://www.w3.org/2000/01/rdf-schema#comment> "Coordination pattern in which agents communicate peer-to-peer along a graph of connections without a central coordinator." .
+<https://w3id.org/agentoscin/onto#Network> <http://www.w3.org/2000/01/rdf-schema#label> "Network" .
+# 
+# https://w3id.org/agentoscin/onto#ReActLoop
+<https://w3id.org/agentoscin/onto#ReActLoop> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/agentoscin/onto#ReActLoop> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/agentoscin/onto#CoordinationPattern> .
+<https://w3id.org/agentoscin/onto#ReActLoop> <http://www.w3.org/2000/01/rdf-schema#comment> "Coordination pattern in which a single agent cycles between reasoning and tool execution until it produces a final answer." .
+<https://w3id.org/agentoscin/onto#ReActLoop> <http://www.w3.org/2000/01/rdf-schema#label> "ReAct Loop" .
+# 
+# https://w3id.org/agentoscin/onto#RoundRobin
+<https://w3id.org/agentoscin/onto#RoundRobin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/agentoscin/onto#RoundRobin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/agentoscin/onto#CoordinationPattern> .
+<https://w3id.org/agentoscin/onto#RoundRobin> <http://www.w3.org/2000/01/rdf-schema#comment> "Coordination pattern in which agents take turns in a fixed cyclic order." .
+<https://w3id.org/agentoscin/onto#RoundRobin> <http://www.w3.org/2000/01/rdf-schema#label> "Round Robin" .
+# 
+# https://w3id.org/agentoscin/onto#SelectorBased
+<https://w3id.org/agentoscin/onto#SelectorBased> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/agentoscin/onto#SelectorBased> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/agentoscin/onto#CoordinationPattern> .
+<https://w3id.org/agentoscin/onto#SelectorBased> <http://www.w3.org/2000/01/rdf-schema#comment> "Coordination pattern in which a selector — typically a model — chooses which agent speaks next at each turn." .
+<https://w3id.org/agentoscin/onto#SelectorBased> <http://www.w3.org/2000/01/rdf-schema#label> "Selector Based" .
+# 
+# https://w3id.org/agentoscin/onto#Sequential
+<https://w3id.org/agentoscin/onto#Sequential> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/agentoscin/onto#Sequential> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/agentoscin/onto#CoordinationPattern> .
+<https://w3id.org/agentoscin/onto#Sequential> <http://www.w3.org/2000/01/rdf-schema#comment> "Coordination pattern in which agents act one after another in a fixed order, each consuming the previous output." .
+<https://w3id.org/agentoscin/onto#Sequential> <http://www.w3.org/2000/01/rdf-schema#label> "Sequential" .
+# 
+# https://w3id.org/agentoscin/onto#Swarm
+<https://w3id.org/agentoscin/onto#Swarm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/agentoscin/onto#Swarm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/agentoscin/onto#CoordinationPattern> .
+<https://w3id.org/agentoscin/onto#Swarm> <http://www.w3.org/2000/01/rdf-schema#comment> "Coordination pattern in which agents hand off control to one another dynamically, based on which agent is best suited to continue." .
+<https://w3id.org/agentoscin/onto#Swarm> <http://www.w3.org/2000/01/rdf-schema#label> "Swarm" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+<https://w3id.org/agentoscin/onto#containsAgent> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an agentic system to an agent it contains." .
+<https://w3id.org/agentoscin/onto#containsAgent> <http://www.w3.org/2000/01/rdf-schema#label> "contains agent" .
+# 
+<https://w3id.org/agentoscin/onto#hasAssociatedAgent> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a workflow step to the agent that executes it (e.g. a LangGraph node function implemented by a specific LLMAgent)." .
+<https://w3id.org/agentoscin/onto#hasAssociatedAgent> <http://www.w3.org/2000/01/rdf-schema#label> "has associated agent" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    General axioms
+# #
+# #################################################################
+# 
+# 
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid12 <http://www.w3.org/2002/07/owl#members> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/agentoscin/onto#TurnLimitTermination> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/agentoscin/onto#TaskCompletionTermination> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/agentoscin/onto#RoutingTermination> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/agentoscin/onto#EventBasedTermination> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/agentoscin/onto#CompositeTermination> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

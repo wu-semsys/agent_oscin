@@ -5,14 +5,14 @@
 # - Environment secrets (API keys, tokens) are stored only as variable names/placeholders (configValue uses the environment variable name). Actual secret values are not included.
 # - Some runtime concepts (in-memory state, file I/O, process invocation) are represented as WorkflowStep descriptions or Task descriptions; no new classes/properties were created.
 
-@prefix : <http://www.semanticweb.org/danilippmann/ontologies/2026/3/agentoscin/> .
-@prefix agento: <http://www.w3id.org/agentic-ai/onto#> .
-@prefix beam: <http://w3id.org/beam/core#> .
-@prefix prov: <http://www.w3.org/ns/prov#> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@base <http://www.semanticweb.org/danilippmann/ontologies/2026/3/agentoscin/> .
+@prefix : <https://w3id.org/agentoscin/onto#>.
+@prefix agento: <http://www.w3id.org/agentic-ai/onto#>.
+@prefix beam: <http://w3id.org/beam/core#>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix prov: <http://www.w3.org/ns/prov#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@base <https://w3id.org/agentoscin/onto#> .
 
 #################################################################
 # Agentic system / team / agents / tools / tasks / workflow

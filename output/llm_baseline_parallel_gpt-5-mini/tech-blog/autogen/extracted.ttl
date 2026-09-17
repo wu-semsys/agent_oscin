@@ -5,14 +5,14 @@
 # - The ontology cannot capture message-level runtime contents (the actual messages produced during execution) because they are produced dynamically. We preserve the prompts, expected output indicators, and termination parameters so another agent can reconstruct equivalent behavior.
 # - No new classes or properties were introduced. Some code-level constructs (e.g., RoundRobinGroupChat class, MaxMessageTermination type) are modeled using the closest matching ontology classes/properties (CoordinationPattern, TurnLimitTermination, WorkflowStep ordering, etc.).
 
-@prefix : <http://www.semanticweb.org/danilippmann/ontologies/2026/3/agentoscin/> .
-@prefix agento: <http://www.w3id.org/agentic-ai/onto#> .
-@prefix beam: <http://w3id.org/beam/core#> .
-@prefix prov: <http://www.w3.org/ns/prov#> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@base <http://www.semanticweb.org/danilippmann/ontologies/2026/3/agentoscin/> .
+@prefix : <https://w3id.org/agentoscin/onto#>.
+@prefix agento: <http://www.w3id.org/agentic-ai/onto#>.
+@prefix beam: <http://w3id.org/beam/core#>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix prov: <http://www.w3.org/ns/prov#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@base <https://w3id.org/agentoscin/onto#> .
 
 #################################################################
 #    Agentic system (top-level)

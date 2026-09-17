@@ -1,5 +1,5 @@
 @prefix agento: <http://www.w3id.org/agentic-ai/onto#> .
-@prefix agentoscin: <http://www.semanticweb.org/danilippmann/ontologies/2026/3/agentoscin/> .
+@prefix agentoscin: <https://w3id.org/agentoscin/onto#> .
 @prefix beam: <http://w3id.org/beam/core#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix ex: <http://example.org/code_review#> .

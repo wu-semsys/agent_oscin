@@ -1,5 +1,5 @@
 @prefix agento: <http://www.w3id.org/agentic-ai/onto#> .
-@prefix agentoscin: <http://www.semanticweb.org/danilippmann/ontologies/2026/3/agentoscin/> .
+@prefix agentoscin: <https://w3id.org/agentoscin/onto#> .
 @prefix ex: <http://example.org/crewai#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .

@@ -7,15 +7,15 @@
 # - The runtime binding of input values (e.g., the Flow state's default topic) and call semantics (kickoff inputs) are modeled as a beam:Resource (DefaultTopic) and as promptInputData literals on prompts; the exact runtime parameter binding is not modeled since no property exists.
 # - No new classes or properties were added. Where necessary information could not be modeled structurally, I've preserved it as literals on existing individuals (promptInstruction, descriptions, labels).
 
-@prefix : <http://example.org/techblog/> .
-@prefix agento: <http://www.w3id.org/agentic-ai/onto#> .
-@prefix agentoscin: <http://www.semanticweb.org/danilippmann/ontologies/2026/3/agentoscin/> .
-@prefix beam: <http://w3id.org/beam/core#> .
-@prefix prov: <http://www.w3.org/ns/prov#> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.org/techblog/>.
+@prefix agento: <http://www.w3id.org/agentic-ai/onto#>.
+@prefix agentoscin: <https://w3id.org/agentoscin/onto#>.
+@prefix beam: <http://w3id.org/beam/core#>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix prov: <http://www.w3.org/ns/prov#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
 #################################################################
 # Agentic system (Flow) and Orchestration (Crew)

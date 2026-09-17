@@ -6,15 +6,15 @@
 # - The ontology contains no property for "LLM invocation parameters" (e.g., model kwargs, environment variables). I included model identifier in the LanguageModel individual description. If more granular LLM params are required, new properties would be needed.
 # - Reasoning pattern used by agents is not explicitly specified in code; I set employsReasoningPattern to agentoscin:Unspecified and preserved the full prompt text so reasoning behavior can be reconstructed from prompts.
 
-@prefix : <http://example.org/code-review-langgraph#> .
-@prefix agento: <http://www.w3id.org/agentic-ai/onto#> .
-@prefix agentoscin: <http://www.semanticweb.org/danilippmann/ontologies/2026/3/agentoscin/> .
-@prefix beam: <http://w3id.org/beam/core#> .
-@prefix prov: <http://www.w3.org/ns/prov#> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.org/code-review-langgraph#>.
+@prefix agento: <http://www.w3id.org/agentic-ai/onto#>.
+@prefix agentoscin: <https://w3id.org/agentoscin/onto#>.
+@prefix beam: <http://w3id.org/beam/core#>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix prov: <http://www.w3.org/ns/prov#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
 ###############################################################################
 # Agentic system and orchestration

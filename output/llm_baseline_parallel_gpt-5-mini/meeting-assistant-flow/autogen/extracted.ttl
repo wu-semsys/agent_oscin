@@ -8,14 +8,14 @@
 # - Console output/result parsing (JSON extraction from the last message) is represented in the Task expected-output description; parsing logic is not modeled.
 # - No new classes or properties were added; all modeling uses only classes and properties defined in the provided ontologies.
 
-@prefix ex: <http://example.org/meeting-assistant#> .
-@prefix agento: <http://www.w3id.org/agentic-ai/onto#> .
-@prefix agentoscin: <http://www.semanticweb.org/danilippmann/ontologies/2026/3/agentoscin/> .
-@prefix beam: <http://w3id.org/beam/core#> .
-@prefix prov: <http://www.w3.org/ns/prov#> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix agento: <http://www.w3id.org/agentic-ai/onto#>.
+@prefix agentoscin: <https://w3id.org/agentoscin/onto#>.
+@prefix beam: <http://w3id.org/beam/core#>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix ex: <http://example.org/meeting-assistant#>.
+@prefix prov: <http://www.w3.org/ns/prov#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 @base <http://example.org/meeting-assistant#> .
 
 ########################################################################

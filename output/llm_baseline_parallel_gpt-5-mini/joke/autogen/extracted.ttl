@@ -6,12 +6,12 @@
 # - Runtime behavior (async execution, message sequencing, implicit internal state/stategraph) and implementation details (Python functions, SDK calls) are not modeled. Only semantic artifacts (agents, prompts, team, workflow, termination, model config, and prompts) are represented.
 # - All information from the source (agent names, full prompt system messages, model identifier, termination parameter, and the task text) is preserved as literals or config entries.
 #
-@prefix : <http://www.semanticweb.org/danilippmann/ontologies/2026/3/agentoscin/instances#> .
-@prefix asc: <http://www.semanticweb.org/danilippmann/ontologies/2026/3/agentoscin/> .
-@prefix agento: <http://www.w3id.org/agentic-ai/onto#> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://www.semanticweb.org/danilippmann/ontologies/2026/3/agentoscin/instances#>.
+@prefix agento: <http://www.w3id.org/agentic-ai/onto#>.
+@prefix asc: <https://w3id.org/agentoscin/onto#>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
 #################################################################
 # Agentic system

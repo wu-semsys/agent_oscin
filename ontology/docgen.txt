@@ -1,0 +1,10 @@
+java -jar widoco-1.4.25-jar-with-dependencies_JDK-11.jar \
+  -ontFile agentoscin.ttl \
+  -outFolder onto/ \
+  -lang en \
+  -webVowl \
+  -licensius \
+  -getOntologyMetadata \
+  -rewriteAll \
+  -htaccess \
+  -includeImportedOntologies
