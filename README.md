@@ -2,9 +2,6 @@
 
 > Bidirectional transformation between agentic AI framework source code and a shared OWL ontology.
 
-**Author:** Dani Lippmann  
-**Context:** Master Thesis — *Towards Interoperability between Agentic AI Frameworks through Semantic Representation* (TU Wien, 2026)
-
 ---
 
 ## Architecture
