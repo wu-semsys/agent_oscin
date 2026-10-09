@@ -18,8 +18,8 @@
 #     FlowStep_run_team wrapped in AutoGenFlow orchestration.
 # ============================================================
 
-<http://example.org/autogen> a owl:Ontology ;
-    owl:imports <http://www.semanticweb.org/danilippmann/ontologies/2026/3/agentoscin> .
+<http://example.org/joke> a owl:Ontology ;
+    owl:imports agentoscin: .
 
 # ---------- system root ----------
 ex:joke a agentoscin:AgenticSystem ;

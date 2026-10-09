@@ -15,7 +15,7 @@
 # ============================================================
 
 <http://example.org/travel_planning> a owl:Ontology ;
-    owl:imports <http://www.semanticweb.org/danilippmann/ontologies/2026/3/agentoscin> .
+    owl:imports agentoscin: .
 
 # ---------- system root ----------
 ex:travel_planning a agentoscin:AgenticSystem ;

@@ -16,8 +16,8 @@
 #     FlowStep_generate_joke with hasEdgeMapping + hasRoutingLogic.
 # ============================================================
 
-<http://example.org/langgraph> a owl:Ontology ;
-    owl:imports <http://www.semanticweb.org/danilippmann/ontologies/2026/3/agentoscin> .
+<http://example.org/joke> a owl:Ontology ;
+    owl:imports agentoscin: .
 
 # ---------- system root ----------
 ex:joke a agentoscin:AgenticSystem ;
