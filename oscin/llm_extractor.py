@@ -165,11 +165,16 @@ def call_openai(prompt: str, model: str = "gpt-4o") -> str:
     response = client.chat.completions.create(**kwargs)
     return response.choices[0].message.content
 
+def llm_call_dry_run(prompt: str, model: str = None) -> str:
+    log.info("This is a dry-run, no external API called, no model invoked")
+    return None
+    
 
 # Provider registry
 PROVIDERS = {
     "anthropic": call_anthropic,
     "openai": call_openai,
+    "dry-run": llm_call_dry_run,
 }
 
 # Default model per provider
@@ -239,6 +244,11 @@ def run_llm_extraction(
 
     call_fn = PROVIDERS[provider]
     response_text = call_fn(prompt, model=model)
+    if provider == "dry-run":
+        output_path.parent.mkdir(parents=True, exist_ok=True)
+        output_path.write_text(prompt, encoding="utf-8")
+        return output_path
+    
     log.info("  Received response (%d chars)", len(response_text))
 
     # Extract TTL

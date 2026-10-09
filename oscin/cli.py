@@ -170,9 +170,9 @@ def main(argv: list[str] | None = None) -> None:
     llm_p.add_argument(
         "--provider",
         "-p",
-        choices=["anthropic", "openai"],
-        default="anthropic",
-        help="LLM provider to use. Default: anthropic",
+        choices=["anthropic", "openai", "dry-run"],
+        default="dry-run",
+        help="LLM provider to use. Default: dry-run",
     )
     llm_p.add_argument(
         "--model",
