@@ -18,7 +18,8 @@ from rdflib import Namespace
 # Ontology vocabulary namespaces
 # ---------------------------------------------------------------------------
 AGENTOSCIN = Namespace(
-    "http://www.semanticweb.org/danilippmann/ontologies/2026/3/agentoscin/"
+#     "http://www.semanticweb.org/danilippmann/ontologies/2026/3/agentoscin/"
+    "https://w3id.org/agentoscin/onto#"
 )
 AGENTO = Namespace("http://www.w3id.org/agentic-ai/onto#")
 BEAM = Namespace("http://w3id.org/beam/core#")
