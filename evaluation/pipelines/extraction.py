@@ -65,6 +65,7 @@ def run_extraction(
     out_root: Path | None = None,
     system_name: str | None = None,
     namespace: str | None = None,
+    existing_extraction: Path | None = None,
 ) -> dict[str, Any]:
     """Execute the extraction pipeline and return the report dict.
 
@@ -77,14 +78,10 @@ def run_extraction(
     example_root = example_root.resolve()
     example_name = example_root.name
     source_dir = resolve_source_dir(example_root)
-    if not source_dir.is_dir():
-        raise FileNotFoundError(f"source dir not found: {source_dir}")
 
     out_root = (out_root or PROJECT_ROOT / "output" / "extraction").resolve()
     work = out_root / framework / example_name
     work.mkdir(parents=True, exist_ok=True)
-
-    ttl_path = work / "extracted.ttl"
 
     if ground_truth is None:
         ground_truth = _discover_ground_truth(example_root)
@@ -105,36 +102,47 @@ def run_extraction(
         "steps": {},
         "metrics": {},
     }
+    
+    ttl_path = work / "extracted.ttl"
 
-    # Step: extract
-    try:
-        run_step(
-            report,
-            "extract",
-            run_oscin,
-            [
-                "extract", str(source_dir),
-                "--framework", framework,
-                "--system-name", effective_system_name,
-                "--namespace", effective_namespace,
-                "--output", str(ttl_path),
-                "--no-report",
-            ],
-            _output_hint=str(ttl_path),
-        )
-    except StepFailed:
-        write_report(report, work)
-        return report
+    if not existing_extraction:
+        # Step: extract
+        try:
+            run_step(
+                report,
+                "extract",
+                run_oscin,
+                [
+                    "extract", str(source_dir),
+                    "--framework", framework,
+                    "--system-name", effective_system_name,
+                    "--namespace", effective_namespace,
+                    "--output", str(ttl_path),
+                    "--no-report",
+                ],
+                _output_hint=str(ttl_path),
+            )
+        except StepFailed:
+            write_report(report, work)
+            return report
+    else:
+        ttl_path = existing_extraction
 
     # Metrics
     report["metrics"]["ttl_intrinsic"] = ttl_intrinsic.compute(ttl_path)
     if ground_truth and ground_truth.is_file():
         report["metrics"]["ttl_pairwise"] = ttl_pairwise.compute(ground_truth, ttl_path)
+        
         try:
             from rdflib import Graph
-            g_ref = Graph(); g_ref.parse(str(ground_truth), format="turtle")
-            g_cand = Graph(); g_cand.parse(str(ttl_path), format="turtle")
-            report["metrics"]["ttl_fuzzy_match"] = ttl_fuzzy_match.compute(g_ref, g_cand)
+            g_ref = Graph()
+            g_ref.parse(str(ground_truth), format="turtle")
+            g_cand = Graph()
+            g_cand.parse(str(ttl_path), format="turtle")
+            fuzzy_match_result = ttl_fuzzy_match.compute(g_ref, g_cand)
+            report["metrics"]["ttl_fuzzy_match"] = fuzzy_match_result
+            alignment = fuzzy_match_result["alignment"]
+            report["metrics"]["ttl_pairwise_aligned"] = ttl_pairwise.compute_with_alignment(g_ref, g_cand, alignment)
         except Exception as e:
             report["metrics"]["ttl_fuzzy_match"] = {
                 "metric": "ttl_fuzzy_match",
@@ -152,6 +160,7 @@ def _parse_args(argv: list[str] | None = None) -> argparse.Namespace:
                     choices=["crewai", "langgraph", "autogen"])
     ap.add_argument("--ground-truth", type=Path, default=None)
     ap.add_argument("--out-root", type=Path, default=None)
+    ap.add_argument("--existing-extraction", type=Path, default=None)
     return ap.parse_args(argv)
 
 
@@ -163,6 +172,7 @@ def main(argv: list[str] | None = None) -> None:
         args.framework,
         ground_truth=args.ground_truth,
         out_root=args.out_root,
+        existing_extraction=args.existing_extraction,
     )
     print(f"report: {r['work_dir']}/report.md")
 

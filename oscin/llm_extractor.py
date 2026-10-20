@@ -216,14 +216,15 @@ def run_llm_extraction(
     # base ontology and the OSCIN extension concatenated, so the model sees the
     # full TBox the deterministic pipeline knows.
     ontology_dir = Path(__file__).resolve().parent.parent / "ontology"
-    base_path = ontology_dir / "agentO.ttl"
+    base_path = ontology_dir / "agento.ttl"
     ext_path = ontology_dir / "agentoscin.ttl"
     parts = []
     for p in (base_path, ext_path):
         if p.is_file():
             parts.append(f"# ===== {p.name} =====\n{p.read_text(encoding='utf-8')}")
-    if not parts:
-        raise FileNotFoundError(f"No ontology files found in {ontology_dir}")
+        else:
+            raise FileNotFoundError(f"Ontology file {p.as_uri} not found")
+
     ontology_text = "\n\n".join(parts)
     log.info(
         "  Loaded ontology from %s + %s (%d chars total)",

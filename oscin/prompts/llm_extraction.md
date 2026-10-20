@@ -18,7 +18,11 @@ Your task:
 3. Populate the ontology with individuals based on the extracted information. The goal is that another LLM can reconstruct the agent solution from the ontology instances you create. Do not add source code because we do not know the target framework to recreate the agent solution, so keep the semantic meaning and logic instead.
    - Use ONLY the existing classes and properties from the ontology!
    - Create individuals for all relevant entities and connect them with the appropriate properties.
+   - Use the following namespace: {{instance_namespace}}
    - Preserve all information from the source code (including prompts, parameters, and important logic) as literals or links between individuals. Fidelity is important, do not change or condense information.
+   - Do not enrich the ontology based on your own knowledge, perform the population only based on the information extracted from the source code.
+   - Include all necessary prefix declarations.
+   - Ensure the syntactic correctness of the generated ontology.
 
 4. If some aspects of the solution cannot be modeled with the current ontology:
    - Do NOT invent new classes or properties!
