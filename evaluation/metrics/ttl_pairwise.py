@@ -18,11 +18,13 @@ from __future__ import annotations
 from dataclasses import asdict
 from pathlib import Path
 
-from rdflib import Graph
+from rdflib import RDF, Graph, URIRef
+from rdflib.namespace import split_uri
 
-from oscin.evaluator import compute_pairwise as _compute_pairwise
+from oscin.evaluator import PairwiseMetrics, compute_pairwise as _compute_pairwise
 
 NAME = "ttl_pairwise"
+NAME_ALIGNED = "ttl_pairwise_aligned"
 
 
 def compute(reference_ttl: Path | str, candidate_ttl: Path | str) -> dict:
@@ -42,13 +44,38 @@ def compute(reference_ttl: Path | str, candidate_ttl: Path | str) -> dict:
     d["candidate"] = str(candidate_ttl)
     return d
 
-
 def compute_from_graphs(reference: Graph, candidate: Graph) -> dict:
     """Variant that takes already-loaded ``rdflib.Graph`` objects."""
     m = _compute_pairwise(reference, candidate)
     d = asdict(m)
     d["metric"] = NAME
     return d
+
+def compute_with_alignment(reference: Graph, candidate: Graph, alignment: dict[str, list[tuple[str, str, float]]]) -> dict:
+    aligned_candidate = replace_aligned(candidate, alignment)
+    d = asdict(_compute_pairwise(reference, aligned_candidate))
+    d["metric"] = NAME_ALIGNED
+    return d
+
+def replace_aligned(graph: Graph, alignment: dict[str, list[tuple[str, str, float]]]) -> Graph:
+    mapping: dict[URIRef, URIRef] = {}
+    for clazz, class_alignments in alignment.items():
+        for replacement, original, score in class_alignments:
+            mapping[original] = replacement
+
+    result = Graph()
+    for s, p, o in graph:
+        replaced_subject, replaced_object = s, o
+        if isinstance(s, URIRef):
+            subject_uri_split = _split_uri(s)
+            replaced_subject = URIRef(subject_uri_split[0] + subject_uri_split[1] + mapping.get(subject_uri_split[2], subject_uri_split[2]))
+        if isinstance(o, URIRef):
+            object_uri_split = _split_uri(o)
+            replaced_object = URIRef(object_uri_split[0] + object_uri_split[1] + mapping.get(object_uri_split[2], object_uri_split[2]))
+        
+        result.add((replaced_subject, p, replaced_object))
+ 
+    return result
 
 
 def row(result: dict) -> dict:
@@ -89,3 +116,10 @@ def summarize_markdown(result: dict) -> str:
                      + ", ".join(extra[:10])
                      + ("…" if len(extra) > 10 else ""))
     return "\n".join(lines) + "\n"
+
+def _split_uri(uri) -> tuple[str, str, str]:
+    s = str(uri)
+    for sep in ("#", "/"):
+        if sep in s:
+            split = s.rsplit(sep, 1)
+            return split[0], sep, split[1]
