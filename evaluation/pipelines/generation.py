@@ -182,7 +182,11 @@ def run_generation(
                     "stdout_overlap": None,
                     "duration_ratio": None,
                     "cand_entry": str(entry),
+                    "cand_stdout": run_result.get("stdout"),
+                    "cand_stderr": run_result.get("stderr"),
                 }
+                print("STDOUT\n", run_result.get("stdout"))
+                print("STDERR\n", run_result.get("stderr"))
 
     write_report(report, work)
     return report

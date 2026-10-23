@@ -104,25 +104,26 @@ def run_target(target: Path, timeout: float = 120.0) -> dict:
         idx = line.find(marker)
         if idx >= 0:
             import json as _json
-            try:
-                payload = _json.loads(line[idx + len(marker):])
-            except _json.JSONDecodeError:
-                pass
+            #try:
+            payload = _json.loads(line[idx + len(marker):])
+            #except _json.JSONDecodeError:
+            #    pass
         else:
             user_stdout_lines.append(line)
 
+    output_capture_length = 65536 # 4096
     user_stdout = "\n".join(user_stdout_lines)
     if payload is None:
         # Subprocess crashed before the marker — capture what we can.
         return {
             "ok": False,
             "error": f"subprocess exit {proc.returncode}; no trace marker",
-            "stdout": user_stdout[-4096:],
-            "stderr": proc.stderr[-4096:],
+            "stdout": user_stdout[-output_capture_length:],
+            "stderr": proc.stderr[-output_capture_length:],
             "duration_s": None,
         }
-    payload["stdout"] = user_stdout[-4096:]
-    payload["stderr"] = proc.stderr[-4096:]
+    payload["stdout"] = user_stdout[-output_capture_length:]
+    payload["stderr"] = proc.stderr[-output_capture_length:]
     payload["subprocess_rc"] = proc.returncode
     return payload
 
