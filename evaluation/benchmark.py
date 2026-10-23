@@ -104,6 +104,7 @@ def _run_extraction_bench(
     frameworks: list[str],
     only: set[str] | None,
     out_root: Path,
+    existing_extraction: Path | None = None
 ) -> list[dict]:
     rows: list[dict] = []
     for fw, ex_root in discover_examples(frameworks):
@@ -112,7 +113,7 @@ def _run_extraction_bench(
             continue
         log.info("── extraction: %s ──", key)
         try:
-            report = ext_pipe.run_extraction(ex_root, fw, out_root=out_root)
+            report = ext_pipe.run_extraction(ex_root, fw, out_root=out_root, existing_extraction=existing_extraction)
         except Exception as e:
             log.exception("extraction crashed for %s", key)
             report = _crash_report("extraction", fw, ex_root.name, e)
@@ -295,13 +296,14 @@ def run_benchmark(
     execute: bool = False,
     reextract: bool = False,
     out_root: Path | None = None,
+    existing_extraction: Path | None = None,
 ) -> list[dict]:
     out_root = (out_root or PROJECT_ROOT / "output" / pipeline).resolve()
     out_root.mkdir(parents=True, exist_ok=True)
     frameworks = frameworks or list(DEFAULT_FRAMEWORKS)
 
     if pipeline == "extraction":
-        rows = _run_extraction_bench(frameworks, only, out_root)
+        rows = _run_extraction_bench(frameworks, only, out_root, existing_extraction)
     elif pipeline == "generation":
         if not target_framework:
             raise ValueError("--target-framework required for generation pipeline")
