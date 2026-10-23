@@ -134,7 +134,7 @@ def call_anthropic(prompt: str, model: str = "claude-sonnet-4-20250514") -> str:
     return response.content[0].text
 
 
-def call_openai(prompt: str, model: str = "gpt-4o") -> str:
+def call_openai(prompt: str, model: str = "gpt-6.1-sol") -> str:
     """Call the OpenAI API."""
     try:
         import openai
@@ -155,7 +155,7 @@ def call_openai(prompt: str, model: str = "gpt-4o") -> str:
     # ``max_completion_tokens``; they also spend part of that budget on
     # internal reasoning, so allow a larger ceiling to leave room for the
     # full Turtle output.
-    is_reasoning = model.startswith(("gpt-5", "o1", "o3", "o4"))
+    is_reasoning = True # model.startswith(("gpt-5", "o1", "o3", "o4"))
     kwargs = {"model": model, "messages": [{"role": "user", "content": prompt}]}
     if is_reasoning:
         kwargs["max_completion_tokens"] = 32768
