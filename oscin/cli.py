@@ -218,7 +218,7 @@ def main(argv: list[str] | None = None) -> None:
         description="LLM-based generation baseline. Sends the ontology instance to an LLM and asks it to produce source code.",
     )
     gen_llm_p.add_argument(
-        "ttl_file",
+        "--ttl_file",
         type=Path,
         help="Path to the .ttl ontology instance file to read.",
     )
@@ -248,6 +248,63 @@ def main(argv: list[str] | None = None) -> None:
         default=None,
         help="Model name override (e.g. 'claude-sonnet-4-20250514', 'gpt-4o').",
     )
+
+    # ---------------------------------------------------------------
+    # Subcommand: llm_fixup
+    # ---------------------------------------------------------------
+    fixup_p = subparsers.add_parser(
+        "llm_fixup",
+        help="Fix/repair generated sources using an LLM",
+        description=(
+            "Sends the generated sources and the "
+        ),
+    )
+    fixup_p.add_argument(
+        "--generated-dir",
+        "-g",
+        type=Path,
+        required=True,
+        help="Directory with the generated input files.",
+    )
+    fixup_p.add_argument(
+        "--output-dir",
+        "-d",
+        type=Path,
+        required=True,
+        help="Output directory for the generated source files.",
+    )
+    fixup_p.add_argument(
+        "--provider",
+        "-p",
+        choices=["anthropic", "openai", "dry-run"],
+        required=True,
+        help="LLM provider to use.",
+    )
+    fixup_p.add_argument(
+        "--model",
+        "-m",
+        required=True,
+        help="Model name override (e.g. 'claude-sonnet-5-5', 'gpt-4o').",
+    )
+    fixup_p.add_argument(
+        "--ttl_file",
+        type=Path,
+        required=True,
+        help="Path to the .ttl ontology instance file to read.",
+    )
+    fixup_p.add_argument(
+        "--target-framework",
+        "-t",
+        required=True,
+        help="The target framework to generate source code for (e.g. 'CrewAI', 'AutoGen').",
+    )
+    fixup_p.add_argument(
+        "--source_framework_code_dir",
+        help="The code from the source framework implementation.",
+        type=Path,
+        default=None,
+    )
+    
 
     # ---------------------------------------------------------------
     # Subcommand: evaluate
@@ -295,6 +352,8 @@ def main(argv: list[str] | None = None) -> None:
         _run_generate(args)
     elif args.command == "generate-llm":
         _run_generate_llm(args)
+    elif args.command == "llm_fixup":
+        _run_llm_fixup(args)
     elif args.command == "evaluate":
         _run_evaluate(args)
 
@@ -450,6 +509,21 @@ def _run_generate_llm(args: argparse.Namespace) -> None:
     log.info("Generated %d files in: %s", len(created_files), output_dir)
     log.info("=" * 60)
 
+# -------------------------------------------------------------------
+# LLM Repair/Fixup
+# -------------------------------------------------------------------
+
+def _run_llm_fixup(args: argparse.Namespace) -> None:
+    from oscin.llm_fixup import run_llm_fixup
+    run_llm_fixup(
+        generated_dir=args.generated_dir,
+        source_framework_code_dir=args.source_framework_code_dir,
+        ttl_file=args.ttl_file,
+        target_framework=args.target_framework,
+        output_dir=args.output_dir,
+        provider=args.provider,
+        model=args.model,
+    )
 
 # -------------------------------------------------------------------
 # Evaluate pipeline

@@ -12,12 +12,15 @@ valid and runnable.
 2) The auto-generated skeleton code for the {{target_framework}} framework:
 {{skeleton_code}}
 
+{{existing_source_framework_implementation_instruction}}
+
 ## Known Issues in the Generated Code
 
 The auto-generation pipeline systematically produces the following defects.
 Fix ALL of them:
 
 ### All frameworks
+
 - **Tool stubs**: Every tool function or `_run` method raises
   `NotImplementedError`. Replace with a plausible working implementation.
   If the tool calls an external API or service that cannot be replicated,
@@ -29,6 +32,7 @@ Fix ALL of them:
   input/output wiring, etc.).
 
 ### CrewAI-specific
+
 - **`@listen()` / `@router()` without arguments**: These decorators MUST
   reference the method they listen to or route from, e.g. `@listen(step_name)`
   or `@router(source_step)`. The skeleton omits the argument; you must add it
@@ -50,6 +54,7 @@ Fix ALL of them:
   if the ontology suggests it.
 
 ### LangGraph-specific
+
 - **Return type errors**: Node functions return `{"messages": response.content}`
   (a string) instead of `{"messages": [response]}` (an AIMessage object in a
   list). The `add_messages` reducer expects BaseMessage objects. Fix ALL
@@ -70,6 +75,7 @@ Fix ALL of them:
   any required initial state fields (topic, task, etc.) from the ontology.
 
 ### AutoGen-specific
+
 - **Missing agent descriptions**: `AssistantAgent` is missing the
   `description=` parameter, which is critical for `SelectorGroupChat`.
   Derive a concise description from the agent's role/goal in the ontology.

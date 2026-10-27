@@ -31,8 +31,9 @@ log = logging.getLogger("oscin")
 
 PROMPT_TEMPLATE_PATH = Path(__file__).parent / "prompts" / "llm_fixup.md"
 
+SOURCE_FRAMEWORK_IMPLEMENTATION_INSTRUCTION = "3) An existing implementation of the desired functionality using a different framework:\n"
 
-def collect_skeleton_files(generated_dir: Path) -> str:
+def collect_code_files(generated_dir: Path) -> str:
     """Collect all .py files from the skeleton directory into a single
     string with --- filepath --- headers, matching the LLM output format."""
     parts: list[str] = []
@@ -41,8 +42,10 @@ def collect_skeleton_files(generated_dir: Path) -> str:
             continue
         rel_path = filepath.relative_to(generated_dir)
         try:
+            log.info("reading file %s", filepath)
             content = filepath.read_text(encoding="utf-8")
         except (UnicodeDecodeError, OSError):
+            log.info("skipping file %s due to error", filepath)
             continue
         parts.append(f"--- {rel_path} ---\n```python\n{content}\n```")
     return "\n\n".join(parts)
@@ -52,6 +55,7 @@ def build_fixup_prompt(
     instance_data: str,
     skeleton_code: str,
     target_framework: str,
+    source_framework_implementation_code: str | None = None,
 ) -> str:
     """Build the full prompt by filling in the template placeholders."""
     template = PROMPT_TEMPLATE_PATH.read_text(encoding="utf-8")
@@ -59,6 +63,11 @@ def build_fixup_prompt(
     prompt = template.replace("{{instance_data}}", instance_data)
     prompt = prompt.replace("{{skeleton_code}}", skeleton_code)
     prompt = prompt.replace("{{target_framework}}", target_framework)
+
+    if source_framework_implementation_code:
+        prompt = prompt.replace("{{existing_source_framework_implementation_instruction}}", SOURCE_FRAMEWORK_IMPLEMENTATION_INSTRUCTION + source_framework_implementation_code)
+    else:
+        prompt = prompt.replace("{{existing_source_framework_implementation_instruction}}", "")
 
     return prompt
 
@@ -70,6 +79,7 @@ def run_llm_fixup(
     output_dir: Path | None = None,
     provider: str = "openai",
     model: str | None = None,
+    source_framework_code_dir: Path | None = None,
 ) -> Path:
     """
     Run the LLM fixup pipeline.
@@ -78,6 +88,8 @@ def run_llm_fixup(
     ----------
     generated_dir : Path
         Directory containing the skeleton code (from deterministic generator).
+    source_framework_code_dir : Path | None
+        Directory containing the implementation of the source framework.
     ttl_file : Path
         Path to the populated TTL file (from AST extraction).
     target_framework : str
@@ -102,6 +114,8 @@ def run_llm_fixup(
 
     if not generated_dir.is_dir():
         raise FileNotFoundError(f"Skeleton directory not found: {generated_dir}")
+    if source_framework_code_dir and not source_framework_code_dir.is_dir():
+        raise FileNotFoundError(f"Source framework implmementation directory not found: {source_framework_code_dir}")
     if not ttl_file.is_file():
         raise FileNotFoundError(f"TTL file not found: {ttl_file}")
 
@@ -109,18 +123,30 @@ def run_llm_fixup(
         output_dir = generated_dir.parent / (generated_dir.name + "_fixed")
     output_dir = Path(output_dir).resolve()
 
+    log.info("collecting generated source code files")
     # Collect skeleton code
-    skeleton_code = collect_skeleton_files(generated_dir)
+    skeleton_code = collect_code_files(generated_dir)
     if not skeleton_code.strip():
         raise ValueError(f"No .py files found in {generated_dir}")
     log.info("  Collected skeleton code (%d chars)", len(skeleton_code))
+
+    source_framework_code = None
+    if source_framework_code_dir:
+        log.info("collecting source framework code files")
+        source_framework_code = collect_code_files(source_framework_code_dir)
+        if not source_framework_code.strip():
+            raise ValueError(f"No .py files found in {source_framework_code_dir}")
+        log.info("  Collected source framework implementation code (%d chars)", len(source_framework_code))
+    else:
+        log.info("no source framework implementation given")
+
 
     # Load TTL instance data
     instance_data = ttl_file.read_text(encoding="utf-8")
     log.info("  Loaded instance data (%d chars)", len(instance_data))
 
     # Build prompt
-    prompt = build_fixup_prompt(instance_data, skeleton_code, target_framework)
+    prompt = build_fixup_prompt(instance_data, skeleton_code, target_framework, source_framework_code)
     log.info("  Full prompt size: %d chars", len(prompt))
 
     # Call LLM
@@ -129,8 +155,14 @@ def run_llm_fixup(
             f"Unknown provider '{provider}'. Choose from: {list(PROVIDERS.keys())}"
         )
     call_fn = PROVIDERS[provider]
+    
+    if provider == "dry-run":
+        output_dir.write_text(prompt, encoding="utf-8")
+        log.info("wrote prompt to file %s", output_dir)
+        return output_dir
+    
     response_text = call_fn(prompt, model=model)
-    log.info("  Received response (%d chars)", len(response_text))
+    log.info("  Received response (%d chars):\n%s", len(response_text), response_text[-65536:])
 
     # Parse response into files
     output_dir.mkdir(parents=True, exist_ok=True)
