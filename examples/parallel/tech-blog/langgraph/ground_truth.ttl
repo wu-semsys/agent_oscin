@@ -19,7 +19,7 @@
 # ============================================================
 
 <http://example.org/tech_blog> a owl:Ontology ;
-    owl:imports agentoscin: .
+    owl:imports <https://w3id.org/agentoscin/onto#> .
 
 # ---------- system root ----------
 ex:tech_blog a agentoscin:AgenticSystem ;

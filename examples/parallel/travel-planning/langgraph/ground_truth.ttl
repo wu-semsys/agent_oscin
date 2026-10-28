@@ -17,7 +17,7 @@
 # ============================================================
 
 <http://example.org/travel_planning> a owl:Ontology ;
-    owl:imports agentoscin: .
+    owl:imports <https://w3id.org/agentoscin/onto#> .
 
 # ---------- system root ----------
 ex:travel_planning a agentoscin:AgenticSystem ;

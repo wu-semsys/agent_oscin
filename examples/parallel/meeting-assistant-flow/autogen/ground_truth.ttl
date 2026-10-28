@@ -17,7 +17,7 @@
 # ============================================================
 
 <http://example.org/meeting_assistant_flow> a owl:Ontology ;
-    owl:imports agentoscin: .
+    owl:imports <https://w3id.org/agentoscin/onto#> .
 
 # ---------- system root ----------
 ex:meeting_assistant_flow a agentoscin:AgenticSystem ;

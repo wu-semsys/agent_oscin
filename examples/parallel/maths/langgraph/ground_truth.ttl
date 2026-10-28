@@ -20,7 +20,7 @@
 # ============================================================
 
 <http://example.org/maths> a owl:Ontology ;
-    owl:imports agentoscin: .
+    owl:imports <https://w3id.org/agentoscin/onto#> .
 
 # ---------- system root ----------
 ex:maths a agentoscin:AgenticSystem ;
