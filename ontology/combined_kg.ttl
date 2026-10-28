@@ -989,7 +989,7 @@ ma_cr:Goal_meeting_analyzer a agento:Goal ;
 Here is the meeting transcript for your reference:\\n\\n {transcript}"""^^xsd:string .
 
 ma_cr:LM_gpt_4 a agento:LanguageModel ;
-    default1:hasTitle "gpt-4"^^xsd:string .
+    default1:hasTitle "gpt-4o"^^xsd:string .
 
 ma_cr:Orchestration_MeetingFlow a default1:Orchestration ;
     default1:employsCoordinationPattern default1:Sequential ;

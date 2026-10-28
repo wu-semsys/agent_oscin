@@ -2159,7 +2159,7 @@ class LangGraphParser(BaseSourceParser):
     ) -> Optional[str]:
         """
         Search a function body for LLM instantiation patterns like:
-        - ChatOpenAI(model="gpt-4")
+        - ChatOpenAI(model="gpt-4o")
         - ChatAnthropic(model="claude-3")
         """
         for node in ast.walk(func_node):

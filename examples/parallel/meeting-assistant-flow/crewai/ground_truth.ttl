@@ -13,7 +13,7 @@
 #     send_slack_notification).
 #   - MeetingAssistantCrew(CrewBase) with 1 @agent (meeting_analyzer)
 #     + 1 @task (analyze_meeting), Process.sequential, verbose=True.
-#   - llm = ChatOpenAI(model="gpt-4") on the crew.
+#   - llm = ChatOpenAI(model="gpt-4o") on the crew.
 # ============================================================
 
 <http://example.org/meeting_assistant_flow> a owl:Ontology ;
@@ -29,7 +29,7 @@ ex:meeting_assistant_flow a agentoscin:AgenticSystem ;
 
 # ---------- language model ----------
 ex:LM_gpt_4 a agento:LanguageModel ;
-    agentoscin:hasTitle "gpt-4"^^xsd:string .
+    agentoscin:hasTitle "gpt-4o"^^xsd:string .
 
 # ---------- verbose=True configs ----------
 ex:Config_verbose_Team_MeetingAssistantCrew a agento:Config ;
