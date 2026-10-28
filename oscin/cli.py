@@ -250,6 +250,47 @@ def main(argv: list[str] | None = None) -> None:
     )
 
     # ---------------------------------------------------------------
+    # Subcommand: generate-llm-code-to-code
+    # ---------------------------------------------------------------
+    gen_llm_code_to_code_p = subparsers.add_parser(
+        "generate-llm-code-to-code",
+        help="Generate framework source code from the implementation of a different framework using an LLM (baseline)",
+        description="LLM-based generation baseline. Sends a source framwork implementation to an LLM and asks it to produce source code in the given target framework.",
+    )
+    gen_llm_code_to_code_p.add_argument(
+        "--source-implementation-dir",
+        "-s",
+        type=Path,
+        help="Path to the implementation in the source framework.",
+    )
+    gen_llm_code_to_code_p.add_argument(
+        "--target-framework",
+        "-t",
+        required=True,
+        help="The target framework to generate source code for (e.g. 'CrewAI', 'AutoGen').",
+    )
+    gen_llm_code_to_code_p.add_argument(
+        "--output-dir",
+        "-d",
+        type=Path,
+        default=Path("generated_llm"),
+        help="Output directory for the generated source files.",
+    )
+    gen_llm_code_to_code_p.add_argument(
+        "--provider",
+        "-p",
+        choices=["anthropic", "openai"],
+        default="anthropic",
+        help="LLM provider to use. Default: anthropic",
+    )
+    gen_llm_code_to_code_p.add_argument(
+        "--model",
+        "-m",
+        default=None,
+        help="Model name override (e.g. 'claude-sonnet-4-20250514', 'gpt-4o').",
+    )
+
+    # ---------------------------------------------------------------
     # Subcommand: llm_fixup
     # ---------------------------------------------------------------
     fixup_p = subparsers.add_parser(
@@ -356,6 +397,8 @@ def main(argv: list[str] | None = None) -> None:
         _run_llm_fixup(args)
     elif args.command == "evaluate":
         _run_evaluate(args)
+    elif args.command == "generate-llm-code-to-code":
+        _run_generate_llm_code_to_code(args)
 
 
 # -------------------------------------------------------------------
@@ -476,7 +519,7 @@ def _run_generate(args: argparse.Namespace) -> None:
 
 def _run_generate_llm(args: argparse.Namespace) -> None:
     """Execute the generate-llm subcommand."""
-    from oscin.llm_generator import run_llm_generation
+    from oscin.llm_generator import run_llm_generation_from_ontology
 
     log = logging.getLogger("oscin")
 
@@ -495,7 +538,7 @@ def _run_generate_llm(args: argparse.Namespace) -> None:
     log.info("=" * 60)
 
     output_dir = args.output_dir.resolve()
-    created_files = run_llm_generation(
+    created_files = run_llm_generation_from_ontology(
         ttl_file=ttl_file,
         output_dir=output_dir,
         target_framework=args.target_framework,
@@ -506,6 +549,45 @@ def _run_generate_llm(args: argparse.Namespace) -> None:
     log.info("")
     log.info("=" * 60)
     log.info("LLM GENERATION COMPLETE")
+    log.info("Generated %d files in: %s", len(created_files), output_dir)
+    log.info("=" * 60)
+    
+# -------------------------------------------------------------------
+# Generate LLM code-to-code pipeline
+# -------------------------------------------------------------------
+
+def _run_generate_llm_code_to_code(args: argparse.Namespace) -> None:
+    """Execute the generate-llm-code-to-code subcommand."""
+    from oscin.llm_generator import run_llm_generation_from_source_implementation
+
+    log = logging.getLogger("oscin")
+
+    source_implementation_dir = args.source_implementation_dir
+    if not source_implementation_dir.is_dir():
+        print(f"ERROR: source implementation directory not found {source_implementation_dir}", file=sys.stderr)
+        sys.exit(1)
+
+    log.info("")
+    log.info("=" * 60)
+    log.info("STARTING LLM-BASED CODE-TO-CODE GENERATION (BASELINE)")
+    log.info("Source implementation: %s", args.source_implementation_dir)
+    log.info("Target Framework: %s", args.target_framework)
+    log.info("Provider: %s", args.provider)
+    log.info("Model: %s", args.model or "(default)")
+    log.info("=" * 60)
+
+    output_dir = args.output_dir.resolve()
+    created_files = run_llm_generation_from_source_implementation(
+        source_implementation_dir=source_implementation_dir,
+        output_dir=output_dir,
+        target_framework=args.target_framework,
+        provider=args.provider,
+        model=args.model,
+    )
+
+    log.info("")
+    log.info("=" * 60)
+    log.info("LLM CODE-TO-CODE GENERATION COMPLETE")
     log.info("Generated %d files in: %s", len(created_files), output_dir)
     log.info("=" * 60)
 

@@ -224,7 +224,7 @@ def _run_llm_same_fw(
 ) -> list[dict]:
     """Run LLM same-framework roundtrip."""
     from oscin.llm_extractor import run_llm_extraction
-    from oscin.llm_generator import run_llm_generation
+    from oscin.llm_generator import run_llm_generation_from_ontology
 
     examples = [(fw, ex) for fw, ex in ALL_EXAMPLES if fw in frameworks]
     results = []
@@ -259,7 +259,7 @@ def _run_llm_same_fw(
 
             # Step 2: LLM generation → source′
             if not gen_dir.exists() or not list(gen_dir.glob("**/*.py")):
-                run_llm_generation(
+                run_llm_generation_from_ontology(
                     ttl_file=ttl1_path,
                     output_dir=gen_dir,
                     target_framework=fw,
@@ -331,7 +331,7 @@ def _run_llm_cross_fw(
 ) -> list[dict]:
     """Run LLM cross-framework roundtrip."""
     from oscin.llm_extractor import run_llm_extraction
-    from oscin.llm_generator import run_llm_generation
+    from oscin.llm_generator import run_llm_generation_from_ontology
 
     jobs = []
     for src_fw, tgt_fw in directions:
@@ -375,7 +375,7 @@ def _run_llm_cross_fw(
 
             # Step 2: LLM generation to target framework
             if not gen_dir.exists() or not list(gen_dir.glob("**/*.py")):
-                run_llm_generation(
+                run_llm_generation_from_ontology(
                     ttl_file=ttl1_path,
                     output_dir=gen_dir,
                     target_framework=tgt_fw,

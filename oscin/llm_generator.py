@@ -17,13 +17,15 @@ import os
 import re
 from pathlib import Path
 from oscin.llm_extractor import PROVIDERS, DEFAULT_MODELS
+from oscin.utils import collect_code_files
 
 log = logging.getLogger("oscin")
 
-PROMPT_TEMPLATE_PATH = Path(__file__).parent / "prompts" / "llm_generation.md"
+PROMPT_TEMPLATE_PATH_GEN_FROM_ONTOLOGY = Path(__file__).parent / "prompts" / "llm_generation.md"
+PROMPT_TEMPLATE_PATH_GEN_FROM_SRC_IMPL = Path(__file__).parent / "prompts" / "llm_code_to_code.md"
 
 
-def build_prompt(
+def build_prompt_generation_from_ontology(
     ontology_text: str,
     instance_data: str,
     target_framework: str,
@@ -31,10 +33,21 @@ def build_prompt(
     """
     Build the full prompt by filling in the template placeholders.
     """
-    template = PROMPT_TEMPLATE_PATH.read_text(encoding="utf-8")
+    template = PROMPT_TEMPLATE_PATH_GEN_FROM_ONTOLOGY.read_text(encoding="utf-8")
 
     prompt = template.replace("{{ontology}}", ontology_text)
     prompt = prompt.replace("{{instance_data}}", instance_data)
+    prompt = prompt.replace("{{target_framework}}", target_framework)
+
+    return prompt
+
+def build_prompt_generation_from_source_implementation(
+    source_implementation_code: str,
+    target_framework: str,
+) -> str:
+    template = PROMPT_TEMPLATE_PATH_GEN_FROM_SRC_IMPL.read_text(encoding="utf-8")
+
+    prompt = template.replace("{{source_implementation_code}}", source_implementation_code)
     prompt = prompt.replace("{{target_framework}}", target_framework)
 
     return prompt
@@ -78,7 +91,7 @@ def parse_generated_files(response_text: str, output_dir: Path) -> list[Path]:
     return created_files
 
 
-def run_llm_generation(
+def run_llm_generation_from_ontology(
     ttl_file: Path,
     output_dir: Path,
     target_framework: str,
@@ -112,7 +125,7 @@ def run_llm_generation(
     )
 
     # Build prompt
-    prompt = build_prompt(ontology_text, instance_data, target_framework)
+    prompt = build_prompt_generation_from_ontology(ontology_text, instance_data, target_framework)
     log.info("  Full prompt size: %d chars", len(prompt))
 
     # Call LLM
@@ -123,10 +136,54 @@ def run_llm_generation(
 
     call_fn = PROVIDERS[provider]
     response_text = call_fn(prompt, model=model)
-    log.info("  Received response (%d chars)", len(response_text))
+    log.info("  Received response (%d chars):\n%s", len(response_text), response_text[-65536:])
 
     # Parse response
     output_dir.mkdir(parents=True, exist_ok=True)
     created_files = parse_generated_files(response_text, output_dir)
 
     return created_files
+
+def run_llm_generation_from_source_implementation(
+    source_implementation_dir: Path,
+    output_dir: Path,
+    target_framework: str,
+    provider: str = "anthropic",
+    model: str | None = None,
+) -> list[Path]:
+        # Resolve model
+        if model is None:
+            model = DEFAULT_MODELS.get(provider, "claude-sonnet-5-5")
+    
+        # source framework implementation
+        log.info("collecting source implementation code files")
+        source_implementation_code = collect_code_files(source_implementation_dir)
+        if not source_implementation_code.strip():
+            raise ValueError(f"No .py files found in {source_implementation_dir}")
+        log.info("  Collected source implementation code (%d chars)", len(source_implementation_code))
+    
+        # Build prompt
+        prompt = build_prompt_generation_from_source_implementation(source_implementation_code, target_framework)
+        log.info("  Full prompt size: %d chars", len(prompt))
+    
+        # Call LLM
+        if provider not in PROVIDERS:
+            raise ValueError(
+                f"Unknown provider '{provider}'. Choose from: {list(PROVIDERS.keys())}"
+            )
+    
+        call_fn = PROVIDERS[provider]
+        response_text = call_fn(prompt, model=model)
+        log.info("  Received response (%d chars)", len(response_text))
+        
+        raw_response_path = output_dir / "raw_llm_response.txt"
+        raw_response_path.parent.mkdir(parents=True, exist_ok=True)
+        raw_response_path.write_text(response_text, encoding="utf-8")
+        log.info("wrote raw LLM response to %s", raw_response_path)
+        
+    
+        # Parse response
+        output_dir.mkdir(parents=True, exist_ok=True)
+        created_files = parse_generated_files(response_text, output_dir)
+    
+        return created_files

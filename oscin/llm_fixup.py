@@ -26,30 +26,13 @@ from pathlib import Path
 
 from oscin.llm_extractor import PROVIDERS, DEFAULT_MODELS
 from oscin.llm_generator import parse_generated_files
+from oscin.utils import collect_code_files
 
 log = logging.getLogger("oscin")
 
 PROMPT_TEMPLATE_PATH = Path(__file__).parent / "prompts" / "llm_fixup.md"
 
 SOURCE_FRAMEWORK_IMPLEMENTATION_INSTRUCTION = "3) An existing implementation of the desired functionality using a different framework:\n"
-
-def collect_code_files(generated_dir: Path) -> str:
-    """Collect all .py files from the skeleton directory into a single
-    string with --- filepath --- headers, matching the LLM output format."""
-    parts: list[str] = []
-    for filepath in sorted(generated_dir.rglob("*.py")):
-        if "__pycache__" in filepath.parts:
-            continue
-        rel_path = filepath.relative_to(generated_dir)
-        try:
-            log.info("reading file %s", filepath)
-            content = filepath.read_text(encoding="utf-8")
-        except (UnicodeDecodeError, OSError):
-            log.info("skipping file %s due to error", filepath)
-            continue
-        parts.append(f"--- {rel_path} ---\n```python\n{content}\n```")
-    return "\n\n".join(parts)
-
 
 def build_fixup_prompt(
     instance_data: str,
