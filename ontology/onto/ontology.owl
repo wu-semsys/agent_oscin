@@ -10,11 +10,11 @@
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="http://www.semanticweb.org/danilippmann/ontologies/2026/3/agentoscin">
         <owl:imports rdf:resource="http://www.w3id.org/agentic-ai/onto"/>
-        <dc:contributor>Andreas Ekelhart</dc:contributor>
-        <dc:contributor>Fajar J. Ekaputra</dc:contributor>
-        <dc:creator>Dani Lippmann</dc:creator>
-        <dc:description xml:lang="en">An Extension of agentO adding agentic-system orchestration, coordination &amp; reasoning patterns, memory bindings, guardrails, human checkpoints, termination conditions, schemas, and framework-mapping properties.</dc:description>
-        <dc:title>AgentOSCIn — Extension of the Agentic AI Ontology</dc:title>
+        <dcterms:contributor>Andreas Ekelhart</dcterms:contributor>
+        <dcterms:contributor>Fajar J. Ekaputra</dcterms:contributor>
+        <dcterms:creator>Dani Lippmann</dcterms:creator>
+        <dcterms:description xml:lang="en">An Extension of agentO adding agentic-system orchestration, coordination &amp; reasoning patterns, memory bindings, guardrails, human checkpoints, termination conditions, schemas, and framework-mapping properties.</dcterms:description>
+        <dcterms:title>AgentOSCIn — Extension of the Agentic AI Ontology</dcterms:title>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
         <rdfs:label>AgentOSCIN Ontology</rdfs:label>
     </owl:Ontology>

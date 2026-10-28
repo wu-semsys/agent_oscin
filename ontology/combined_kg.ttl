@@ -20,7 +20,6 @@
 @prefix agento: <http://www.w3id.org/agentic-ai/onto#> .
 @prefix beam: <http://w3id.org/beam/core#> .
 @prefix cr_ag: <http://example.org/parallel/code_review_autogen#> .
-@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix default1: <https://w3id.org/agentoscin/onto#> .
 @prefix demo: <http://example.org/demo/feature_demo#> .
@@ -152,15 +151,15 @@ tp_ag:travel_planning a default1:AgenticSystem ;
     default1:hasSourceFramework "AutoGen_v0.4"^^xsd:string ;
     default1:hasTitle "travel_planning"^^xsd:string .
 
-dc:contributor a owl:AnnotationProperty .
+dcterms:contributor a owl:AnnotationProperty .
 
-dc:creator a owl:AnnotationProperty .
+dcterms:creator a owl:AnnotationProperty .
 
-dc:description a owl:AnnotationProperty .
+dcterms:description a owl:AnnotationProperty .
 
-dc:rights a owl:AnnotationProperty .
+dcterms:rights a owl:AnnotationProperty .
 
-dc:title a owl:AnnotationProperty .
+dcterms:title a owl:AnnotationProperty .
 
 dcterms:description a owl:DatatypeProperty ;
     rdfs:label "description" ;
@@ -1297,11 +1296,11 @@ default1:SelectorBased a default1:CoordinationPattern,
 
 <http://www.w3id.org/agentic-ai/onto> a owl:Ontology ;
     rdfs:label "Agentic AI Ontology" ;
-    dc:contributor "Fajar J. Ekaputra" ;
-    dc:creator "Kabul Kurniawan" ;
-    dc:description "An ontology for describing agentic AI systems, their components, interraction and patterns."@en ;
-    dc:rights "http://creativecommons.org/licenses/by/4.0/" ;
-    dc:title "Agentic AI Ontology" ;
+    dcterms:contributor "Fajar J. Ekaputra" ;
+    dcterms:creator "Kabul Kurniawan" ;
+    dcterms:description "An ontology for describing agentic AI systems, their components, interraction and patterns."@en ;
+    dcterms:rights "http://creativecommons.org/licenses/by/4.0/" ;
+    dcterms:title "Agentic AI Ontology" ;
     vann:preferredNamespacePrefix "agento" ;
     rdfs:comment "An ontology for describing agentic AI systems, their components, interraction and patterns." ;
     owl:versionInfo 0.2 .
@@ -1746,9 +1745,9 @@ agento:Memory a owl:Class ;
 
 <http://www.semanticweb.org/danilippmann/ontologies/2026/3/agentoscin> a owl:Ontology ;
     rdfs:label "AgentOSCIN Ontology" ;
-    dc:creator "Dani Lippmann" ;
-    dc:description "Extension of agentO adding agentic-system orchestration, coordination & reasoning patterns, memory bindings, guardrails, human checkpoints, termination conditions, schemas, and framework-mapping properties."@en ;
-    dc:title "AgentOSCIn — Extension of the Agentic AI Ontology" ;
+    dcterms:creator "Dani Lippmann" ;
+    dcterms:description "Extension of agentO adding agentic-system orchestration, coordination & reasoning patterns, memory bindings, guardrails, human checkpoints, termination conditions, schemas, and framework-mapping properties."@en ;
+    dcterms:title "AgentOSCIn — Extension of the Agentic AI Ontology" ;
     owl:imports <http://www.w3id.org/agentic-ai/onto> ;
     owl:versionInfo 0.1 .
 

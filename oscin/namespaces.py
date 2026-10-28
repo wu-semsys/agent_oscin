@@ -44,7 +44,7 @@ def is_ontology_uri(uri: str) -> bool:
     but the ontology *root IRI* itself — e.g. the one used in ``owl:imports``
     statements — does not. Both forms must be recognised, otherwise the
     ontology-level metadata triples
-    (``owl:imports``, ``dc:title``, ``dc:creator`` …) leak into ABox
+    (``owl:imports``, ``dcterms:title``, ``dcterms:creator`` …) leak into ABox
     comparisons.
     """
     s = str(uri)

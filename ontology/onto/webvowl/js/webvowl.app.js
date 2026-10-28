@@ -3070,11 +3070,11 @@ webvowl.app =
 	  }
 	  
 	  function getOntologyTitle( indent ){
-	    return general_languageExtractor(indent, "title", "dc:title");
+	    return general_languageExtractor(indent, "title", "dcterms:title");
 	  }
 	  
 	  function getOntologyDescription( indent ){
-	    return general_languageExtractor(indent, "description", "dc:description");
+	    return general_languageExtractor(indent, "description", "dcterms:description");
 	  }
 	  
 	  function getOntologyAuthor( indent ){
@@ -3083,11 +3083,11 @@ webvowl.app =
 	      if ( typeof languageElement !== "object" ) {
 	        if ( languageElement.length === 0 )
 	          return ""; // an empty string
-	        var aString = indent + " dc:creator " + '"' + languageElement + '";\r\n';
+	        var aString = indent + " dcterms:creator " + '"' + languageElement + '";\r\n';
 	        return aString;
 	      }
 	      // we assume this thing is an array;
-	      var authorString = indent + " dc:creator " + '"';
+	      var authorString = indent + " dcterms:creator " + '"';
 	      for ( var i = 0; i < languageElement.length - 1; i++ ) {
 	        authorString += languageElement[i] + ", ";
 	      }

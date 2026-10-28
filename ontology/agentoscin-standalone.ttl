@@ -1,5 +1,4 @@
 @prefix : <https://w3id.org/agentoscin#> .
-@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -14,11 +13,11 @@
 @base <https://w3id.org/agentoscin#> .
 
 <https://w3id.org/agentoscin> rdf:type owl:Ontology ;
-                               dc:creator "Dani Lippmann" ;
-                               dc:description """Self-contained serialisation of AgentOSCIN: the AgentOSCIN extension together with all axioms of the imported Agentic AI Ontology (agentO), asserted directly instead of via owl:imports.
+                               dcterms:creator "Dani Lippmann" ;
+                               dcterms:description """Self-contained serialisation of AgentOSCIN: the AgentOSCIN extension together with all axioms of the imported Agentic AI Ontology (agentO), asserted directly instead of via owl:imports.
 
 AgentOSCIN adds agentic-system orchestration, coordination & reasoning patterns, memory bindings, guardrails, human checkpoints, termination conditions, schemas, and framework-mapping properties. agentO terms keep their original IRIs under http://www.w3id.org/agentic-ai/onto#."""@en ;
-                               dc:title "AgentOSCIN — Extension of the Agentic AI Ontology" ;
+                               dcterms:title "AgentOSCIN — Extension of the Agentic AI Ontology" ;
                                dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
                                vann:preferredNamespacePrefix "agentoscin" ;
                                rdfs:comment "Contains every class, property and individual of AgentOSCIN and of agentO (http://www.w3id.org/agentic-ai/onto) in a single file, without owl:imports." ;
@@ -30,23 +29,23 @@ AgentOSCIN adds agentic-system orchestration, coordination & reasoning patterns,
 #################################################################
 
 ###  http://purl.org/dc/elements/1.1/contributor
-dc:contributor rdf:type owl:AnnotationProperty .
+dcterms:contributor rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/elements/1.1/creator
-dc:creator rdf:type owl:AnnotationProperty .
+dcterms:creator rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/elements/1.1/description
-dc:description rdf:type owl:AnnotationProperty .
+dcterms:description rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/elements/1.1/rights
-dc:rights rdf:type owl:AnnotationProperty .
+dcterms:rights rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/elements/1.1/title
-dc:title rdf:type owl:AnnotationProperty .
+dcterms:title rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/license
