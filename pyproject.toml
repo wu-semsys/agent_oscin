@@ -20,6 +20,7 @@ dependencies = [
     "python-dotenv>=1.2",
     "langgraph>=1.2",
     # langchain-openai, langchain-anthropic
+    "autogen",
     "autogen-agentchat>=0.7",
     # "autogen-ext[openai]", "autogen-ext[anthropic]" + tiktoken
     "crewai",
