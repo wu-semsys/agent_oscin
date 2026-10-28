@@ -90,6 +90,7 @@ def run_generation(
     reextract: bool = False,
     out_root: Path | None = None,
     name: str | None = None,
+    existing_generation: Path | None = None,
 ) -> dict[str, Any]:
     """Execute the generation pipeline and return the report dict."""
     ttl_path, derived_name = _resolve_input(ttl, fixture)
@@ -116,22 +117,25 @@ def run_generation(
     # Intrinsic of the input (so the report shows what we fed the generator)
     report["metrics"]["ttl_intrinsic"] = ttl_intrinsic.compute(ttl_path)
 
-    # Step: generate
-    try:
-        run_step(
-            report,
-            "generate",
-            run_oscin,
-            [
-                "generate", str(ttl_path),
-                "--target-framework", target_framework,
-                "--output-dir", str(gen_dir),
-            ],
-            _output_hint=str(gen_dir),
-        )
-    except StepFailed:
-        write_report(report, work)
-        return report
+    if existing_generation:
+        gen_dir = existing_generation
+    else:
+        # Step: generate
+        try:
+            run_step(
+                report,
+                "generate",
+                run_oscin,
+                [
+                    "generate", str(ttl_path),
+                    "--target-framework", target_framework,
+                    "--output-dir", str(gen_dir),
+                ],
+                _output_hint=str(gen_dir),
+            )
+        except StepFailed:
+            write_report(report, work)
+            return report
 
     # Metrics
     report["metrics"]["syntax_validity"] = syntax_validity.compute(gen_dir)
@@ -159,6 +163,7 @@ def run_generation(
             report["metrics"]["ttl_pairwise"] = ttl_pairwise.compute(
                 ttl_path, ttl2
             )
+            report["metrics"]["ttl_pairwise_aligned"] = ttl_pairwise.compute_with_alignment_from_files(ttl_path, ttl2)
         except StepFailed:
             pass
 
@@ -209,6 +214,7 @@ def _parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     ap.add_argument("--name", type=str, default=None,
                     help="override report name (defaults to TTL stem / fixture name)")
     ap.add_argument("--out-root", type=Path, default=None)
+    ap.add_argument("--existing-generation", type=Path, default=None)
     return ap.parse_args(argv)
 
 
@@ -224,6 +230,7 @@ def main(argv: list[str] | None = None) -> None:
         reextract=args.reextract,
         out_root=args.out_root,
         name=args.name,
+        existing_generation=args.existing_generation,
     )
     print(f"report: {r['work_dir']}/report.md")
 

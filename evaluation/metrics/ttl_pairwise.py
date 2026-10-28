@@ -21,6 +21,7 @@ from pathlib import Path
 from rdflib import RDF, Graph, URIRef
 from rdflib.namespace import split_uri
 
+from evaluation.metrics import ttl_fuzzy_match
 from oscin.evaluator import PairwiseMetrics, compute_pairwise as _compute_pairwise
 
 NAME = "ttl_pairwise"
@@ -50,6 +51,16 @@ def compute_from_graphs(reference: Graph, candidate: Graph) -> dict:
     d = asdict(m)
     d["metric"] = NAME
     return d
+
+def compute_with_alignment_from_files(reference: Path, candidate: Path) -> dict:
+    from rdflib import Graph
+    g_ref = Graph()
+    g_ref.parse(str(reference), format="turtle")
+    g_cand = Graph()
+    g_cand.parse(str(candidate), format="turtle")
+    fuzzy_match_result = ttl_fuzzy_match.compute(g_ref, g_cand)
+    alignment = fuzzy_match_result["alignment"]
+    return compute_with_alignment(g_ref, g_cand, alignment)
 
 def compute_with_alignment(reference: Graph, candidate: Graph, alignment: dict[str, list[tuple[str, str, float]]]) -> dict:
     aligned_candidate = replace_aligned(candidate, alignment)
