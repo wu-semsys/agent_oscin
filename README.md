@@ -51,46 +51,6 @@ deterministic (AST/template) path and an LLM path used as a baseline:
 The `evaluation/` package scores all of this: extraction, generation, and
 round-trip (same-framework and cross-framework).
 
-## Folder structure
-
-```
-├── ontology/                    # Ontology schema and query assets
-│   ├── agentoscin.ttl           #   the OSCIN ontology (TBox)
-│   ├── agentO.ttl               #   AgentO, the related-work ontology
-│   ├── competency_queries.rq    #   competency questions (SPARQL)
-│   ├── combined_kg.ttl          #   merged KG over all extractions
-│   ├── feature_demo.ttl         #   small worked example
-│   └── catalog-v001.xml         #   Protégé catalog
-├── oscin/                       # Python package (installed as `oscin`)
-│   ├── parsers/                 #   crewai / autogen / langgraph + ast_utils
-│   ├── generators/              #   per-framework generators + templates/*.j2
-│   ├── prompts/                 #   llm_extraction.md, llm_generation.md, llm_fixup.md
-│   ├── intermediate.py          #   shared IR dataclasses
-│   ├── populator.py             #   IR → ontology individuals
-│   ├── reader.py                #   TTL → IR (reverse direction)
-│   ├── llm_extractor.py         #   LLM extraction baseline
-│   ├── llm_generator.py         #   LLM generation baseline
-│   ├── llm_fixup.py             #   LLM repair of generated code
-│   ├── evaluator.py             #   metrics behind `oscin evaluate`
-│   ├── namespaces.py, utils.py, base_parser.py
-│   └── cli.py                   #   `oscin` entry point
-├── evaluation/                  # Evaluation harness (not pip-installed)
-│   ├── pipelines/               #   extraction / generation / roundtrip / hybrid_roundtrip
-│   ├── metrics/                 #   ttl_*, ast_diff, syntax_validity, execution_trace, …
-│   ├── benchmark.py             #   aggregator, driven by --pipeline
-│   ├── reporting.py             #   shared report renderer
-│   └── README.md                #   pipeline/metric matrix — read this first
-├── examples/                    # Input corpora
-│   ├── crewai/ autogen/ langgraph/   #   per-framework examples
-│   └── parallel/                #   parallel corpus: one scenario × 3 frameworks,
-│                                #   each with a hand-authored ground_truth.ttl
-├── output/                      # Generated artifacts (TTL, source, reports)
-└── .env                         # API keys (not committed)
-```
-
-`evaluation/` lives at the project root but is **not** part of the
-installed package — run from the project root.
-
 ## Quick start
 
 ### Installation
@@ -99,6 +59,10 @@ installed package — run from the project root.
 python -m venv .venv && source .venv/bin/activate
 pip install -e .
 ```
+
+### Fine-grained reproduction of results in paper
+
+The results reported in the paper can be reproduced using the scripts given in the folder `reproducibility`.
 
 ### Extract: source code → ontology
 
@@ -186,6 +150,47 @@ fixtures, `--out-root` to redirect artifacts.
 
 See [evaluation/README.md](evaluation/README.md) for the pipeline × metric
 matrix and the contract every metric module implements.
+
+## Folder structure
+
+```
+├── ontology/                    # Ontology schema and query assets
+│   ├── agentoscin.ttl           #   the OSCIN ontology (TBox)
+│   ├── agentO.ttl               #   AgentO, the related-work ontology
+│   ├── competency_queries.rq    #   competency questions (SPARQL)
+│   ├── combined_kg.ttl          #   merged KG over all extractions
+│   ├── feature_demo.ttl         #   small worked example
+│   └── catalog-v001.xml         #   Protégé catalog
+├── oscin/                       # Python package (installed as `oscin`)
+│   ├── parsers/                 #   crewai / autogen / langgraph + ast_utils
+│   ├── generators/              #   per-framework generators + templates/*.j2
+│   ├── prompts/                 #   llm_extraction.md, llm_generation.md, llm_fixup.md
+│   ├── intermediate.py          #   shared IR dataclasses
+│   ├── populator.py             #   IR → ontology individuals
+│   ├── reader.py                #   TTL → IR (reverse direction)
+│   ├── llm_extractor.py         #   LLM extraction baseline
+│   ├── llm_generator.py         #   LLM generation baseline
+│   ├── llm_fixup.py             #   LLM repair of generated code
+│   ├── evaluator.py             #   metrics behind `oscin evaluate`
+│   ├── namespaces.py, utils.py, base_parser.py
+│   └── cli.py                   #   `oscin` entry point
+├── evaluation/                  # Evaluation harness (not pip-installed)
+│   ├── pipelines/               #   extraction / generation / roundtrip / hybrid_roundtrip
+│   ├── metrics/                 #   ttl_*, ast_diff, syntax_validity, execution_trace, …
+│   ├── benchmark.py             #   aggregator, driven by --pipeline
+│   ├── reporting.py             #   shared report renderer
+│   └── README.md                #   pipeline/metric matrix — read this first
+├── examples/                    # Input corpora
+│   ├── crewai/ autogen/ langgraph/   #   per-framework examples
+│   └── parallel/                #   parallel corpus: one scenario × 3 frameworks,
+│                                #   each with a hand-authored ground_truth.ttl
+├── reproducibility/             # Scripts to reproduce results reported in paper
+├── output/                      # Generated artifacts (TTL, source, reports)
+└── .env                         # API keys (not committed)
+```
+
+`evaluation/` lives at the project root but is **not** part of the
+installed package — run from the project root.
 
 
 ## Supported frameworks
