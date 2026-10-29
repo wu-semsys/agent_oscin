@@ -2,7 +2,9 @@
 
 > Bidirectional transformation between agentic AI framework source code and a shared OWL ontology.
 
----
+## Acknowledgements
+
+The contents of this repository are based on the work done by Dani Lippmann in the course of his [master thesis](https://doi.org/10.34726/hss.2026.138767) at TU Wien.
 
 ## Architecture
 
@@ -10,10 +12,10 @@ Two transformation directions over one shared ontology, each with a
 deterministic (AST/template) path and an LLM path used as a baseline:
 
 ```
-                        ┌──────────────────────────────┐
-                        │         Source Code          │
+                        ┌───────────────────────────────┐
+                        │         Source Code           │
                         │ (CrewAI / AutoGen / LangGraph)│
-                        └───────┬──────────────┬───────┘
+                        └───────┬──────────────┬────────┘
              AST path           │              │        LLM baseline
    ┌────────────────────────────▼──┐        ┌──▼───────────────────────┐
    │ oscin/parsers/                │        │ oscin/llm_extractor.py   │
@@ -29,13 +31,14 @@ deterministic (AST/template) path and an LLM path used as a baseline:
    │ oscin/populator.py  (RDFLib)  │                   │
    └────────────────┬──────────────┘                   │
                     │                                  │
-                ┌───▼──────────────────────────────────▼───┐
+                ┌───▼──────────────────────────────────▼──────┐
                 │   instance .ttl  ⊨  ontology/agentoscin.ttl │
-                └───┬──────────────────────────────────┬───┘
+                └───┬──────────────────────────────────┬──────┘
                     │                                  │
-   ┌────────────────▼──────────────┐        ┌──────────▼───────────────┐
-   │ oscin/reader.py → generators/ │        │ oscin/llm_generator.py   │
-   │ Jinja2 templates → source     │        │ TTL → source             │
+                    │                       ┌──────────▼───────────────┐
+   ┌────────────────▼──────────────┐        │ oscin/llm_generator.py   │
+   │ oscin/reader.py → generators/ │        │ TTL → source             │
+   │ Jinja2 templates → source     │        │ source → source          │
    └────────────────┬──────────────┘        └──────────┬───────────────┘
                     └───────────────┬──────────────────┘
                                     │
@@ -48,25 +51,9 @@ deterministic (AST/template) path and an LLM path used as a baseline:
 The `evaluation/` package scores all of this: extraction, generation, and
 round-trip (same-framework and cross-framework).
 
-### Thesis chapter mapping
-
-| Module                          | Thesis chapter                                    |
-|---------------------------------|---------------------------------------------------|
-| `ontology/agentoscin.ttl`       | Ch. 5 — Semantic representation (ontology design) |
-| `ontology/competency_queries.rq`| Ch. 5 — Competency questions                      |
-| `oscin/parsers/`                | Ch. 6 — OSCIN Phases 3 & 4 (extraction)           |
-| `oscin/intermediate.py`         | Ch. 6 — Intermediate representation               |
-| `oscin/populator.py`            | Ch. 6 — OSCIN Phase 4 (ontology population)       |
-| `oscin/reader.py`, `oscin/generators/` | Ch. 6 — OSCIN Phase 5 (reverse reading + generation) |
-| `oscin/llm_*.py`                | Ch. 7 — LLM baselines and repair                  |
-| `evaluation/`, `scripts/`       | Ch. 7 — Evaluation                                |
-
----
-
 ## Folder structure
 
 ```
-thesis_code/
 ├── ontology/                    # Ontology schema and query assets
 │   ├── agentoscin.ttl           #   the OSCIN ontology (TBox)
 │   ├── agentO.ttl               #   AgentO, the related-work ontology
@@ -93,20 +80,16 @@ thesis_code/
 │   ├── benchmark.py             #   aggregator, driven by --pipeline
 │   ├── reporting.py             #   shared report renderer
 │   └── README.md                #   pipeline/metric matrix — read this first
-├── gui/                         # Streamlit UI over the pipelines
 ├── examples/                    # Input corpora
 │   ├── crewai/ autogen/ langgraph/   #   per-framework examples
 │   └── parallel/                #   parallel corpus: one scenario × 3 frameworks,
 │                                #   each with a hand-authored ground_truth.ttl
-├── scripts/                     # One-off thesis experiment drivers
 ├── output/                      # Generated artifacts (TTL, source, reports)
 └── .env                         # API keys (not committed)
 ```
 
-`evaluation/` and `gui/` live at the project root but are **not** part of the
-installed package — run them from the project root.
-
----
+`evaluation/` lives at the project root but is **not** part of the
+installed package — run from the project root.
 
 ## Quick start
 
@@ -114,7 +97,7 @@ installed package — run them from the project root.
 
 ```bash
 python -m venv .venv && source .venv/bin/activate
-pip install -e .           # add '.[gui]' for the Streamlit UI
+pip install -e .
 ```
 
 ### Extract: source code → ontology
@@ -204,13 +187,6 @@ fixtures, `--out-root` to redirect artifacts.
 See [evaluation/README.md](evaluation/README.md) for the pipeline × metric
 matrix and the contract every metric module implements.
 
-### GUI
-
-```bash
-streamlit run gui/app.py     # requires the [gui] extra
-```
-
----
 
 ## Supported frameworks
 
@@ -224,19 +200,12 @@ Plus `examples/parallel/` — 6 scenario families implemented in all three
 frameworks, each variant shipping a hand-authored `ground_truth.ttl`. See
 [examples/parallel/README.md](examples/parallel/README.md).
 
----
-
 ## Dependencies
 
-Declared in `pyproject.toml`: Python ≥ 3.10, `rdflib` ≥ 7.0, `pyyaml` ≥ 6.0,
-`nbformat` ≥ 5.0; `streamlit` ≥ 1.32 under the `gui` extra.
-
-Also imported at runtime but **not currently declared**: `jinja2` (required by
-`oscin/generators/`), `python-dotenv` (LLM paths), and `openai` / `anthropic`
+Imported at runtime but **not currently declared**: `openai` / `anthropic`
 (whichever provider you use for the LLM baselines). Install them alongside the
-package until they are added to `pyproject.toml`.
-
----
+package until they are added to `pyproject.toml`. 
+The same is true for `langchain-openai` / `langchain-anthropic` and `autogen-ext[openai]` / `autogen-ext[anthropic]` (this one also requires `tiktoken`).
 
 ## CrewAI parser: how it works
 
@@ -262,8 +231,6 @@ for static analysis (no code execution). It handles two CrewAI patterns:
 - YAML config files must match the agent/task keys referenced in Python decorators
 - Tools must be either defined locally (BaseTool subclass or @tool decorator) or imported (created as external stubs)
 - LLM assignments should use `ChatOpenAI(model="...")` or similar patterns with string literal model names
-
----
 
 ## License
 

@@ -49,5 +49,3 @@ Driven from the GUI's **Parallel corpus** tab. Two experiments per cell:
 2. **Generation fidelity** — OSCIN generates source from `ground_truth.ttl`
    into the same framework → compared against the original `source_files/`
    via `ast_diff` and `syntax_validity`.
-
-No `mapping_conformance` and no `execution_trace` — see thesis for rationale.

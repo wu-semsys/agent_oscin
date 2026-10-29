@@ -17,8 +17,8 @@ evaluation/
 
 | Pipeline | Input | Output | Metrics |
 |---|---|---|---|
-| **extraction** | `examples/<fw>/<name>/` | `output/extraction/<fw>/<name>/extracted.ttl` + report | `ttl_intrinsic`; if `ground_truth.ttl` is present: `ttl_pairwise`, `ttl_fuzzy_match` |
-| **generation** | `evaluation/fixtures/<name>.ttl` _or_ an explicit `--ttl` path | `output/generation/<target>/<name>/generated/` + report | `ttl_intrinsic`, `syntax_validity`; optional: `ast_diff` (vs `--reference-source`), `ttl_pairwise` (if `--reextract`), `execution_trace` (if `--execute`) |
+| **extraction** | `examples/<fw>/<name>/` | `output/extraction/<fw>/<name>/extracted.ttl` + report | `ttl_intrinsic`; if `ground_truth.ttl` is present: `ttl_pairwise`, `ttl_fuzzy_match`, `ttl_pairwise_aligned` |
+| **generation** | `evaluation/fixtures/<name>.ttl` _or_ an explicit `--ttl` path | `output/generation/<target>/<name>/generated/` + report | `ttl_intrinsic`, `syntax_validity`; optional: `ast_diff` (vs `--reference-source`), `ttl_pairwise` and `ttl_pairwise_aligned` (if `--reextract`), `execution_trace` (if `--execute`) |
 | **roundtrip** same-fw | `examples/<fw>/<name>/` | `output/roundtrip/<fw>/<name>/` | `ttl_pairwise`, `ttl_fuzzy_match`, `ast_diff`, `execution_trace` |
 | **roundtrip** cross-fw (`--target X`) | `examples/<fw>/<name>/` | `output/roundtrip/<fw>/<name>/` | `ttl_pairwise`, `ttl_fuzzy_match`; `mapping_conformance` iff `{src, tgt} == {crewai, langgraph}` |
 
@@ -28,7 +28,7 @@ evaluation/
 |---|---|---|
 | `ttl_intrinsic`      | counts/density of **one** TTL | extraction, generation |
 | `ttl_pairwise`       | two TTLs — individual/property/triple/literal P/R/F1 | extraction (if GT), generation (if `--reextract`), roundtrip (all) |
-| `ttl_fuzzy_match`    | two TTLs with fuzzy entity alignment (tolerant of URI renames) | extraction (if GT), roundtrip (all) |
+| `ttl_fuzzy_match`, `ttl_pairwise_aligned`    | two TTLs with fuzzy entity alignment (tolerant of URI renames) | extraction (if GT), roundtrip (all) |
 | `ast_diff`           | two **source trees** in the same language — imports / classes / decorators / state fields / graph calls P/R/F1 | roundtrip same-fw, generation (with `--reference-source`) |
 | `syntax_validity`    | every generated `.py` — does it `ast.parse`? do imports resolve? | generation |
 | `execution_trace`    | two source trees — subprocess run, stdout overlap, exit code match | roundtrip same-fw, generation (with `--execute`) |
