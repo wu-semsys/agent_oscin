@@ -1,21 +1,20 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.semanticweb.org/danilippmann/ontologies/2026/3/agentoscin#"
-     xml:base="http://www.semanticweb.org/danilippmann/ontologies/2026/3/agentoscin"
-     xmlns:dc="http://purl.org/dc/elements/1.1/"
+<rdf:RDF xmlns="https://w3id.org/agentoscin/onto#"
+     xml:base="https://w3id.org/agentoscin/onto"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:terms="http://purl.org/dc/terms/">
-    <owl:Ontology rdf:about="http://www.semanticweb.org/danilippmann/ontologies/2026/3/agentoscin">
+    <owl:Ontology rdf:about="https://w3id.org/agentoscin/onto">
         <owl:imports rdf:resource="http://www.w3id.org/agentic-ai/onto"/>
-        <dcterms:contributor>Andreas Ekelhart</dcterms:contributor>
-        <dcterms:contributor>Fajar J. Ekaputra</dcterms:contributor>
-        <dcterms:creator>Dani Lippmann</dcterms:creator>
-        <dcterms:description xml:lang="en">An Extension of agentO adding agentic-system orchestration, coordination &amp; reasoning patterns, memory bindings, guardrails, human checkpoints, termination conditions, schemas, and framework-mapping properties.</dcterms:description>
-        <dcterms:title>AgentOSCIn — Extension of the Agentic AI Ontology</dcterms:title>
+        <terms:contributor>Andreas Ekelhart</terms:contributor>
+        <terms:contributor>Fajar J. Ekaputra</terms:contributor>
+        <terms:creator>Dani Lippmann</terms:creator>
+        <terms:description xml:lang="en">An Extension of agentO adding agentic-system orchestration, coordination &amp; reasoning patterns, memory bindings, guardrails, human checkpoints, termination conditions, schemas, and framework-mapping properties.</terms:description>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <terms:title>AgentOSCIn — Extension of the Agentic AI Ontology</terms:title>
         <rdfs:label>AgentOSCIN Ontology</rdfs:label>
     </owl:Ontology>
     
@@ -33,31 +32,24 @@
     
 
 
-    <!-- http://purl.org/dc/elements/1.1/contributor -->
+    <!-- http://purl.org/dc/terms/contributor -->
 
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/contributor"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
     
 
 
-    <!-- http://purl.org/dc/elements/1.1/creator -->
+    <!-- http://purl.org/dc/terms/creator -->
 
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
     
 
 
-    <!-- http://purl.org/dc/elements/1.1/description -->
+    <!-- http://purl.org/dc/terms/description -->
 
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
-    
-
-
-    <!-- http://purl.org/dc/elements/1.1/title -->
-
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
     
 
 
@@ -65,6 +57,13 @@
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
     
 
 
