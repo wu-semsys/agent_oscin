@@ -7,18 +7,21 @@
 @prefix prov: <http://www.w3.org/ns/prov#>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix vann: <http://purl.org/vocab/vann/>.
 @prefix xml: <http://www.w3.org/XML/1998/namespace>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 @base <https://w3id.org/agentoscin/onto#> .
 
 <https://w3id.org/agentoscin/onto> rdf:type owl:Ontology ;
-                                                                        owl:imports <http://www.w3id.org/agentic-ai/onto> ;
-                                                                        dcterms:creator "Dani Lippmann" ;
-                                                                        dcterms:contributor "Fajar J. Ekaputra","Andreas Ekelhart" ;
-                                                                        dcterms:description "An Extension of agentO adding agentic-system orchestration, coordination & reasoning patterns, memory bindings, guardrails, human checkpoints, termination conditions, schemas, and framework-mapping properties."@en ;
-                                                                        dcterms:title "AgentOSCIn — Extension of the Agentic AI Ontology" ;
-                                                                        dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
-                                                                        rdfs:label "AgentOSCIN Ontology" .
+    owl:imports <http://www.w3id.org/agentic-ai/onto> ;
+    dcterms:creator "Dani Lippmann" ;
+    dcterms:contributor "Fajar J. Ekaputra","Andreas Ekelhart","Alexander Prock" ;
+    dcterms:description "An Extension of agentO adding agentic-system orchestration, coordination & reasoning patterns, memory bindings, guardrails, human checkpoints, termination conditions, schemas, and framework-mapping properties."@en ;
+    dcterms:title "AgentOSCIn — Extension of the Agentic AI Ontology" ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    vann:preferredNamespacePrefix "agentoscin" ;
+    owl:versionInfo "1.0" ;
+    rdfs:label "AgentOSCIN Ontology" .
 
 #################################################################
 #    Object Properties
