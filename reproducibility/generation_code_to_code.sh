@@ -38,42 +38,42 @@ oscin generate-llm-code-to-code \
     --model gpt-6-astra
 
 python -m evaluation.pipelines.generation \
-    --ttl examples/parallel/code-review/crewai/ground_truth.ttl \
+    --ttl examples/parallel/code-review/autogen/ground_truth.ttl \
     --target-framework autogen \
     --out-root output/llm_code_to_code_report/cross/crewai/autogen/code_review \
     --reference-source examples/parallel/code-review/autogen/source_files \
     --existing-generation output/llm_code_to_code/cross/crewai/autogen/code_review \
     --reextract
 python -m evaluation.pipelines.generation \
-    --ttl examples/parallel/joke/crewai/ground_truth.ttl \
+    --ttl examples/parallel/joke/autogen/ground_truth.ttl \
     --target-framework autogen \
     --out-root output/llm_code_to_code_report/cross/crewai/autogen/joke \
     --reference-source examples/parallel/joke/autogen/source_files \
     --existing-generation output/llm_code_to_code/cross/crewai/autogen/joke \
     --reextract
 python -m evaluation.pipelines.generation \
-    --ttl examples/parallel/maths/crewai/ground_truth.ttl \
+    --ttl examples/parallel/maths/autogen/ground_truth.ttl \
     --target-framework autogen \
     --out-root output/llm_code_to_code_report/cross/crewai/autogen/maths \
     --reference-source examples/parallel/maths/autogen/source_files \
     --existing-generation output/llm_code_to_code/cross/crewai/autogen/maths \
     --reextract
 python -m evaluation.pipelines.generation \
-    --ttl examples/parallel/meeting-assistant-flow/crewai/ground_truth.ttl \
+    --ttl examples/parallel/meeting-assistant-flow/autogen/ground_truth.ttl \
     --target-framework autogen \
     --out-root output/llm_code_to_code_report/cross/crewai/autogen/meeting_assistant \
     --reference-source examples/parallel/meeting-assistant-flow/autogen/source_files \
     --existing-generation output/llm_code_to_code/cross/crewai/autogen/meeting_assistant \
     --reextract
 python -m evaluation.pipelines.generation \
-    --ttl examples/parallel/tech-blog/crewai/ground_truth.ttl \
+    --ttl examples/parallel/tech-blog/autogen/ground_truth.ttl \
     --target-framework autogen \
     --out-root output/llm_code_to_code_report/cross/crewai/autogen/tech_blog \
     --reference-source examples/parallel/tech-blog/autogen/source_files \
     --existing-generation output/llm_code_to_code/cross/crewai/autogen/tech_blog \
     --reextract
 python -m evaluation.pipelines.generation \
-    --ttl examples/parallel/travel-planning/crewai/ground_truth.ttl \
+    --ttl examples/parallel/travel-planning/autogen/ground_truth.ttl \
     --target-framework autogen \
     --out-root output/llm_code_to_code_report/cross/crewai/autogen/travel_planning \
     --reference-source examples/parallel/travel-planning/autogen/source_files \
@@ -127,42 +127,42 @@ oscin generate-llm-code-to-code \
     --model gpt-6-astra
 
 python -m evaluation.pipelines.generation \
-    --ttl examples/parallel/code-review/crewai/ground_truth.ttl \
+    --ttl examples/parallel/code-review/langgraph/ground_truth.ttl \
     --target-framework langgraph \
     --out-root output/llm_code_to_code_report/cross/crewai/langgraph/code_review \
     --reference-source examples/parallel/code-review/langgraph/source_files \
     --existing-generation output/llm_code_to_code/cross/crewai/langgraph/code_review \
     --reextract
 python -m evaluation.pipelines.generation \
-    --ttl examples/parallel/joke/crewai/ground_truth.ttl \
+    --ttl examples/parallel/joke/langgraph/ground_truth.ttl \
     --target-framework langgraph \
     --out-root output/llm_code_to_code_report/cross/crewai/langgraph/joke \
     --reference-source examples/parallel/joke/langgraph/source_files \
     --existing-generation output/llm_code_to_code/cross/crewai/langgraph/joke \
     --reextract
 python -m evaluation.pipelines.generation \
-    --ttl examples/parallel/maths/crewai/ground_truth.ttl \
+    --ttl examples/parallel/maths/langgraph/ground_truth.ttl \
     --target-framework langgraph \
     --out-root output/llm_code_to_code_report/cross/crewai/langgraph/maths \
     --reference-source examples/parallel/maths/langgraph/source_files \
     --existing-generation output/llm_code_to_code/cross/crewai/langgraph/maths \
     --reextract
 python -m evaluation.pipelines.generation \
-    --ttl examples/parallel/meeting-assistant-flow/crewai/ground_truth.ttl \
+    --ttl examples/parallel/meeting-assistant-flow/langgraph/ground_truth.ttl \
     --target-framework langgraph \
     --out-root output/llm_code_to_code_report/cross/crewai/langgraph/meeting_assistant \
     --reference-source examples/parallel/meeting-assistant-flow/langgraph/source_files \
     --existing-generation output/llm_code_to_code/cross/crewai/langgraph/meeting_assistant \
     --reextract
 python -m evaluation.pipelines.generation \
-    --ttl examples/parallel/tech-blog/crewai/ground_truth.ttl \
+    --ttl examples/parallel/tech-blog/langgraph/ground_truth.ttl \
     --target-framework langgraph \
     --out-root output/llm_code_to_code_report/cross/crewai/langgraph/tech_blog \
     --reference-source examples/parallel/tech-blog/langgraph/source_files \
     --existing-generation output/llm_code_to_code/cross/crewai/langgraph/tech_blog \
     --reextract
 python -m evaluation.pipelines.generation \
-    --ttl examples/parallel/travel-planning/crewai/ground_truth.ttl \
+    --ttl examples/parallel/travel-planning/langgraph/ground_truth.ttl \
     --target-framework langgraph \
     --out-root output/llm_code_to_code_report/cross/crewai/langgraph/travel_planning \
     --reference-source examples/parallel/travel-planning/langgraph/source_files \
@@ -216,42 +216,42 @@ oscin generate-llm-code-to-code \
     --model gpt-6-astra
 
 python -m evaluation.pipelines.generation \
-    --ttl examples/parallel/code-review/langgraph/ground_truth.ttl \
+    --ttl examples/parallel/code-review/autogen/ground_truth.ttl \
     --target-framework autogen \
     --out-root output/llm_code_to_code_report/cross/langgraph/autogen/code_review \
     --reference-source examples/parallel/code-review/autogen/source_files \
     --existing-generation output/llm_code_to_code/cross/langgraph/autogen/code_review \
     --reextract
 python -m evaluation.pipelines.generation \
-    --ttl examples/parallel/joke/langgraph/ground_truth.ttl \
+    --ttl examples/parallel/joke/autogen/ground_truth.ttl \
     --target-framework autogen \
     --out-root output/llm_code_to_code_report/cross/langgraph/autogen/joke \
     --reference-source examples/parallel/joke/autogen/source_files \
     --existing-generation output/llm_code_to_code/cross/langgraph/autogen/joke \
     --reextract
 python -m evaluation.pipelines.generation \
-    --ttl examples/parallel/maths/langgraph/ground_truth.ttl \
+    --ttl examples/parallel/maths/autogen/ground_truth.ttl \
     --target-framework autogen \
     --out-root output/llm_code_to_code_report/cross/langgraph/autogen/maths \
     --reference-source examples/parallel/maths/autogen/source_files \
     --existing-generation output/llm_code_to_code/cross/langgraph/autogen/maths \
     --reextract
 python -m evaluation.pipelines.generation \
-    --ttl examples/parallel/meeting-assistant-flow/langgraph/ground_truth.ttl \
+    --ttl examples/parallel/meeting-assistant-flow/autogen/ground_truth.ttl \
     --target-framework autogen \
     --out-root output/llm_code_to_code_report/cross/langgraph/autogen/meeting_assistant \
     --reference-source examples/parallel/meeting-assistant-flow/autogen/source_files \
     --existing-generation output/llm_code_to_code/cross/langgraph/autogen/meeting_assistant \
     --reextract
 python -m evaluation.pipelines.generation \
-    --ttl examples/parallel/tech-blog/langgraph/ground_truth.ttl \
+    --ttl examples/parallel/tech-blog/autogen/ground_truth.ttl \
     --target-framework autogen \
     --out-root output/llm_code_to_code_report/cross/langgraph/autogen/tech_blog \
     --reference-source examples/parallel/tech-blog/autogen/source_files \
     --existing-generation output/llm_code_to_code/cross/langgraph/autogen/tech_blog \
     --reextract
 python -m evaluation.pipelines.generation \
-    --ttl examples/parallel/travel-planning/langgraph/ground_truth.ttl \
+    --ttl examples/parallel/travel-planning/autogen/ground_truth.ttl \
     --target-framework autogen \
     --out-root output/llm_code_to_code_report/cross/langgraph/autogen/travel_planning \
     --reference-source examples/parallel/travel-planning/autogen/source_files \
@@ -305,42 +305,42 @@ oscin generate-llm-code-to-code \
     --model gpt-6-astra
 
 python -m evaluation.pipelines.generation \
-    --ttl examples/parallel/code-review/langgraph/ground_truth.ttl \
+    --ttl examples/parallel/code-review/crewai/ground_truth.ttl \
     --target-framework crewai \
     --out-root output/llm_code_to_code_report/cross/langgraph/crewai/code_review \
     --reference-source examples/parallel/code-review/crewai/source_files \
     --existing-generation output/llm_code_to_code/cross/langgraph/crewai/code_review \
     --reextract
 python -m evaluation.pipelines.generation \
-    --ttl examples/parallel/joke/langgraph/ground_truth.ttl \
+    --ttl examples/parallel/joke/crewai/ground_truth.ttl \
     --target-framework crewai \
     --out-root output/llm_code_to_code_report/cross/langgraph/crewai/joke \
     --reference-source examples/parallel/joke/crewai/source_files \
     --existing-generation output/llm_code_to_code/cross/langgraph/crewai/joke \
     --reextract
 python -m evaluation.pipelines.generation \
-    --ttl examples/parallel/maths/langgraph/ground_truth.ttl \
+    --ttl examples/parallel/maths/crewai/ground_truth.ttl \
     --target-framework crewai \
     --out-root output/llm_code_to_code_report/cross/langgraph/crewai/maths \
     --reference-source examples/parallel/maths/crewai/source_files \
     --existing-generation output/llm_code_to_code/cross/langgraph/crewai/maths \
     --reextract
 python -m evaluation.pipelines.generation \
-    --ttl examples/parallel/meeting-assistant-flow/langgraph/ground_truth.ttl \
+    --ttl examples/parallel/meeting-assistant-flow/crewai/ground_truth.ttl \
     --target-framework crewai \
     --out-root output/llm_code_to_code_report/cross/langgraph/crewai/meeting_assistant \
     --reference-source examples/parallel/meeting-assistant-flow/crewai/source_files \
     --existing-generation output/llm_code_to_code/cross/langgraph/crewai/meeting_assistant \
     --reextract
 python -m evaluation.pipelines.generation \
-    --ttl examples/parallel/tech-blog/langgraph/ground_truth.ttl \
+    --ttl examples/parallel/tech-blog/crewai/ground_truth.ttl \
     --target-framework crewai \
     --out-root output/llm_code_to_code_report/cross/langgraph/crewai/tech_blog \
     --reference-source examples/parallel/tech-blog/crewai/source_files \
     --existing-generation output/llm_code_to_code/cross/langgraph/crewai/tech_blog \
     --reextract
 python -m evaluation.pipelines.generation \
-    --ttl examples/parallel/travel-planning/langgraph/ground_truth.ttl \
+    --ttl examples/parallel/travel-planning/crewai/ground_truth.ttl \
     --target-framework crewai \
     --out-root output/llm_code_to_code_report/cross/langgraph/crewai/travel_planning \
     --reference-source examples/parallel/travel-planning/crewai/source_files \
@@ -394,42 +394,42 @@ oscin generate-llm-code-to-code \
     --model gpt-6-astra
 
 python -m evaluation.pipelines.generation \
-    --ttl examples/parallel/code-review/autogen/ground_truth.ttl \
+    --ttl examples/parallel/code-review/langgraph/ground_truth.ttl \
     --target-framework langgraph \
     --out-root output/llm_code_to_code_report/cross/autogen/langgraph/code_review \
     --reference-source examples/parallel/code-review/langgraph/source_files \
     --existing-generation output/llm_code_to_code/cross/autogen/langgraph/code_review \
     --reextract
 python -m evaluation.pipelines.generation \
-    --ttl examples/parallel/joke/autogen/ground_truth.ttl \
+    --ttl examples/parallel/joke/langgraph/ground_truth.ttl \
     --target-framework langgraph \
     --out-root output/llm_code_to_code_report/cross/autogen/langgraph/joke \
     --reference-source examples/parallel/joke/langgraph/source_files \
     --existing-generation output/llm_code_to_code/cross/autogen/langgraph/joke \
     --reextract
 python -m evaluation.pipelines.generation \
-    --ttl examples/parallel/maths/autogen/ground_truth.ttl \
+    --ttl examples/parallel/maths/langgraph/ground_truth.ttl \
     --target-framework langgraph \
     --out-root output/llm_code_to_code_report/cross/autogen/langgraph/maths \
     --reference-source examples/parallel/maths/langgraph/source_files \
     --existing-generation output/llm_code_to_code/cross/autogen/langgraph/maths \
     --reextract
 python -m evaluation.pipelines.generation \
-    --ttl examples/parallel/meeting-assistant-flow/autogen/ground_truth.ttl \
+    --ttl examples/parallel/meeting-assistant-flow/langgraph/ground_truth.ttl \
     --target-framework langgraph \
     --out-root output/llm_code_to_code_report/cross/autogen/langgraph/meeting_assistant \
     --reference-source examples/parallel/meeting-assistant-flow/langgraph/source_files \
     --existing-generation output/llm_code_to_code/cross/autogen/langgraph/meeting_assistant \
     --reextract
 python -m evaluation.pipelines.generation \
-    --ttl examples/parallel/tech-blog/autogen/ground_truth.ttl \
+    --ttl examples/parallel/tech-blog/langgraph/ground_truth.ttl \
     --target-framework langgraph \
     --out-root output/llm_code_to_code_report/cross/autogen/langgraph/tech_blog \
     --reference-source examples/parallel/tech-blog/langgraph/source_files \
     --existing-generation output/llm_code_to_code/cross/autogen/langgraph/tech_blog \
     --reextract
 python -m evaluation.pipelines.generation \
-    --ttl examples/parallel/travel-planning/autogen/ground_truth.ttl \
+    --ttl examples/parallel/travel-planning/langgraph/ground_truth.ttl \
     --target-framework langgraph \
     --out-root output/llm_code_to_code_report/cross/autogen/langgraph/travel_planning \
     --reference-source examples/parallel/travel-planning/langgraph/source_files \
@@ -483,42 +483,42 @@ oscin generate-llm-code-to-code \
     --model gpt-6-astra
 
 python -m evaluation.pipelines.generation \
-    --ttl examples/parallel/code-review/autogen/ground_truth.ttl \
+    --ttl examples/parallel/code-review/crewai/ground_truth.ttl \
     --target-framework crewai \
     --out-root output/llm_code_to_code_report/cross/autogen/crewai/code_review \
     --reference-source examples/parallel/code-review/crewai/source_files \
     --existing-generation output/llm_code_to_code/cross/autogen/crewai/code_review \
     --reextract
 python -m evaluation.pipelines.generation \
-    --ttl examples/parallel/joke/autogen/ground_truth.ttl \
+    --ttl examples/parallel/joke/crewai/ground_truth.ttl \
     --target-framework crewai \
     --out-root output/llm_code_to_code_report/cross/autogen/crewai/joke \
     --reference-source examples/parallel/joke/crewai/source_files \
     --existing-generation output/llm_code_to_code/cross/autogen/crewai/joke \
     --reextract
 python -m evaluation.pipelines.generation \
-    --ttl examples/parallel/maths/autogen/ground_truth.ttl \
+    --ttl examples/parallel/maths/crewai/ground_truth.ttl \
     --target-framework crewai \
     --out-root output/llm_code_to_code_report/cross/autogen/crewai/maths \
     --reference-source examples/parallel/maths/crewai/source_files \
     --existing-generation output/llm_code_to_code/cross/autogen/crewai/maths \
     --reextract
 python -m evaluation.pipelines.generation \
-    --ttl examples/parallel/meeting-assistant-flow/autogen/ground_truth.ttl \
+    --ttl examples/parallel/meeting-assistant-flow/crewai/ground_truth.ttl \
     --target-framework crewai \
     --out-root output/llm_code_to_code_report/cross/autogen/crewai/meeting_assistant \
     --reference-source examples/parallel/meeting-assistant-flow/crewai/source_files \
     --existing-generation output/llm_code_to_code/cross/autogen/crewai/meeting_assistant \
     --reextract
 python -m evaluation.pipelines.generation \
-    --ttl examples/parallel/tech-blog/autogen/ground_truth.ttl \
+    --ttl examples/parallel/tech-blog/crewai/ground_truth.ttl \
     --target-framework crewai \
     --out-root output/llm_code_to_code_report/cross/autogen/crewai/tech_blog \
     --reference-source examples/parallel/tech-blog/crewai/source_files \
     --existing-generation output/llm_code_to_code/cross/autogen/crewai/tech_blog \
     --reextract
 python -m evaluation.pipelines.generation \
-    --ttl examples/parallel/travel-planning/autogen/ground_truth.ttl \
+    --ttl examples/parallel/travel-planning/crewai/ground_truth.ttl \
     --target-framework crewai \
     --out-root output/llm_code_to_code_report/cross/autogen/crewai/travel_planning \
     --reference-source examples/parallel/travel-planning/crewai/source_files \
