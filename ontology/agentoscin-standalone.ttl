@@ -1,28 +1,26 @@
-@prefix : <https://w3id.org/agentoscin#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix beam: <http://w3id.org/beam/core#> .
-@prefix prov: <http://www.w3.org/ns/prov#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix vann: <http://purl.org/vocab/vann/> .
-@prefix agento: <http://www.w3id.org/agentic-ai/onto#> .
-@prefix p-plan: <http://purl.org/net/p-plan#> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@base <https://w3id.org/agentoscin#> .
+@prefix : <https://w3id.org/agentoscin/onto#>.
+@prefix agento: <http://www.w3id.org/agentic-ai/onto#>.
+@prefix beam: <http://w3id.org/beam/core#>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix p-plan: <http://purl.org/net/p-plan#>.
+@prefix prov: <http://www.w3.org/ns/prov#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix vann: <http://purl.org/vocab/vann/>.
+@prefix xml: <http://www.w3.org/XML/1998/namespace>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@base <https://w3id.org/agentoscin/onto#> .
 
-<https://w3id.org/agentoscin> rdf:type owl:Ontology ;
-                               dcterms:creator "Dani Lippmann" ;
-                               dcterms:description """Self-contained serialisation of AgentOSCIN: the AgentOSCIN extension together with all axioms of the imported Agentic AI Ontology (agentO), asserted directly instead of via owl:imports.
-
-AgentOSCIN adds agentic-system orchestration, coordination & reasoning patterns, memory bindings, guardrails, human checkpoints, termination conditions, schemas, and framework-mapping properties. agentO terms keep their original IRIs under http://www.w3id.org/agentic-ai/onto#."""@en ;
-                               dcterms:title "AgentOSCIN — Extension of the Agentic AI Ontology" ;
-                               dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
-                               vann:preferredNamespacePrefix "agentoscin" ;
-                               rdfs:comment "Contains every class, property and individual of AgentOSCIN and of agentO (http://www.w3id.org/agentic-ai/onto) in a single file, without owl:imports." ;
-                               rdfs:label "AgentOSCIN Ontology" ;
-                               owl:versionInfo "1.0 (merged with agentO 0.2)" .
+<https://w3id.org/agentoscin/onto> rdf:type owl:Ontology ;
+    dcterms:creator "Dani Lippmann" ;
+    dcterms:contributor "Fajar J. Ekaputra","Andreas Ekelhart","Alexander Prock" ;
+    dcterms:description "An Extension of agentO adding agentic-system orchestration, coordination & reasoning patterns, memory bindings, guardrails, human checkpoints, termination conditions, schemas, and framework-mapping properties."@en ;
+    dcterms:title "AgentOSCIn — Extension of the Agentic AI Ontology" ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    vann:preferredNamespacePrefix "agentoscin" ;
+    owl:versionInfo "1.0" ;
+    rdfs:label "AgentOSCIN Ontology" .
 
 #################################################################
 #    Annotation properties
@@ -38,10 +36,6 @@ dcterms:creator rdf:type owl:AnnotationProperty .
 
 ###  http://purl.org/dc/elements/1.1/description
 dcterms:description rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/elements/1.1/rights
-dcterms:rights rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/elements/1.1/title
@@ -581,26 +575,6 @@ agento:useLanguageModel rdf:type owl:ObjectProperty ;
 #################################################################
 #    Data properties
 #################################################################
-
-###  http://purl.org/dc/terms/description
-dcterms:description rdf:type owl:DatatypeProperty ;
-                    rdfs:range xsd:string ;
-                    rdfs:comment "An account of the resource." ;
-                    rdfs:label "description" .
-
-
-###  http://purl.org/dc/terms/reference
-dcterms:reference rdf:type owl:DatatypeProperty ;
-                  rdfs:range xsd:string ;
-                  rdfs:comment "A reference of resource." ;
-                  rdfs:label "reference" .
-
-
-###  http://purl.org/dc/terms/title
-dcterms:title rdf:type owl:DatatypeProperty ;
-              rdfs:range xsd:string ;
-              rdfs:comment "A name given to the resource." ;
-              rdfs:label "title" .
 
 
 ###  http://www.w3id.org/agentic-ai/onto#agentID
